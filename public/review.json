@@ -1,0 +1,27 @@
+[
+    {
+      "reviewerName": "Emily Davis",
+      "reviewerImage": " https://i.ibb.co/2snRCJv/review-3.webp",
+      "reviewDescription": "I couldn't be happier with my new home. The attention to detail and the excellent service from the agent made the process smooth and enjoyable.",
+      "propertyTitle": "Charming Townhouse in Riverside"
+    },
+    {
+      "reviewerName": "Jake Turner",
+      "reviewerImage": "https://i.ibb.co/BLg1Gdy/review-2.jpg",
+      "reviewDescription": "The property exceeded my expectations. The neighborhood is vibrant, and the agent, Sarah, was incredibly helpful throughout the entire process.",
+      "propertyTitle": "Spacious Loft in Arts District"
+    },
+    {
+      "reviewerName": "Sophie Roberts",
+      "reviewerImage": "https://i.ibb.co/5hFLk8g/review.jpg",
+      "reviewDescription": "I love the modern design of my new apartment. The agent, Michael, provided excellent guidance, and the overall experience was top-notch.",
+      "propertyTitle": "Modern Apartment with City View"
+    },
+    {
+      "reviewerName": "Andrew Thompson",
+      "reviewerImage": "https://i.ibb.co/FKyRnSh/review-1.jpg",
+      "reviewDescription": "The family-friendly atmosphere of the neighborhood and the well-maintained property make it the perfect place for us. Highly recommend!",
+      "propertyTitle": "Cozy Family Home with Garden"
+    }
+  ]
+  
