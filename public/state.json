@@ -138,5 +138,145 @@
                 "reviewDescription": "Beautiful views from the property. Highly recommend!"
             }
         ]
+    },
+    {
+        "propertyImage": "https://i.ibb.co/kKYqk5Q/banner-4.jpg",
+        "propertyTitle": "Modern Condo with City View",
+        "propertyLocation": "456 Oak Street, Urbantown",
+        "priceRange": "$700,000 - $800,000",
+        "verificationStatus": "verified",
+        "agentName": "Emma Thompson",
+        "agentImage": "agent1.jpg",
+        "reviews": [
+            {
+                "reviewerName": "David Miller",
+                "reviewerImage": "david.jpg",
+                "propertyTitle": "Modern Condo with City View",
+                "reviewDescription": "Fantastic property! The city view is breathtaking, and the amenities are top-notch."
+            },
+            {
+                "reviewerName": "Sophia Brown",
+                "reviewerImage": "sophia.jpg",
+                "propertyTitle": "Modern Condo with City View",
+                "reviewDescription": "Emma, the agent, was very professional and guided us through the process smoothly."
+            },
+            {
+                "reviewerName": "Ryan Garcia",
+                "reviewerImage": "ryan.jpg",
+                "propertyTitle": "Modern Condo with City View",
+                "reviewDescription": "Impressed with the attention to detail. The property is exactly as advertised."
+            },
+            {
+                "reviewerName": "Olivia White",
+                "reviewerImage": "olivia.jpg",
+                "propertyTitle": "Modern Condo with City View",
+                "reviewDescription": "Great investment! The neighborhood is convenient, and we love our new home."
+            }
+        ]
+    },
+    {
+        "propertyImage": "https://i.ibb.co/VQB2sdX/banner-2.jpg",
+        "propertyTitle": "Modern Condo with City View",
+        "propertyLocation": "789 Maple Avenue, Suburbia",
+        "priceRange": "$450,000 - $500,000",
+        "verificationStatus": "verified",
+        "agentName": "James Anderson",
+        "agentImage": "agent2.jpg",
+        "reviews": [
+            {
+                "reviewerName": "Isabella Clark",
+                "reviewerImage": "isabella.jpg",
+                "propertyTitle": "Modern Condo with City View",
+                "reviewDescription": "Lovely family home with a beautiful garden. Perfect for kids and pets!"
+            },
+            {
+                "reviewerName": "Matthew Turner",
+                "reviewerImage": "matthew.jpg",
+                "propertyTitle": "Modern Condo with City View",
+                "reviewDescription": "James was very informative and made the home-buying process stress-free."
+            },
+            {
+                "reviewerName": "Lily Hernandez",
+                "reviewerImage": "lily.jpg",
+                "propertyTitle": "Modern Condo with City View",
+                "reviewDescription": "The neighborhood is quiet, and the property is well-maintained. Highly recommended."
+            },
+            {
+                "reviewerName": "Daniel Roberts",
+                "reviewerImage": "daniel.jpg",
+                "propertyTitle": "Modern Condo with City View",
+                "reviewDescription": "Great value for the price. We're very happy with our new home!"
+            }
+        ]
+    },
+    {
+        "propertyImage": "https://i.ibb.co/Zd7dtc7/banner-3.jpg",
+        "propertyTitle": "Cozy Family Home with Garden",
+        "propertyLocation": "789 Maple Avenue, Suburbia",
+        "priceRange": "$450,000 - $500,000",
+        "verificationStatus": "verified",
+        "agentName": "James Anderson",
+        "agentImage": "agent2.jpg",
+        "reviews": [
+            {
+                "reviewerName": "Isabella Clark",
+                "reviewerImage": "isabella.jpg",
+                "propertyTitle": "Cozy Family Home with Garden",
+                "reviewDescription": "Lovely family home with a beautiful garden. Perfect for kids and pets!"
+            },
+            {
+                "reviewerName": "Matthew Turner",
+                "reviewerImage": "matthew.jpg",
+                "propertyTitle": "Cozy Family Home with Garden",
+                "reviewDescription": "James was very informative and made the home-buying process stress-free."
+            },
+            {
+                "reviewerName": "Lily Hernandez",
+                "reviewerImage": "lily.jpg",
+                "propertyTitle": "Cozy Family Home with Garden",
+                "reviewDescription": "The neighborhood is quiet, and the property is well-maintained. Highly recommended."
+            },
+            {
+                "reviewerName": "Daniel Roberts",
+                "reviewerImage": "daniel.jpg",
+                "propertyTitle": "Cozy Family Home with Garden",
+                "reviewDescription": "Great value for the price. We're very happy with our new home!"
+            }
+        ]
+    },
+    {
+        "propertyImage": "https://i.ibb.co/cYs8GBM/banner-1.jpg",
+        "propertyTitle": "Luxurious Apartment in Downtown",
+        "propertyLocation": "123 Main Street, Cityville",
+        "priceRange": "$500,000 - $600,000",
+        "verificationStatus": "verified",
+        "agentName": "John Doe",
+        "agentImage": "agent1.jpg",
+        "reviews": [
+            {
+                "reviewerName": "Alice Johnson",
+                "reviewerImage": "alice.jpg",
+                "propertyTitle": "Luxurious Apartment in Downtown",
+                "reviewDescription": "Amazing property with great amenities. Loved the experience!"
+            },
+            {
+                "reviewerName": "Bob Smith",
+                "reviewerImage": "bob.jpg",
+                "propertyTitle": "Luxurious Apartment in Downtown",
+                "reviewDescription": "The agent was very helpful, and the property exceeded our expectations."
+            },
+            {
+                "reviewerName": "Eva Davis",
+                "reviewerImage": "eva.jpg",
+                "propertyTitle": "Luxurious Apartment in Downtown",
+                "reviewDescription": "Smooth transaction and excellent communication throughout the process."
+            },
+            {
+                "reviewerName": "Michael Wilson",
+                "reviewerImage": "michael.jpg",
+                "propertyTitle": "Luxurious Apartment in Downtown",
+                "reviewDescription": "Beautiful views from the property. Highly recommend!"
+            }
+        ]
     }
 ]

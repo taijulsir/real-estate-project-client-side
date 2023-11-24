@@ -76,8 +76,8 @@ const Banner = () => {
                         </div>
                     </section>
 
+                    {/* key features */}
                     <div className="grid grid-cols-1 lg:grid-cols-4 relative mt-0 lg:-mt-[90px] z-10 rounded">
-
                         <div>
                             <BannerFeatures bgColor="bg-red-600" icon={BsHouseDoor} heading={"Find Your Dream Home"} description={"Explore a wide range of properties and find the perfect home that suits your lifestyle."}></BannerFeatures>
                         </div>

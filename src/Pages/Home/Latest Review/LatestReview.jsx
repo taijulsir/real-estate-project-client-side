@@ -2,7 +2,7 @@
 
 const LatestReview = () => {
     return (
-        <div>
+        <div className="my-16">
             
         </div>
     );
