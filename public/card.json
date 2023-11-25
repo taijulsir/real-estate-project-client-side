@@ -1,0 +1,117 @@
+[
+    {
+      "id": "1",
+      "propertyImage": [
+        { "img": "url1_1.jpg" },
+        { "img": "url1_2.jpg" },
+        { "img": "url1_3.jpg" },
+        { "img": "url1_4.jpg" }
+      ],
+      "propertyTitle": "Luxury Penthouse Suite",
+      "propertyLocation": "City Center",
+      "priceRange": "$600,000 - $700,000",
+      "agentName": "Mahmud",
+      "agentEmail": "mahmud@gmail.com"
+    },
+    {
+      "id": "2",
+      "propertyImage": [
+        { "img": "url2_1.jpg" },
+        { "img": "url2_2.jpg" },
+        { "img": "url2_3.jpg" },
+        { "img": "url2_4.jpg" }
+      ],
+      "propertyTitle": "Modern Condo, Suburbia",
+      "propertyLocation": "Suburbia",
+      "priceRange": "$300,000 - $400,000",
+      "agentName": "Mahmud",
+      "agentEmail": "mahmud@gmail.com"
+    },
+    {
+      "id": "3",
+      "propertyImage": [
+        { "img": "url3_1.jpg" },
+        { "img": "url3_2.jpg" },
+        { "img": "url3_3.jpg" },
+        { "img": "url3_4.jpg" }
+      ],
+      "propertyTitle": "Elegant Villa, Prime Location",
+      "propertyLocation": "Prime Location",
+      "priceRange": "$1,200,000 - $1,300,000",
+      "agentName": "Raihan",
+      "agentEmail": "raihan@gmail.com"
+    },
+    {
+      "id": "4",
+      "propertyImage": [
+        { "img": "url4_1.jpg" },
+        { "img": "url4_2.jpg" },
+        { "img": "url4_3.jpg" },
+        { "img": "url4_4.jpg" }
+      ],
+      "propertyTitle": "Chic Downtown Apartment",
+      "propertyLocation": "Downtown",
+      "priceRange": "$400,000 - $500,000",
+      "agentName": "Raihan",
+      "agentEmail": "raihan@gmail.com"
+    },
+    {
+      "id": "5",
+      "propertyImage": [
+        { "img": "url5_1.jpg" },
+        { "img": "url5_2.jpg" },
+        { "img": "url5_3.jpg" },
+        { "img": "url5_4.jpg" }
+      ],
+      "propertyTitle": "Charming Countryside Cottage",
+      "propertyLocation": "Countryside",
+      "priceRange": "$500,000 - $600,000",
+      "agentName": "Taijul Islam",
+      "agentEmail": "taijulkhan20@gmail.com"
+    },
+    {
+      "id": "6",
+      "propertyImage": [
+        { "img": "url6_1.jpg" },
+        { "img": "url6_2.jpg" },
+        { "img": "url6_3.jpg" },
+        { "img": "url6_4.jpg" }
+      ],
+      "propertyTitle": "Investment Opportunity, Business District",
+      "propertyLocation": "Business District",
+      "priceRange": "$800,000 - $900,000",
+      "agentName": "Taijul Islam",
+      "agentEmail": "taijulkhan20@gmail.com"
+    },
+    {
+      "id": "7",
+      "propertyImage": [
+        { "img": "url7_1.jpg" },
+        { "img": "url7_2.jpg" },
+        { "img": "url7_3.jpg" },
+        { "img": "url7_4.jpg" }
+      ],
+      "propertyTitle": "Spacious Penthouse, Skyline Views",
+      "propertyLocation": "Skyline Views",
+      "priceRange": "$700,000 - $800,000",
+      "agentName": "Mostofa",
+      "agentEmail": "mostofa@57.com"
+    },
+    {
+      "id": "8",
+      "propertyImage": [
+        { "img": "url8_1.jpg" },
+        { "img": "url8_2.jpg" },
+        { "img": "url8_3.jpg" },
+        { "img": "url8_4.jpg" }
+      ],
+      "propertyTitle": "Sunny Seaside Bungalow",
+      "propertyLocation": "Seaside",
+      "priceRange": "$600,000 - $700,000",
+      "agentName": "Mostofa",
+      "agentEmail": "mostofa@57.com"
+    }
+  ]
+
+  
+  

@@ -27,7 +27,6 @@ const useCheckRole = () => {
     if (error) {
         console.error("Error fetching role:", error);
     }
-    console.log(isCheckRole)
     return [isCheckRole, isCheckRoleLoading];
 };
 

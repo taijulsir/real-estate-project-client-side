@@ -8,6 +8,7 @@ const DashboardAgent = () => {
         <div>
             <li>
                 <Link
+                to="agentProfile"
                     className="flex items-center px-6 py-4 text-gray-700 dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100">
                     <span className="inline-block mr-3">
                         <MdOutlineDashboard></MdOutlineDashboard>
@@ -17,6 +18,7 @@ const DashboardAgent = () => {
             </li>
             <li>
                 <Link
+                to="addProperty"
                     className="flex items-center px-6 py-4 text-gray-700 dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100">
                     <span className="inline-block mr-3">
                         <FaHeart></FaHeart>

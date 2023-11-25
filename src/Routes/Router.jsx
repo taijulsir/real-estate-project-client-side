@@ -12,6 +12,8 @@ import MyReviews from "../Pages/DashBoard/MyReviews/MyReviews";
 import PrivateRoute from "./PrivateRoute";
 import ManageUsers from "../Pages/DashBoard/ManageUsers/ManageUsers";
 import AdminProfile from "../Pages/DashBoard/AdminProfile/AdminProfile";
+import AgentProfile from "../Pages/DashBoard/AgentProfile/AgentProfile";
+import AddProperty from "../Pages/DashBoard/AddProperty/AddProperty";
 
 
 const router = createBrowserRouter([
@@ -54,6 +56,15 @@ const router = createBrowserRouter([
             {
              path: 'manageUsers',
              element: <ManageUsers></ManageUsers>   
+            },
+            // agent routes
+            {
+                path: 'agentProfile',
+                element: <AgentProfile></AgentProfile>
+            },
+            {
+                path: 'addProperty',
+                element: <AddProperty></AddProperty>
             },
             // normal user routes
             {

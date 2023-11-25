@@ -55,7 +55,7 @@ const ManageUsers = () => {
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, delete it!"
+            confirmButtonText: "Yes, update role!"
         }).then((result) => {
             const updateRole = role
             console.log(updateRole)
@@ -118,7 +118,7 @@ const ManageUsers = () => {
                                 </td>
                                 <td className="px-6 py-4 text-sm">
                                     <div className="flex items-center cursor-pointer">
-                                        <img src={user.photoURL} className="w-9 h-9 rounded-full shrink-0" />
+                                        <img src={user.photoURL} className="w-12 h-12 rounded-full shrink-0 object-cover" />
                                         <div className="ml-4">
                                             <p className="text-base text-gray-400 ">{user.email}</p>
                                         </div>

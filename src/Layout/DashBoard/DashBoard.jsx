@@ -6,9 +6,6 @@ import DashboardUser from "../../Routes/DashboardUser";
 import DashboardAgent from "../../Routes/DashboardAgent";
 import DashboardAdmin from "../../Routes/DashboardAdmin";
 import useCheckRole from "../../Hooks/useCheckRole/useCheckRole";
-
-
-
 const DashBoard = () => {
     const [open, setOpen] = useState(true)
     const [dropdown, setDropdown] = useState(false)
@@ -20,11 +17,6 @@ const DashBoard = () => {
     const roleInfo = isCheckRole? isCheckRole.roleInfo : null;
     const isAdmin = roleInfo ? roleInfo?.admin : false;
     const isAgent = roleInfo ? roleInfo?.agent: false;
-    // const { roleInfo } = isCheckRole;
-    // const isAdmin = roleInfo.admin;
-    // const isAgent = roleInfo.agent;
-    // const isAdmin = true;
-    // const isAgent= false;
     return (
         <div>
             <div className="bg-gray-100 xl:h-screen dark:bg-gray-800">
