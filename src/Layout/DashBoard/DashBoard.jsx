@@ -5,14 +5,26 @@ import { Link, Outlet } from "react-router-dom";
 import DashboardUser from "../../Routes/DashboardUser";
 import DashboardAgent from "../../Routes/DashboardAgent";
 import DashboardAdmin from "../../Routes/DashboardAdmin";
+import useCheckRole from "../../Hooks/useCheckRole/useCheckRole";
+
 
 
 const DashBoard = () => {
     const [open, setOpen] = useState(true)
     const [dropdown, setDropdown] = useState(false)
     const { user } = useAuth()
-    const isAdmin = true;
-    const isAgent = false;
+    const [isCheckRole,isCheckRoleLoading] = useCheckRole()
+    if(isCheckRoleLoading){
+        return <span className="loading loading-spinner loading-lg"></span>
+    }
+    const roleInfo = isCheckRole? isCheckRole.roleInfo : null;
+    const isAdmin = roleInfo ? roleInfo?.admin : false;
+    const isAgent = roleInfo ? roleInfo?.agent: false;
+    // const { roleInfo } = isCheckRole;
+    // const isAdmin = roleInfo.admin;
+    // const isAgent = roleInfo.agent;
+    // const isAdmin = true;
+    // const isAgent= false;
     return (
         <div>
             <div className="bg-gray-100 xl:h-screen dark:bg-gray-800">
@@ -58,6 +70,7 @@ const DashBoard = () => {
                                 <ul className="mb-8 text-sm">
                                     {user && isAgent && <DashboardAgent></DashboardAgent>}
                                 </ul>
+                                {/* admin */}
                                 <ul className="mb-8 text-sm">
                                     {user && isAdmin && <DashboardAdmin></DashboardAdmin>}
                                 </ul>

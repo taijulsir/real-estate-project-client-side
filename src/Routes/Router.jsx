@@ -10,6 +10,8 @@ import WishList from "../Pages/DashBoard/Wishlist/WishList";
 import PropertyBought from "../Pages/DashBoard/PropertyBought/PropertyBought";
 import MyReviews from "../Pages/DashBoard/MyReviews/MyReviews";
 import PrivateRoute from "./PrivateRoute";
+import ManageUsers from "../Pages/DashBoard/ManageUsers/ManageUsers";
+import AdminProfile from "../Pages/DashBoard/AdminProfile/AdminProfile";
 
 
 const router = createBrowserRouter([
@@ -43,6 +45,15 @@ const router = createBrowserRouter([
             {
                 path: 'profile',
                 element: <DashboardProfile></DashboardProfile>
+            },
+            // admin routes
+            {
+                path: "adminProfile",
+                element: <AdminProfile></AdminProfile>
+            },
+            {
+             path: 'manageUsers',
+             element: <ManageUsers></ManageUsers>   
             },
             // normal user routes
             {
