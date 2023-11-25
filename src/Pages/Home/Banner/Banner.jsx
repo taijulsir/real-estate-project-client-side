@@ -88,7 +88,7 @@ const Banner = () => {
                             <BannerFeatures bgColor="bg-red-600" icon={MdOutlineMedicalServices} heading={"Property Management Services"} description={"Simplify property management with our comprehensive services and modern solutions."}></BannerFeatures>
                         </div>
                         <div>
-                            <BannerFeatures bgColor="bg-green-600" icon={MdOutlineVerified} heading={"Verified Listings"} description={" Explore our collection of verified listings, ensuring the authenticity and quality of each property on our platform."}></BannerFeatures>
+                            <BannerFeatures bgColor="bg-green-600" icon={MdOutlineVerified} heading={"Verified Listings"} description={" Explore our collection of verified listings, ensuring the authenticity and quality of each property."}></BannerFeatures>
                         </div>
 
                     </div>

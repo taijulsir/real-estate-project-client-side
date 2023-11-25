@@ -5,7 +5,7 @@ import LatestReview from "../Latest Review/LatestReview";
 
 const Home = () => {
     return (
-        <div>
+        <div className="font-libreFranklin">
            <Banner></Banner> 
            <Advertisement></Advertisement>
            <LatestReview></LatestReview>

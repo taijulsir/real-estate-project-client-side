@@ -1,282 +1,226 @@
 [
     {
-        "propertyImage": "https://i.ibb.co/kKYqk5Q/banner-4.jpg",
-        "propertyTitle": "Modern Condo with City View",
-        "propertyLocation": "456 Oak Street, Urbantown",
-        "priceRange": "$700,000 - $800,000",
-        "verificationStatus": "verified",
-        "agentName": "Emma Thompson",
-        "agentImage": "agent1.jpg",
-        "reviews": [
+        "_id": "1",
+        "property_name": "Spacious Beachfront Condo",
+        "property_image": [
             {
-                "reviewerName": "David Miller",
-                "reviewerImage": "david.jpg",
-                "propertyTitle": "Modern Condo with City View",
-                "reviewDescription": "Fantastic property! The city view is breathtaking, and the amenities are top-notch."
+                "img": "https://i.ibb.co/4t4HL7V/amazing-aerial-shot-singapore-cityscape-with-lots-skyscrapers-1.jpg"
             },
             {
-                "reviewerName": "Sophia Brown",
-                "reviewerImage": "sophia.jpg",
-                "propertyTitle": "Modern Condo with City View",
-                "reviewDescription": "Emma, the agent, was very professional and guided us through the process smoothly."
+                "img": "https://i.ibb.co/cYs8GBM/banner-1.jpg"
             },
             {
-                "reviewerName": "Ryan Garcia",
-                "reviewerImage": "ryan.jpg",
-                "propertyTitle": "Modern Condo with City View",
-                "reviewDescription": "Impressed with the attention to detail. The property is exactly as advertised."
+                "img": "https://i.ibb.co/Zd7dtc7/banner-3.jpg.jpg"   
             },
             {
-                "reviewerName": "Olivia White",
-                "reviewerImage": "olivia.jpg",
-                "propertyTitle": "Modern Condo with City View",
-                "reviewDescription": "Great investment! The neighborhood is convenient, and we love our new home."
+                "img": "https://i.ibb.co/kKYqk5Q/banner-4.jpg"   
             }
-        ]
+        ],
+        "location": "Miami Beach, Florida",
+        "price_range": "$1,200,000 - $1,500,000",
+        "verification_status": "Verified",
+        "description": "Modern elegance meets breathtaking views in this luxury property. Immerse yourself in comfort and style.",
+        "bed": 3,
+        "bath": 3,
+        "size": "2,200 sq ft",
+        "agent_img": "https://i.ibb.co/k3nHgVs/portrait-beautiful-young-woman-standing-grey-wall.jpg",
+        "agent_name": "Jane Johnson",
+        "year": 2022
     },
     {
-        "propertyImage": "https://i.ibb.co/Zd7dtc7/banner-3.jpg",
-        "propertyTitle": "Cozy Family Home with Garden",
-        "propertyLocation": "789 Maple Avenue, Suburbia",
-        "priceRange": "$450,000 - $500,000",
-        "verificationStatus": "verified",
-        "agentName": "James Anderson",
-        "agentImage": "agent2.jpg",
-        "reviews": [
+        "_id": "2",
+        "property_name": "Mountain View Retreat",
+        "property_image": [
             {
-                "reviewerName": "Isabella Clark",
-                "reviewerImage": "isabella.jpg",
-                "propertyTitle": "Cozy Family Home with Garden",
-                "reviewDescription": "Lovely family home with a beautiful garden. Perfect for kids and pets!"
+                "img": "https://i.ibb.co/4t4HL7V/amazing-aerial-shot-singapore-cityscape-with-lots-skyscrapers-1.jpg"
             },
             {
-                "reviewerName": "Matthew Turner",
-                "reviewerImage": "matthew.jpg",
-                "propertyTitle": "Cozy Family Home with Garden",
-                "reviewDescription": "James was very informative and made the home-buying process stress-free."
+                "img": "https://i.ibb.co/cYs8GBM/banner-1.jpg"
             },
             {
-                "reviewerName": "Lily Hernandez",
-                "reviewerImage": "lily.jpg",
-                "propertyTitle": "Cozy Family Home with Garden",
-                "reviewDescription": "The neighborhood is quiet, and the property is well-maintained. Highly recommended."
+                "img": "https://i.ibb.co/Zd7dtc7/banner-3.jpg.jpg"   
             },
             {
-                "reviewerName": "Daniel Roberts",
-                "reviewerImage": "daniel.jpg",
-                "propertyTitle": "Cozy Family Home with Garden",
-                "reviewDescription": "Great value for the price. We're very happy with our new home!"
+                "img": "https://i.ibb.co/kKYqk5Q/banner-4.jpg"   
             }
-        ]
+        ],
+        "location": "Aspen, Colorado",
+        "price_range": "$1,800,000 - $2,200,000",
+        "description": "Modern elegance meets breathtaking views in this luxury property. Immerse yourself in comfort and style.",
+        "verification_status": "Verified",
+        "bed": 4,
+        "bath": 4,
+        "size": "3,500 sq ft",
+        "agent_img": "https://i.ibb.co/k3nHgVs/portrait-beautiful-young-woman-standing-grey-wall.jpg",
+        "agent_name": "Mike Anderson",
+        "year": 2021
     },
     {
-        "propertyImage": "https://i.ibb.co/VQB2sdX/banner-2.jpg",
-        "propertyTitle": "Modern Condo with City View",
-        "propertyLocation": "789 Maple Avenue, Suburbia",
-        "priceRange": "$450,000 - $500,000",
-        "verificationStatus": "verified",
-        "agentName": "James Anderson",
-        "agentImage": "agent2.jpg",
-        "reviews": [
+        "_id": "3",
+        "property_name": "Urban Loft in the City",
+        "property_image": [
             {
-                "reviewerName": "Isabella Clark",
-                "reviewerImage": "isabella.jpg",
-                "propertyTitle": "Modern Condo with City View",
-                "reviewDescription": "Lovely family home with a beautiful garden. Perfect for kids and pets!"
+                "img": "https://i.ibb.co/4t4HL7V/amazing-aerial-shot-singapore-cityscape-with-lots-skyscrapers-1.jpg"
             },
             {
-                "reviewerName": "Matthew Turner",
-                "reviewerImage": "matthew.jpg",
-                "propertyTitle": "Modern Condo with City View",
-                "reviewDescription": "James was very informative and made the home-buying process stress-free."
+                "img": "https://i.ibb.co/cYs8GBM/banner-1.jpg"
             },
             {
-                "reviewerName": "Lily Hernandez",
-                "reviewerImage": "lily.jpg",
-                "propertyTitle": "Modern Condo with City View",
-                "reviewDescription": "The neighborhood is quiet, and the property is well-maintained. Highly recommended."
+                "img": "https://i.ibb.co/Zd7dtc7/banner-3.jpg.jpg"   
             },
             {
-                "reviewerName": "Daniel Roberts",
-                "reviewerImage": "daniel.jpg",
-                "propertyTitle": "Modern Condo with City View",
-                "reviewDescription": "Great value for the price. We're very happy with our new home!"
+                "img": "https://i.ibb.co/kKYqk5Q/banner-4.jpg"   
             }
-        ]
+        ],
+        "location": "San Francisco, California",
+        "description": "Modern elegance meets breathtaking views in this luxury property. Immerse yourself in comfort and style.",
+        "price_range": "$900,000 - $1,100,000",
+        "verification_status": "Pending Verification",
+        "bed": 2,
+        "bath": 2,
+        "size": "1,500 sq ft",
+        "agent_img": "https://i.ibb.co/k3nHgVs/portrait-beautiful-young-woman-standing-grey-wall.jpg",
+        "agent_name": "David Smith",
+        "year": 2020
     },
     {
-        "propertyImage": "https://i.ibb.co/cYs8GBM/banner-1.jpg",
-        "propertyTitle": "Luxurious Apartment in Downtown",
-        "propertyLocation": "123 Main Street, Cityville",
-        "priceRange": "$500,000 - $600,000",
-        "verificationStatus": "verified",
-        "agentName": "John Doe",
-        "agentImage": "agent1.jpg",
-        "reviews": [
+        "_id": "4",
+        "property_name": "Charming Countryside Cottage",
+        "property_image": [
             {
-                "reviewerName": "Alice Johnson",
-                "reviewerImage": "alice.jpg",
-                "propertyTitle": "Luxurious Apartment in Downtown",
-                "reviewDescription": "Amazing property with great amenities. Loved the experience!"
+                "img": "https://i.ibb.co/4t4HL7V/amazing-aerial-shot-singapore-cityscape-with-lots-skyscrapers-1.jpg"
             },
             {
-                "reviewerName": "Bob Smith",
-                "reviewerImage": "bob.jpg",
-                "propertyTitle": "Luxurious Apartment in Downtown",
-                "reviewDescription": "The agent was very helpful, and the property exceeded our expectations."
+                "img": "https://i.ibb.co/cYs8GBM/banner-1.jpg"
             },
             {
-                "reviewerName": "Eva Davis",
-                "reviewerImage": "eva.jpg",
-                "propertyTitle": "Luxurious Apartment in Downtown",
-                "reviewDescription": "Smooth transaction and excellent communication throughout the process."
+                "img": "https://i.ibb.co/Zd7dtc7/banner-3.jpg.jpg"   
             },
             {
-                "reviewerName": "Michael Wilson",
-                "reviewerImage": "michael.jpg",
-                "propertyTitle": "Luxurious Apartment in Downtown",
-                "reviewDescription": "Beautiful views from the property. Highly recommend!"
+                "img": "https://i.ibb.co/kKYqk5Q/banner-4.jpg"   
             }
-        ]
+        ],
+        "location": "Cotswolds, England",
+        "price_range": "$600,000 - $800,000",
+        "description": "Modern elegance meets breathtaking views in this luxury property. Immerse yourself in comfort and style.",
+        "verification_status": "Verified",
+        "bed": 3,
+        "bath": 2,
+        "size": "1,800 sq ft",
+        "agent_img": "https://i.ibb.co/k3nHgVs/portrait-beautiful-young-woman-standing-grey-wall.jpg",
+        "agent_name": "Emma Turner",
+        "year": 2019
     },
     {
-        "propertyImage": "https://i.ibb.co/kKYqk5Q/banner-4.jpg",
-        "propertyTitle": "Modern Condo with City View",
-        "propertyLocation": "456 Oak Street, Urbantown",
-        "priceRange": "$700,000 - $800,000",
-        "verificationStatus": "verified",
-        "agentName": "Emma Thompson",
-        "agentImage": "agent1.jpg",
-        "reviews": [
+        "_id": "5",
+        "property_name": "Luxury Penthouse Suite",
+        "property_image": [
             {
-                "reviewerName": "David Miller",
-                "reviewerImage": "david.jpg",
-                "propertyTitle": "Modern Condo with City View",
-                "reviewDescription": "Fantastic property! The city view is breathtaking, and the amenities are top-notch."
+                "img": "https://i.ibb.co/4t4HL7V/amazing-aerial-shot-singapore-cityscape-with-lots-skyscrapers-1.jpg"
             },
             {
-                "reviewerName": "Sophia Brown",
-                "reviewerImage": "sophia.jpg",
-                "propertyTitle": "Modern Condo with City View",
-                "reviewDescription": "Emma, the agent, was very professional and guided us through the process smoothly."
+                "img": "https://i.ibb.co/cYs8GBM/banner-1.jpg"
             },
             {
-                "reviewerName": "Ryan Garcia",
-                "reviewerImage": "ryan.jpg",
-                "propertyTitle": "Modern Condo with City View",
-                "reviewDescription": "Impressed with the attention to detail. The property is exactly as advertised."
+                "img": "https://i.ibb.co/Zd7dtc7/banner-3.jpg.jpg"   
             },
             {
-                "reviewerName": "Olivia White",
-                "reviewerImage": "olivia.jpg",
-                "propertyTitle": "Modern Condo with City View",
-                "reviewDescription": "Great investment! The neighborhood is convenient, and we love our new home."
+                "img": "https://i.ibb.co/kKYqk5Q/banner-4.jpg"   
             }
-        ]
+        ],
+        "location": "Manhattan, New York",
+        "price_range": "$3,000,000 - $3,500,000",
+        "description": "Modern elegance meets breathtaking views in this luxury property. Immerse yourself in comfort and style.",
+        "verification_status": "Verified",
+        "bed": 5,
+        "bath": 6,
+        "size": "4,500 sq ft",
+        "agent_img": "https://i.ibb.co/k3nHgVs/portrait-beautiful-young-woman-standing-grey-wall.jpg",
+        "agent_name": "Peter White",
+        "year": 2022
     },
     {
-        "propertyImage": "https://i.ibb.co/VQB2sdX/banner-2.jpg",
-        "propertyTitle": "Modern Condo with City View",
-        "propertyLocation": "789 Maple Avenue, Suburbia",
-        "priceRange": "$450,000 - $500,000",
-        "verificationStatus": "verified",
-        "agentName": "James Anderson",
-        "agentImage": "agent2.jpg",
-        "reviews": [
+        "_id": "6",
+        "property_name": "Lakefront Retreat",
+        "property_image": [
             {
-                "reviewerName": "Isabella Clark",
-                "reviewerImage": "isabella.jpg",
-                "propertyTitle": "Modern Condo with City View",
-                "reviewDescription": "Lovely family home with a beautiful garden. Perfect for kids and pets!"
+                "img": "https://i.ibb.co/4t4HL7V/amazing-aerial-shot-singapore-cityscape-with-lots-skyscrapers-1.jpg"
             },
             {
-                "reviewerName": "Matthew Turner",
-                "reviewerImage": "matthew.jpg",
-                "propertyTitle": "Modern Condo with City View",
-                "reviewDescription": "James was very informative and made the home-buying process stress-free."
+                "img": "https://i.ibb.co/cYs8GBM/banner-1.jpg"
             },
             {
-                "reviewerName": "Lily Hernandez",
-                "reviewerImage": "lily.jpg",
-                "propertyTitle": "Modern Condo with City View",
-                "reviewDescription": "The neighborhood is quiet, and the property is well-maintained. Highly recommended."
+                "img": "https://i.ibb.co/Zd7dtc7/banner-3.jpg.jpg"   
             },
             {
-                "reviewerName": "Daniel Roberts",
-                "reviewerImage": "daniel.jpg",
-                "propertyTitle": "Modern Condo with City View",
-                "reviewDescription": "Great value for the price. We're very happy with our new home!"
+                "img": "https://i.ibb.co/kKYqk5Q/banner-4.jpg"   
             }
-        ]
+        ],
+        "location": "Lake Tahoe, Nevada",
+        "price_range": "$1,500,000 - $1,800,000",
+        "verification_status": "Pending Verification",
+        "description": "Modern elegance meets breathtaking views in this luxury property. Immerse yourself in comfort and style.",
+        "bed": 4,
+        "bath": 4,
+        "size": "3,000 sq ft",
+        "agent_img": "https://i.ibb.co/k3nHgVs/portrait-beautiful-young-woman-standing-grey-wall.jpg",
+        "agent_name": "Susan Martin",
+        "year": 2021
     },
     {
-        "propertyImage": "https://i.ibb.co/Zd7dtc7/banner-3.jpg",
-        "propertyTitle": "Cozy Family Home with Garden",
-        "propertyLocation": "789 Maple Avenue, Suburbia",
-        "priceRange": "$450,000 - $500,000",
-        "verificationStatus": "verified",
-        "agentName": "James Anderson",
-        "agentImage": "agent2.jpg",
-        "reviews": [
+        "_id": "7",
+        "property_name": "Historic Townhouse",
+        "property_image": [
             {
-                "reviewerName": "Isabella Clark",
-                "reviewerImage": "isabella.jpg",
-                "propertyTitle": "Cozy Family Home with Garden",
-                "reviewDescription": "Lovely family home with a beautiful garden. Perfect for kids and pets!"
+                "img": "https://i.ibb.co/4t4HL7V/amazing-aerial-shot-singapore-cityscape-with-lots-skyscrapers-1.jpg"
             },
             {
-                "reviewerName": "Matthew Turner",
-                "reviewerImage": "matthew.jpg",
-                "propertyTitle": "Cozy Family Home with Garden",
-                "reviewDescription": "James was very informative and made the home-buying process stress-free."
+                "img": "https://i.ibb.co/cYs8GBM/banner-1.jpg"
             },
             {
-                "reviewerName": "Lily Hernandez",
-                "reviewerImage": "lily.jpg",
-                "propertyTitle": "Cozy Family Home with Garden",
-                "reviewDescription": "The neighborhood is quiet, and the property is well-maintained. Highly recommended."
+                "img": "https://i.ibb.co/Zd7dtc7/banner-3.jpg.jpg"   
             },
             {
-                "reviewerName": "Daniel Roberts",
-                "reviewerImage": "daniel.jpg",
-                "propertyTitle": "Cozy Family Home with Garden",
-                "reviewDescription": "Great value for the price. We're very happy with our new home!"
+                "img": "https://i.ibb.co/kKYqk5Q/banner-4.jpg"   
             }
-        ]
+        ],
+        "location": "Charleston, South Carolina",
+        "price_range": "$1,000,000 - $1,200,000",
+        "description": "Modern elegance meets breathtaking views in this luxury property. Immerse yourself in comfort and style.",
+        "verification_status": "Verified",
+        "bed": 3,
+        "bath": 3,
+        "size": "2,000 sq ft",
+        "agent_img": "https://i.ibb.co/k3nHgVs/portrait-beautiful-young-woman-standing-grey-wall.jpg",
+        "agent_name": "Jack Taylor",
+        "year": 2020
     },
     {
-        "propertyImage": "https://i.ibb.co/cYs8GBM/banner-1.jpg",
-        "propertyTitle": "Luxurious Apartment in Downtown",
-        "propertyLocation": "123 Main Street, Cityville",
-        "priceRange": "$500,000 - $600,000",
-        "verificationStatus": "verified",
-        "agentName": "John Doe",
-        "agentImage": "agent1.jpg",
-        "reviews": [
+        "_id": "8",
+        "property_name": "Sunny Suburban Home",
+        "property_image": [
             {
-                "reviewerName": "Alice Johnson",
-                "reviewerImage": "alice.jpg",
-                "propertyTitle": "Luxurious Apartment in Downtown",
-                "reviewDescription": "Amazing property with great amenities. Loved the experience!"
+                "img": "https://i.ibb.co/4t4HL7V/amazing-aerial-shot-singapore-cityscape-with-lots-skyscrapers-1.jpg"
             },
             {
-                "reviewerName": "Bob Smith",
-                "reviewerImage": "bob.jpg",
-                "propertyTitle": "Luxurious Apartment in Downtown",
-                "reviewDescription": "The agent was very helpful, and the property exceeded our expectations."
+                "img": "https://i.ibb.co/cYs8GBM/banner-1.jpg"
             },
             {
-                "reviewerName": "Eva Davis",
-                "reviewerImage": "eva.jpg",
-                "propertyTitle": "Luxurious Apartment in Downtown",
-                "reviewDescription": "Smooth transaction and excellent communication throughout the process."
+                "img": "https://i.ibb.co/Zd7dtc7/banner-3.jpg.jpg"   
             },
             {
-                "reviewerName": "Michael Wilson",
-                "reviewerImage": "michael.jpg",
-                "propertyTitle": "Luxurious Apartment in Downtown",
-                "reviewDescription": "Beautiful views from the property. Highly recommend!"
+                "img": "https://i.ibb.co/kKYqk5Q/banner-4.jpg"   
             }
-        ]
+        ],
+        "location": "Palo Alto, California",
+        "price_range": "$1,200,000 - $1,500,000",
+        "verification_status": "Pending Verification",
+        "description": "Modern elegance meets breathtaking views in this luxury property. Immerse yourself in comfort and style.",
+        "bed": 4,
+        "bath": 3,
+        "size": "2,400 sq ft",
+        "agent_img": "https://i.ibb.co/k3nHgVs/portrait-beautiful-young-woman-standing-grey-wall.jpg",
+        "agent_name": "Lisa Robinson",
+        "year": 2019
     }
 ]

@@ -7,10 +7,15 @@ import { BsFacebook } from "react-icons/bs";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import useAuth from "../../Hooks/useAuth/useAuth"
+import useAxiosPublic from "../../Hooks/useAxiosPublic/useAxiosPublic";
+import Swal from "sweetalert2";
 const Login = () => {
     const {login,googleLogin,githubLogin} = useAuth()
+    const axiosPublic = useAxiosPublic()
     const location = useLocation()
     const navigate = useNavigate()
+
+    // form functionality
     const { register, handleSubmit, formState: { errors },reset } = useForm()
     const onSubmit = (data) => {
        login(data.email,data.password)
@@ -25,14 +30,30 @@ const Login = () => {
         toast.error(error.message)
        })
     }
+
+    // login with google or github
     const handleSocialSignin = (popUp) => {
         console.log(popUp)
         popUp()
         
         .then(result=>{
             console.log(result)
-            toast.success("login Succesfull")
-            navigate(location?.state? location.state : '/')
+            const authInfo = {
+                name: result.user?.displayName,
+                email: result.user?.email
+            }
+            axiosPublic.post('/users',authInfo)
+            .then(res=> {
+                console.log(res.data)
+                if(res.data?.insertedId|| res.data?.insertedId === null){
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Success!',
+                        text: 'Logged in successful.',
+                    })
+                    navigate(location?.state ? location.state : '/')
+                }
+            })
         })
         .catch(error=> {
             console.log(error)

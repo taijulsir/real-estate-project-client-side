@@ -5,8 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'libreFranklin': ['Libre Franklin', 'sans-serif'],
+        'raleway': ['Raleway', 'sans-serif'],
+      }
+    },
   },
   plugins: [require("daisyui")],
 }
-

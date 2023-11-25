@@ -3,16 +3,63 @@ import { FaUserCheck } from "react-icons/fa";
 import { IoCloudUploadOutline } from "react-icons/io5";
 import { MdOutlineEmail } from "react-icons/md";
 import { LuEye } from "react-icons/lu";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth/useAuth";
 import { useForm } from "react-hook-form";
+import useAxiosPublic from "../../Hooks/useAxiosPublic/useAxiosPublic";
+import toast, { Toaster } from "react-hot-toast";
+import Swal from "sweetalert2";
 
+// image hosting api
+const image_Hosting_Key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
+const image_Hosting_Api = `https://api.imgbb.com/1/upload?key=${image_Hosting_Key}`
 
 const Register = () => {
     const { createUser, logout, profileUpdate } = useAuth()
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
-    const onSubmit = (data) => {
-        console.log(data)
+    const axiosPublic = useAxiosPublic()
+    const navigate = useNavigate()
+    const onSubmit = async (data) => {
+        const imageFile = { image: data.photo[0] }
+        console.log(imageFile)
+        const res = await axiosPublic.post(image_Hosting_Api, imageFile, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        })
+
+        // register
+        createUser(data.email, data.password)
+            .then(result => {
+                console.log(result)
+                // update profile with name and photo
+                profileUpdate(data.name, res.data.data.display_url)
+                const authInfo = {
+                    name: data.name,
+                    email: data.email
+                }
+                axiosPublic.post('/users', authInfo)
+                    .then(res => {
+                        if (res.data.insertedId || res.data.insertedId === null) {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Success!',
+                                text: 'Sign up successful.',
+                            });
+                        }
+                        // log out user
+                        logout()
+                            .then()
+                            .catch(error => console.log(error))
+                        reset()
+                        // naviagate to login  page
+                        navigate('/login')
+                    })
+
+            })
+            .catch(error => {
+                toast.error(error.message)
+            })
     }
     return (
         <div style={{ backgroundImage: 'url(https://i.ibb.co/Jspy7Nq/register.png)', backgroundRepeat: "no-repeat", backgroundSize: "cover" }}>
@@ -20,7 +67,7 @@ const Register = () => {
                 <div className="grid md:grid-cols-3 items-center shadow-xl rounded-xl overflow-hidden">
                     <div className="max-md:order-1 flex flex-col justify-center space-y-16 max-md:mt-16 min-h-full bg-gradient-to-r from-violet-900 to-violet-700 lg:px-8 px-4 py-4">
                         {/* text description */}
-                        <div className="hidden md:flex md:flex-row">
+                        <div className="hidden md:flex md:flex-col gap-20">
                             <div>
                                 <h4 className=" text-zinc-950 text-lg font-bold">Create Your Account</h4>
                                 <p className="text-[13px] text-[#FFFF] mt-2">Welcome to our registration page! Get started by creating your account.</p>
@@ -96,6 +143,7 @@ const Register = () => {
                                 </div>
                                 {errors.photo && <span className="text-red-500 font-medium">This field is required</span>}
                             </div>
+                            {/* terms and condition */}
                             <div className="flex items-center">
                                 <input id="remember-me" name="remember-me" type="checkbox" className="h-4 w-4 shrink-0 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" required />
                                 <label htmlFor="remember-me" className="ml-3 block text-sm text-zinc-950">
@@ -112,6 +160,7 @@ const Register = () => {
                     </form>
                 </div>
             </div>
+            <Toaster></Toaster>
         </div>
     );
 };
