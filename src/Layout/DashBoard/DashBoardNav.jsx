@@ -4,10 +4,16 @@ import { FaListUl } from "react-icons/fa";
 import { IoIosSearch } from "react-icons/io";
 import { IoLogOutOutline } from "react-icons/io5";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import useAuth from "../../Hooks/useAuth/useAuth";
 
 
 const DashBoardNav = ({open,setOpen,dropdown,setDropdown}) => {
-    
+    const {user,logout} = useAuth()
+    const handleLogout = () => {
+        logout()
+        .then()
+        .catch(error=>console.log(error))
+    }
     return (
         <div>
                <section
@@ -70,11 +76,12 @@ const DashBoardNav = ({open,setOpen,dropdown,setDropdown}) => {
                                             <div className="lg:block" onClick={() => setDropdown(!dropdown)}>
                                                 <button className="flex items-center">
                                                     <div className="hidden mr-3 text-right md:block">
-                                                        <p className="text-sm font-bold text-black dark:text-gray-400"> John Doe
+                                                        <p className="text-sm font-bold text-black dark:text-gray-400">
+                                                            {user?.displayName}
                                                         </p>
                                                     </div>
                                                     <div className="mr-2">
-                                                        <img src="https://i.postimg.cc/pr2Q6n1w/pexels-italo-melo-2379005.jpg"
+                                                        <img src={user?.photoURL}
                                                             className="object-cover object-right w-10 h-10 rounded-full"
                                                             alt="person" />
                                                     </div>
@@ -90,14 +97,14 @@ const DashBoardNav = ({open,setOpen,dropdown,setDropdown}) => {
                                             >
                                                 <div className="py-1">
                                                     <a
-                                                        href="#"
+                                                       
                                                         className="flex px-4 py-2 text-sm text-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 hover:bg-gray-100"
                                                     >
                                                         <CiSettings />
                                                         Account
                                                     </a>
                                                     <a
-                                                        href="#"
+                                                        onClick={handleLogout}
                                                         className="flex px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-800 dark:text-gray-400 hover:bg-gray-100"
                                                     >
                                                         <IoLogOutOutline />

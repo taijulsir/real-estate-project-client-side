@@ -40,18 +40,20 @@ const Login = () => {
             console.log(result)
             const authInfo = {
                 name: result.user?.displayName,
-                email: result.user?.email
+                email: result.user?.email,
+                photoURL: result.user?.photoURL
             }
             axiosPublic.post('/users',authInfo)
             .then(res=> {
                 console.log(res.data)
                 if(res.data?.insertedId|| res.data?.insertedId === null){
+                    navigate(location?.state ? location.state : '/')
                     Swal.fire({
                         icon: 'success',
                         title: 'Success!',
                         text: 'Logged in successful.',
                     })
-                    navigate(location?.state ? location.state : '/')
+                   
                 }
             })
         })

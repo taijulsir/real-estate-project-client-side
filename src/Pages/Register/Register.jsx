@@ -36,7 +36,8 @@ const Register = () => {
                 profileUpdate(data.name, res.data.data.display_url)
                 const authInfo = {
                     name: data.name,
-                    email: data.email
+                    email: data.email,
+                    photoURL: res.data.data.display_url
                 }
                 axiosPublic.post('/users', authInfo)
                     .then(res => {

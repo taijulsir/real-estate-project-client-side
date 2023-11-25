@@ -9,6 +9,7 @@ import DashboardProfile from "../Shared/DashboardProfile/DashboardProfile";
 import WishList from "../Pages/DashBoard/Wishlist/WishList";
 import PropertyBought from "../Pages/DashBoard/PropertyBought/PropertyBought";
 import MyReviews from "../Pages/DashBoard/MyReviews/MyReviews";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
     {
         path: "dashboard",
         errorElement: <ErrorPage></ErrorPage>,
-        element: <DashBoard></DashBoard>,
+        element: <PrivateRoute> <DashBoard></DashBoard></PrivateRoute> ,
         children: [
             {
                 path: 'profile',
