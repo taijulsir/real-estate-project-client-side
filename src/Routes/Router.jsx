@@ -14,6 +14,8 @@ import ManageUsers from "../Pages/DashBoard/ManageUsers/ManageUsers";
 import AdminProfile from "../Pages/DashBoard/AdminProfile/AdminProfile";
 import AgentProfile from "../Pages/DashBoard/AgentProfile/AgentProfile";
 import AddProperty from "../Pages/DashBoard/AddProperty/AddProperty";
+import UserProfile from "../Pages/DashBoard/UserProfile/UserProfile";
+import AgentAddProperty from "../Pages/DashBoard/AgentAddProperty/AgentAddProperty";
 
 
 const router = createBrowserRouter([
@@ -66,7 +68,15 @@ const router = createBrowserRouter([
                 path: 'addProperty',
                 element: <AddProperty></AddProperty>
             },
+            {
+                path: 'addedProperties',
+                element: <AgentAddProperty></AgentAddProperty>
+            },
             // normal user routes
+            {
+                path: 'usersProfile',
+                element: <UserProfile></UserProfile>
+            },
             {
                 path: "wishlist",
                 element: <WishList></WishList>

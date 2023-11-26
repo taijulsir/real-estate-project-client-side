@@ -2,14 +2,18 @@ import { useForm } from "react-hook-form";
 import LeftSide from "./LeftSide";
 import useAuth from "../../../Hooks/useAuth/useAuth";
 import useAxiosPublic from "../../../Hooks/useAxiosPublic/useAxiosPublic";
+import useAxiosSecure from "../../../Hooks/useAxiosSecure/useAxiosSecure";
+import Swal from "sweetalert2";
 
 const image_Hosting_Key = import.meta.env.VITE_UPLOAD_HOSTING_KEY;
 const image_Hosting_Api = `https://api.imgbb.com/1/upload?key=${image_Hosting_Key}`
 const AddProperty = () => {
     const axiosPublic = useAxiosPublic()
-    const status = "pending"
+    const axiosSecure = useAxiosSecure()
     const { user } = useAuth()
     const { register, handleSubmit, formState: { errors }, reset } = useForm()
+
+    // form
     const onSubmit = async (data) => {
         const propertyImage = { image: data.propertyImage1[0] }
         const res = await axiosPublic.post(image_Hosting_Api, propertyImage, {
@@ -30,7 +34,19 @@ const AddProperty = () => {
             size: data.size,
             verified_status: "pending"
          }
-         console.log(properties)
+       // eslint-disable-next-line no-unused-vars
+       const propertiesRes = await axiosSecure.post('/properties',properties)
+       .then(properties=>{
+        if(properties.data.insertedId){
+            Swal.fire({
+                icon: 'success',
+                title: 'Success!',
+                text: 'Sign up successful.',
+            });
+            reset()
+        }
+       })
+       .catch(error=>console.log(error))
     }
 
     return (

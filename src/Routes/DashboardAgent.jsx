@@ -28,6 +28,7 @@ const DashboardAgent = () => {
             </li>
             <li>
                 <Link
+                to="addedProperties"
                     className="flex items-center px-6 py-4 text-gray-700 dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100">
                     <span className="inline-block mr-3">
                         <FaSuperpowers></FaSuperpowers>
