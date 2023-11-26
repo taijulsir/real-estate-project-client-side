@@ -41,7 +41,7 @@ const DashboardAgent = () => {
                     <span className="inline-block mr-3">
                         <FaBook></FaBook>
                     </span>
-                    <span>My Bought Properties</span>
+                    <span>My Sold Properties</span>
                 </Link>
             </li>
             <li>
