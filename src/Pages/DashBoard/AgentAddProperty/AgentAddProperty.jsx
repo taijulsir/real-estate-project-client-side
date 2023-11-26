@@ -70,9 +70,16 @@ const AgentAddProperty = () => {
                             </p>
                             <div className="flex justify-between w-full mt-2 gap-2">
                                 <div className="flex-1 ">
-                                    <Link to={`updateProperties/${properties._id}`}>
-                                        <button className="btn w-full">Update</button>
-                                    </Link>
+                                    {properties.status === "rejected" ? (
+                                        <div>
+                                            <button disabled className="btn w-full">Update</button>
+                                        </div>
+                                    ) : (
+                                        <Link to={`updateProperties/${properties._id}`}>
+                                            <button className="btn w-full">Update</button>
+                                        </Link>
+                                    )                          
+                                    }
                                 </div>
                                 <div className="flex-1">
                                     <button onClick={() => handleDelete(properties._id)} className="btn w-full">Delete</button>

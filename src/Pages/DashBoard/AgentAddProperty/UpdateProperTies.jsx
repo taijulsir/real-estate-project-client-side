@@ -8,8 +8,6 @@ import { useLoaderData, useNavigate } from "react-router-dom";
 
 const image_Hosting_Key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_Hosting_Api = `https://api.imgbb.com/1/upload?key=${image_Hosting_Key}`
-
-
 const UpdateProperTies = () => {
     const properties = useLoaderData()
     const axiosSecure = useAxiosSecure()
@@ -26,7 +24,6 @@ const UpdateProperTies = () => {
             }
         })
         console.log(res.data)
-
         const property = {
             propertyImage: res.data.data.display_url,
             propertyTitle: data.propertyTitle,
@@ -36,17 +33,21 @@ const UpdateProperTies = () => {
         // eslint-disable-next-line no-unused-vars
         const updateProperties = await axiosSecure.patch(`/properties/${properties._id}`,property)
             .then(res => {
+                console.log(res)
                 if (res.data.modifiedCount > 0) {
                     Swal.fire({
                         icon: 'success',
                         title: 'Success!',
                         text: 'Property Update Successfull.',
                     });
+                    navigate('/dashboard/addedProperties')
                 }
             })
     }
     return (
         <div className="px-3 lg:px-6 my-5">
+
+            <h3 className="text-3xl font-bold text-center mb-5">Update Your Properties</h3>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className=" space-y-3">
                     {/* agent name */}
