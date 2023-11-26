@@ -16,6 +16,7 @@ import AgentProfile from "../Pages/DashBoard/AgentProfile/AgentProfile";
 import AddProperty from "../Pages/DashBoard/AddProperty/AddProperty";
 import UserProfile from "../Pages/DashBoard/UserProfile/UserProfile";
 import AgentAddProperty from "../Pages/DashBoard/AgentAddProperty/AgentAddProperty";
+import UpdateProperTies from "../Pages/DashBoard/AgentAddProperty/UpdateProperTies";
 
 
 const router = createBrowserRouter([
@@ -71,6 +72,12 @@ const router = createBrowserRouter([
             {
                 path: 'addedProperties',
                 element: <AgentAddProperty></AgentAddProperty>
+            },
+            {
+                path: 'addedProperties/updateProperties/:id',
+                element: <UpdateProperTies></UpdateProperTies>,
+                loader: ({params}) => fetch(`http://localhost:5000/properties/${params.id}`)
+                
             },
             // normal user routes
             {

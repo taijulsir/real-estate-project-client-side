@@ -26,6 +26,7 @@ const AddProperty = () => {
             propertyTitle: data.propertyTitle,
             propertyLocation: data.propertyLocation,
             priceRange: data.priceRange,
+            agentImage: user?.photoURl,
             agentName: data.agentName,
             agentEmail: data.agentEmail,
             propertyDescription:data.propertyDescription,
