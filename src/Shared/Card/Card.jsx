@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 /* eslint-disable react/prop-types */
 const Card = ({ advertise }) => {
   return (
@@ -39,6 +41,9 @@ const Card = ({ advertise }) => {
             <p className="text-lg font-bold text-blue-500 dark:text-blue-300 ">
               <span className="text-xs font-semibold text-gray-400  ">${advertise.priceRange}</span>
             </p>
+           <Link to={`/propertyDetails/${advertise._id}`}>
+           <button className="btn bg-amber-600 mt-2">Details</button>
+           </Link>
           </div>
         </div>
       </div>

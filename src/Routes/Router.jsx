@@ -19,6 +19,7 @@ import AgentAddProperty from "../Pages/DashBoard/AgentAddProperty/AgentAddProper
 import UpdateProperTies from "../Pages/DashBoard/AgentAddProperty/UpdateProperTies";
 import ManageProperties from "../Pages/DashBoard/ManageProperties/ManageProperties";
 import ManageReviews from "../Pages/DashBoard/ManageReviews/ManageReviews";
+import PropertyDetails from "../Pages/Home/PropertyDetails/PropertyDetails";
 
 
 const router = createBrowserRouter([
@@ -30,9 +31,18 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>
-            }
+            },
+            {
+                path: '/propertyDetails/:id',
+                element: <PropertyDetails></PropertyDetails>,
+                loader: async ({ params }) => {
+                  const propertiesPromise = fetch(`http://localhost:5000/singleProperties/${params.id}`).then(res => res.json());
+                  const reviewsPromise = fetch(`http://localhost:5000/singleReviews/${params.id}`).then(res => res.json());              
+                  const [properties, reviews] = await Promise.all([propertiesPromise, reviewsPromise]);             
+                  return { properties, reviews };
+                }
+              }
         ]
-    
     },
     // Auth routes
     {
@@ -47,7 +57,7 @@ const router = createBrowserRouter([
     {
         path: "dashboard",
         errorElement: <ErrorPage></ErrorPage>,
-        element: <PrivateRoute> <DashBoard></DashBoard></PrivateRoute> ,
+        element: <PrivateRoute> <DashBoard></DashBoard></PrivateRoute>,
         children: [
             {
                 path: 'profile',
@@ -59,8 +69,8 @@ const router = createBrowserRouter([
                 element: <AdminProfile></AdminProfile>
             },
             {
-             path: 'manageUsers',
-             element: <ManageUsers></ManageUsers>   
+                path: 'manageUsers',
+                element: <ManageUsers></ManageUsers>
             },
             {
                 path: 'manageProperties',
@@ -86,8 +96,8 @@ const router = createBrowserRouter([
             {
                 path: 'addedProperties/updateProperties/:id',
                 element: <UpdateProperTies></UpdateProperTies>,
-                loader: ({params}) => fetch(`http://localhost:5000/properties/${params.id}`)
-                
+                loader: ({ params }) => fetch(`http://localhost:5000/properties/${params.id}`)
+
             },
             // normal user routes
             {

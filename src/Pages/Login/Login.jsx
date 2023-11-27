@@ -33,11 +33,8 @@ const Login = () => {
 
     // login with google or github
     const handleSocialSignin = (popUp) => {
-        console.log(popUp)
-        popUp()
-        
+        popUp()       
         .then(result=>{
-            console.log(result)
             const authInfo = {
                 name: result.user?.displayName,
                 email: result.user?.email,
@@ -46,7 +43,6 @@ const Login = () => {
             }
             axiosPublic.post('/users',authInfo)
             .then(res=> {
-                console.log(res.data)
                 if(res.data?.insertedId|| res.data?.insertedId === null){
                     navigate(location?.state ? location.state : '/')
                     Swal.fire({

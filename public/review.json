@@ -1,7 +1,8 @@
 [
   {
     "id": "1",
-    "propertyTitle": "Luxury Penthouse Suite",
+    "propertyTitle": "Modern Urban Loft",
+    "propertyId":"6563756c9fb951449d1458cc",
     "reviewerName": "Mahmud",
     "reviewerEmail" : "mahmud@gmail.com",
      "reviewerImage" : "https://i.ibb.co/KNCxRJt/user3.jpg",
@@ -10,7 +11,8 @@
   },
   {
     "id": "2",
-    "propertyTitle": "Luxury Penthouse Suite",
+    "propertyTitle": "Modern Urban Loft",
+    "propertyId":"6563756c9fb951449d1458cc",
     "reviewerName": "Raihan",
     "reviewerEmail" : "raihan@gmail.com",
      "reviewerImage" : "https://i.ibb.co/3M0Vy8T/user-1.jpg",
@@ -19,7 +21,8 @@
   },
   {
     "id": "3",
-    "propertyTitle": "Luxury Penthouse Suite",
+    "propertyTitle": "Modern Urban Loft",
+    "propertyId":"6563756c9fb951449d1458cc",
     "reviewerName": "Mostofa",
     "reviewerEmail" : "mostofa@57.com",
      "reviewerImage" : "https://i.ibb.co/6RhRY7r/user2.jpg",
@@ -29,6 +32,7 @@
   {
     "id": "4",
     "propertyTitle": "Modern Condo, Suburbia",
+    "propertyId" : "656372e3ba4d23b32a5d7648",
     "reviewerName": "Mahmud",
     "reviewerEmail" : "mostofa@57.com",
      "reviewerImage" : "https://i.ibb.co/6RhRY7r/user2.jpg",
@@ -38,6 +42,7 @@
   {
     "id": "5",
     "propertyTitle": "Modern Condo, Suburbia",
+    "propertyId" : "656372e3ba4d23b32a5d7648",
     "reviewerName": "Raihan",
     "reviewerEmail" : "mostofa@57.com",
      "reviewerImage" : "https://i.ibb.co/6RhRY7r/user2.jpg",
@@ -47,6 +52,7 @@
   {
     "id": "6",
     "propertyTitle": "Modern Condo, Suburbia",
+    "propertyId" : "656372e3ba4d23b32a5d7648",
     "reviewerName": "Mostofa",
     "reviewerEmail" : "arifulislam@gmail.com",
      "reviewerImage" : " https://i.ibb.co/9YFTJc7/user4.jpg",
@@ -57,6 +63,7 @@
     "id": "7",
     "propertyTitle": "Elegant Villa, Prime Location",
     "reviewerName": "Raihan",
+    "propertyId": "656372e3ba4d23b32a5d7649",
     "reviewerEmail" : "arifulislam@gmail.com",
      "reviewerImage" : " https://i.ibb.co/9YFTJc7/user4.jpg",
     "reviewTime": "2023-12-07T12:45:00Z",
@@ -67,6 +74,7 @@
     "propertyTitle": "Elegant Villa, Prime Location",
     "reviewerName": "Mostofa",
     "reviewerEmail" : "arifulislam@gmail.com",
+    "propertyId": "656372e3ba4d23b32a5d7649",
      "reviewerImage" : " https://i.ibb.co/9YFTJc7/user4.jpg",
     "reviewTime": "2023-12-08T14:50:00Z",
     "reviewDescription": "Mostofa ensured a smooth transaction. The villa's location and architecture are top-notch."
@@ -76,6 +84,7 @@
     "propertyTitle": "Elegant Villa, Prime Location",
     "reviewerName": "Taijul Islam",
     "reviewerEmail" : "arifulislam@gmail.com",
+    "propertyId": "656372e3ba4d23b32a5d7649",
      "reviewerImage" : " https://i.ibb.co/9YFTJc7/user4.jpg",
     "reviewTime": "2023-12-09T18:00:00Z",
     "reviewDescription": "Taijul Islam went above and beyond to find our dream villa. We're grateful for his expertise."
@@ -83,6 +92,7 @@
   {
     "id": "10",
     "propertyTitle": "Chic Downtown Apartment",
+    "propertyId" : "656372e3ba4d23b32a5d764a",
     "reviewerName": "Raihan",
     "reviewerEmail" : "taijulkhan20@gmail.com",
      "reviewerImage" : " https://i.ibb.co/NpZmJxF/user5.jpg",
@@ -92,6 +102,7 @@
   {
     "id": "11",
     "propertyTitle": "Chic Downtown Apartment",
+    "propertyId" : "656372e3ba4d23b32a5d764a",
     "reviewerName": "Mostofa",
     "reviewerEmail" : "taijulkhan20@gmail.com",
      "reviewerImage" : " https://i.ibb.co/NpZmJxF/user5.jpg",
@@ -101,6 +112,7 @@
   {
     "id": "12",
     "propertyTitle": "Chic Downtown Apartment",
+    "propertyId" : "656372e3ba4d23b32a5d764a",
     "reviewerName": "Taijul Islam",
     "reviewerEmail" : "taijulkhan20@gmail.com",
      "reviewerImage" : " https://i.ibb.co/NpZmJxF/user5.jpg",
@@ -110,6 +122,7 @@
   {
     "id": "29",
     "propertyTitle": "Charming Countryside Cottage",
+    "propertyId" :"656372e3ba4d23b32a5d764b",
     "reviewerName": "Mahmud",
     "reviewerEmail" : "taijulkhan20@gmail.com",
      "reviewerImage" : " https://i.ibb.co/NpZmJxF/user5.jpg",
@@ -119,6 +132,7 @@
   {
     "id": "30",
     "propertyTitle": "Charming Countryside Cottage",
+    "propertyId" :"656372e3ba4d23b32a5d764b",
     "reviewerName": "Raihan",
     "reviewerEmail" : "taijulkhan20@gmail.com",
      "reviewerImage" : " https://i.ibb.co/NpZmJxF/user5.jpg",
@@ -128,6 +142,7 @@
   {
     "id": "31",
     "propertyTitle": "Charming Countryside Cottage",
+    "propertyId" :"656372e3ba4d23b32a5d764b",
     "reviewerName": "Taijul Islam",
     "reviewerEmail" : "mahmud@gmail.com",
      "reviewerImage" : "https://i.ibb.co/KNCxRJt/user3.jpg",
@@ -138,7 +153,8 @@
 
   {
     "id": "32",
-    "propertyTitle": "Investment Opportunity, Business District",
+    "propertyTitle": "Serenity Haven Estates",
+    "propertyId" : "656372e3ba4d23b32a5d764c",
     "reviewerName": "Mahmud",
     "reviewerEmail" : "mahmud@gmail.com",
      "reviewerImage" : "https://i.ibb.co/KNCxRJt/user3.jpg",
@@ -147,7 +163,8 @@
   },
   {
     "id": "33",
-    "propertyTitle": "Investment Opportunity, Business District",
+    "propertyTitle": "Serenity Haven Estates",
+    "propertyId" : "656372e3ba4d23b32a5d764c",
     "reviewerName": "Raihan",
     "reviewerEmail" : "mahmud@gmail.com",
      "reviewerImage" : "https://i.ibb.co/KNCxRJt/user3.jpg",
@@ -156,7 +173,8 @@
   },
   {
     "id": "34",
-    "propertyTitle": "Investment Opportunity, Business District",
+    "propertyTitle": "Serenity Haven Estates",
+    "propertyId" : "656372e3ba4d23b32a5d764c",
     "reviewerName": "Taijul Islam",
     "reviewerEmail" : "mahmud@gmail.com",
      "reviewerImage" : "https://i.ibb.co/KNCxRJt/user3.jpg",
@@ -167,7 +185,8 @@
 
   {
     "id": "35",
-    "propertyTitle": "Spacious Penthouse, Skyline Views",
+    "propertyTitle": "Eternal Horizon Residences",
+    "propertyId" : "656372e3ba4d23b32a5d764d",
     "reviewerName": "Mahmud",
     "reviewerEmail" : "mahmud@gmail.com",
      "reviewerImage" : "https://i.ibb.co/KNCxRJt/user3.jpg",
@@ -176,7 +195,8 @@
   },
   {
     "id": "36",
-    "propertyTitle": "Spacious Penthouse, Skyline Views",
+    "propertyTitle": "Eternal Horizon Residences",
+    "propertyId" : "656372e3ba4d23b32a5d764d",
     "reviewerName": "Raihan",
     "reviewerEmail" : "raihan@gmail.com",
      "reviewerImage" : "https://i.ibb.co/3M0Vy8T/user-1.jpg",
@@ -185,7 +205,8 @@
   },
   {
     "id": "37",
-    "propertyTitle": "Spacious Penthouse, Skyline Views",
+    "propertyTitle": "Eternal Horizon Residences",
+    "propertyId" : "656372e3ba4d23b32a5d764d",
     "reviewerName": "Taijul Islam",
     "reviewerEmail" : "raihan@gmail.com",
      "reviewerImage" : "https://i.ibb.co/3M0Vy8T/user-1.jpg",
@@ -196,6 +217,7 @@
   {
     "id": "38",
     "propertyTitle": "Sunny Seaside Bungalow",
+    "propertyId":"656372e3ba4d23b32a5d764e",
     "reviewerName": "Mahmud",
     "reviewerEmail" : "raihan@gmail.com",
      "reviewerImage" : "https://i.ibb.co/3M0Vy8T/user-1.jpg",
@@ -205,6 +227,7 @@
   {
     "id": "39",
     "propertyTitle": "Sunny Seaside Bungalow",
+    "propertyId":"656372e3ba4d23b32a5d764e",
     "reviewerName": "Raihan",
     "reviewerEmail" : "raihan@gmail.com",
      "reviewerImage" : "https://i.ibb.co/3M0Vy8T/user-1.jpg",
@@ -214,6 +237,7 @@
   {
     "id": "40",
     "propertyTitle": "Sunny Seaside Bungalow",
+    "propertyId":"656372e3ba4d23b32a5d764e",
     "reviewerName": "Taijul Islam",
     "reviewerEmail" : "raihan@gmail.com",
      "reviewerImage" : "https://i.ibb.co/3M0Vy8T/user-1.jpg",
