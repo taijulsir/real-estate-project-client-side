@@ -17,6 +17,7 @@ import AddProperty from "../Pages/DashBoard/AddProperty/AddProperty";
 import UserProfile from "../Pages/DashBoard/UserProfile/UserProfile";
 import AgentAddProperty from "../Pages/DashBoard/AgentAddProperty/AgentAddProperty";
 import UpdateProperTies from "../Pages/DashBoard/AgentAddProperty/UpdateProperTies";
+import ManageProperties from "../Pages/DashBoard/ManageProperties/ManageProperties";
 
 
 const router = createBrowserRouter([
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
             {
              path: 'manageUsers',
              element: <ManageUsers></ManageUsers>   
+            },
+            {
+                path: 'manageProperties',
+                element: <ManageProperties></ManageProperties>
             },
             // agent routes
             {

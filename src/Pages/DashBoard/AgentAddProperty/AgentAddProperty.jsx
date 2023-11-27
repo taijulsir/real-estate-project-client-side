@@ -46,10 +46,6 @@ const AgentAddProperty = () => {
         });
     }
 
-    // handle update
-    const handleUpdate = (id) => {
-
-    }
     return (
         <div className="px-4">
             <h1 className=" text-2xl lg:text-4xl font-bold my-10 text-center">All Added Properties</h1>

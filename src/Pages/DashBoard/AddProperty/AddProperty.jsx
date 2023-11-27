@@ -11,7 +11,7 @@ const AddProperty = () => {
     const axiosPublic = useAxiosPublic()
     const axiosSecure = useAxiosSecure()
     const { user } = useAuth()
-    const { register, handleSubmit, formState: { errors }, reset } = useForm()
+    const { register, handleSubmit, reset } = useForm()
 
     // form
     const onSubmit = async (data) => {
