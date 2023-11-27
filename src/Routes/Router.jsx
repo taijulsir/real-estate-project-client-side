@@ -20,7 +20,7 @@ import UpdateProperTies from "../Pages/DashBoard/AgentAddProperty/UpdateProperTi
 import ManageProperties from "../Pages/DashBoard/ManageProperties/ManageProperties";
 import ManageReviews from "../Pages/DashBoard/ManageReviews/ManageReviews";
 import PropertyDetails from "../Pages/Home/PropertyDetails/PropertyDetails";
-
+import BroughtProperty from "../Pages/DashBoard/Wishlist/BroughtProperty";
 
 const router = createBrowserRouter([
     {
@@ -36,12 +36,12 @@ const router = createBrowserRouter([
                 path: '/propertyDetails/:id',
                 element: <PropertyDetails></PropertyDetails>,
                 loader: async ({ params }) => {
-                  const propertiesPromise = fetch(`http://localhost:5000/singleProperties/${params.id}`).then(res => res.json());
-                  const reviewsPromise = fetch(`http://localhost:5000/singleReviews/${params.id}`).then(res => res.json());              
-                  const [properties, reviews] = await Promise.all([propertiesPromise, reviewsPromise]);             
-                  return { properties, reviews };
+                    const propertiesPromise = fetch(`http://localhost:5000/singleProperties/${params.id}`).then(res => res.json());
+                    const reviewsPromise = fetch(`http://localhost:5000/singleReviews/${params.id}`).then(res => res.json());
+                    const [properties, reviews] = await Promise.all([propertiesPromise, reviewsPromise]);
+                    return { properties, reviews };
                 }
-              }
+            }
         ]
     },
     // Auth routes
@@ -115,6 +115,11 @@ const router = createBrowserRouter([
             {
                 path: "myReviews",
                 element: <MyReviews> </MyReviews>
+            },
+            {
+                path: "wishlist/offerProperties/:id",
+                element: <BroughtProperty></BroughtProperty>,
+                loader: ({params})=>fetch(`http://localhost:5000/wishlist/${params.id}`)
             }
         ]
     }

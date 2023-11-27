@@ -14,7 +14,6 @@ const ManageProperties = () => {
             return res.data;
         }
     })
-
     // handle verify or rejected
     const handleVerify = async (id, status) => {
         const updateStatus = status;
@@ -62,16 +61,16 @@ const ManageProperties = () => {
                                 <th className="px-6 py-3 text-left text-sm font-semibold text-white">
                                     Price Range
                                 </th>
-                              {
-                                manageProperties?.verified_status === 'verified' || manageProperties?.verified_status === 'rejected' ? ( <th className="px-6 py-3 text-left text-sm font-semibold text-white">
-                               Status
-                            </th>) : (  <thead><th className="px-6 py-3 text-left text-sm font-semibold text-white">
-                                Verify
-                            </th>
-                            <th className="px-6 py-3 text-left text-sm font-semibold text-white">
-                                Reject
-                            </th></thead>)
-                              }
+                                {
+                                    manageProperties?.verified_status === 'verified' || manageProperties?.verified_status === 'rejected' ? (<th className="px-6 py-3 text-left text-sm font-semibold text-white">
+                                        Status
+                                    </th>) : (<thead><th className="px-6 py-3 text-left text-sm font-semibold text-white">
+                                        Verify
+                                    </th>
+                                        <th className="px-6 py-3 text-left text-sm font-semibold text-white">
+                                            Reject
+                                        </th></thead>)
+                                }
                             </tr>
                         </thead>
                         <tbody className="whitespace-nowrap">
