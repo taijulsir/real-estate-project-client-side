@@ -18,6 +18,7 @@ import UserProfile from "../Pages/DashBoard/UserProfile/UserProfile";
 import AgentAddProperty from "../Pages/DashBoard/AgentAddProperty/AgentAddProperty";
 import UpdateProperTies from "../Pages/DashBoard/AgentAddProperty/UpdateProperTies";
 import ManageProperties from "../Pages/DashBoard/ManageProperties/ManageProperties";
+import ManageReviews from "../Pages/DashBoard/ManageReviews/ManageReviews";
 
 
 const router = createBrowserRouter([
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
             {
                 path: 'manageProperties',
                 element: <ManageProperties></ManageProperties>
+            },
+            {
+                path: 'manageReviews',
+                element: <ManageReviews></ManageReviews>
             },
             // agent routes
             {

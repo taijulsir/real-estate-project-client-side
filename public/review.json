@@ -2,120 +2,135 @@
   {
     "id": "1",
     "propertyTitle": "Luxury Penthouse Suite",
-    "agentName": "Mahmud",
+    "reviewerName": "Mahmud",
     "reviewerEmail" : "mahmud@gmail.com",
+     "reviewerImage" : "https://i.ibb.co/KNCxRJt/user3.jpg",
     "reviewTime": "2023-12-01T09:00:00Z",
     "reviewDescription": "Wonderful property with stunning views. Mahmud was very helpful throughout the process."
   },
   {
     "id": "2",
     "propertyTitle": "Luxury Penthouse Suite",
-    "agentName": "Raihan",
+    "reviewerName": "Raihan",
     "reviewerEmail" : "raihan@gmail.com",
+     "reviewerImage" : "https://i.ibb.co/3M0Vy8T/user-1.jpg",
     "reviewTime": "2023-12-02T11:30:00Z",
     "reviewDescription": "Excellent service from Raihan. The penthouse exceeded our expectations. Highly recommended."
   },
   {
     "id": "3",
     "propertyTitle": "Luxury Penthouse Suite",
-    "agentName": "Mostofa",
+    "reviewerName": "Mostofa",
     "reviewerEmail" : "mostofa@57.com",
+     "reviewerImage" : "https://i.ibb.co/6RhRY7r/user2.jpg",
     "reviewTime": "2023-12-03T15:45:00Z",
     "reviewDescription": "Mostofa provided valuable insights, making our buying experience smooth. The penthouse is a dream."
   },
   {
     "id": "4",
     "propertyTitle": "Modern Condo, Suburbia",
-    "agentName": "Mahmud",
+    "reviewerName": "Mahmud",
     "reviewerEmail" : "mostofa@57.com",
+     "reviewerImage" : "https://i.ibb.co/6RhRY7r/user2.jpg",
     "reviewTime": "2023-12-04T10:15:00Z",
     "reviewDescription": "Mahmud helped us find the perfect condo in the suburban area. Great communication and expertise."
   },
   {
     "id": "5",
     "propertyTitle": "Modern Condo, Suburbia",
-    "agentName": "Raihan",
+    "reviewerName": "Raihan",
     "reviewerEmail" : "mostofa@57.com",
+     "reviewerImage" : "https://i.ibb.co/6RhRY7r/user2.jpg",
     "reviewTime": "2023-12-05T14:20:00Z",
     "reviewDescription": "Raihan's professionalism stood out. The condo's location and amenities exceeded our expectations."
   },
   {
     "id": "6",
     "propertyTitle": "Modern Condo, Suburbia",
-    "agentName": "Mostofa",
+    "reviewerName": "Mostofa",
     "reviewerEmail" : "arifulislam@gmail.com",
+     "reviewerImage" : " https://i.ibb.co/9YFTJc7/user4.jpg",
     "reviewTime": "2023-12-06T16:30:00Z",
     "reviewDescription": "Mostofa made the buying process straightforward. The condo is in a family-friendly neighborhood."
   },
   {
     "id": "7",
     "propertyTitle": "Elegant Villa, Prime Location",
-    "agentName": "Raihan",
+    "reviewerName": "Raihan",
     "reviewerEmail" : "arifulislam@gmail.com",
+     "reviewerImage" : " https://i.ibb.co/9YFTJc7/user4.jpg",
     "reviewTime": "2023-12-07T12:45:00Z",
     "reviewDescription": "Raihan guided us to an elegant villa in a prime location. Exceptional service and attention to detail."
   },
   {
     "id": "8",
     "propertyTitle": "Elegant Villa, Prime Location",
-    "agentName": "Mostofa",
+    "reviewerName": "Mostofa",
     "reviewerEmail" : "arifulislam@gmail.com",
+     "reviewerImage" : " https://i.ibb.co/9YFTJc7/user4.jpg",
     "reviewTime": "2023-12-08T14:50:00Z",
     "reviewDescription": "Mostofa ensured a smooth transaction. The villa's location and architecture are top-notch."
   },
   {
     "id": "9",
     "propertyTitle": "Elegant Villa, Prime Location",
-    "agentName": "Taijul Islam",
+    "reviewerName": "Taijul Islam",
     "reviewerEmail" : "arifulislam@gmail.com",
+     "reviewerImage" : " https://i.ibb.co/9YFTJc7/user4.jpg",
     "reviewTime": "2023-12-09T18:00:00Z",
     "reviewDescription": "Taijul Islam went above and beyond to find our dream villa. We're grateful for his expertise."
   },
   {
     "id": "10",
     "propertyTitle": "Chic Downtown Apartment",
-    "agentName": "Raihan",
+    "reviewerName": "Raihan",
     "reviewerEmail" : "taijulkhan20@gmail.com",
+     "reviewerImage" : " https://i.ibb.co/NpZmJxF/user5.jpg",
     "reviewTime": "2023-12-10T13:30:00Z",
     "reviewDescription": "Raihan made our downtown apartment purchase seamless. His knowledge of the area is commendable."
   },
   {
     "id": "11",
     "propertyTitle": "Chic Downtown Apartment",
-    "agentName": "Mostofa",
+    "reviewerName": "Mostofa",
     "reviewerEmail" : "taijulkhan20@gmail.com",
+     "reviewerImage" : " https://i.ibb.co/NpZmJxF/user5.jpg",
     "reviewTime": "2023-12-11T16:45:00Z",
     "reviewDescription": "Mostofa's guidance was invaluable. The chic apartment perfectly fits our urban lifestyle."
   },
   {
     "id": "12",
     "propertyTitle": "Chic Downtown Apartment",
-    "agentName": "Taijul Islam",
+    "reviewerName": "Taijul Islam",
     "reviewerEmail" : "taijulkhan20@gmail.com",
+     "reviewerImage" : " https://i.ibb.co/NpZmJxF/user5.jpg",
     "reviewTime": "2023-12-12T19:00:00Z",
     "reviewDescription": "Taijul Islam helped us secure a chic downtown apartment. His professionalism is commendable."
   },
   {
     "id": "29",
     "propertyTitle": "Charming Countryside Cottage",
-    "agentName": "Mahmud",
+    "reviewerName": "Mahmud",
     "reviewerEmail" : "taijulkhan20@gmail.com",
+     "reviewerImage" : " https://i.ibb.co/NpZmJxF/user5.jpg",
     "reviewTime": "2023-12-29T10:30:00Z",
     "reviewDescription": "Mahmud's assistance in finding our charming countryside cottage was exceptional. The cottage exceeded our expectations."
   },
   {
     "id": "30",
     "propertyTitle": "Charming Countryside Cottage",
-    "agentName": "Raihan",
+    "reviewerName": "Raihan",
     "reviewerEmail" : "taijulkhan20@gmail.com",
+     "reviewerImage" : " https://i.ibb.co/NpZmJxF/user5.jpg",
     "reviewTime": "2023-12-30T12:45:00Z",
     "reviewDescription": "Raihan played a key role in helping us secure our dream charming countryside cottage. His professionalism is commendable."
   },
   {
     "id": "31",
     "propertyTitle": "Charming Countryside Cottage",
-    "agentName": "Taijul Islam",
+    "reviewerName": "Taijul Islam",
     "reviewerEmail" : "mahmud@gmail.com",
+     "reviewerImage" : "https://i.ibb.co/KNCxRJt/user3.jpg",
     "reviewTime": "2023-12-31T15:00:00Z",
     "reviewDescription": "Taijul Islam's dedication and insights were crucial in making our dream of a charming countryside cottage a reality."
   },
@@ -124,24 +139,27 @@
   {
     "id": "32",
     "propertyTitle": "Investment Opportunity, Business District",
-    "agentName": "Mahmud",
+    "reviewerName": "Mahmud",
     "reviewerEmail" : "mahmud@gmail.com",
+     "reviewerImage" : "https://i.ibb.co/KNCxRJt/user3.jpg",
     "reviewTime": "2024-01-01T09:15:00Z",
     "reviewDescription": "Mahmud's expertise and knowledge of the business district were evident in helping us secure a promising investment opportunity."
   },
   {
     "id": "33",
     "propertyTitle": "Investment Opportunity, Business District",
-    "agentName": "Raihan",
+    "reviewerName": "Raihan",
     "reviewerEmail" : "mahmud@gmail.com",
+     "reviewerImage" : "https://i.ibb.co/KNCxRJt/user3.jpg",
     "reviewTime": "2024-01-02T11:30:00Z",
     "reviewDescription": "Raihan's professionalism and insights played a crucial role in making our investment in the business district a success."
   },
   {
     "id": "34",
     "propertyTitle": "Investment Opportunity, Business District",
-    "agentName": "Taijul Islam",
+    "reviewerName": "Taijul Islam",
     "reviewerEmail" : "mahmud@gmail.com",
+     "reviewerImage" : "https://i.ibb.co/KNCxRJt/user3.jpg",
     "reviewTime": "2024-01-03T14:45:00Z",
     "reviewDescription": "Taijul Islam ensured a smooth transaction for our investment in the business district. We highly recommend his services."
   },
@@ -150,24 +168,27 @@
   {
     "id": "35",
     "propertyTitle": "Spacious Penthouse, Skyline Views",
-    "agentName": "Mahmud",
+    "reviewerName": "Mahmud",
     "reviewerEmail" : "mahmud@gmail.com",
+     "reviewerImage" : "https://i.ibb.co/KNCxRJt/user3.jpg",
     "reviewTime": "2024-01-04T10:30:00Z",
     "reviewDescription": "Mahmud's assistance in securing our spacious penthouse with skyline views exceeded our expectations. His professionalism is commendable."
   },
   {
     "id": "36",
     "propertyTitle": "Spacious Penthouse, Skyline Views",
-    "agentName": "Raihan",
+    "reviewerName": "Raihan",
     "reviewerEmail" : "raihan@gmail.com",
+     "reviewerImage" : "https://i.ibb.co/3M0Vy8T/user-1.jpg",
     "reviewTime": "2024-01-05T12:45:00Z",
     "reviewDescription": "Raihan played a key role in helping us find and secure our dream spacious penthouse with breathtaking skyline views."
   },
   {
     "id": "37",
     "propertyTitle": "Spacious Penthouse, Skyline Views",
-    "agentName": "Taijul Islam",
+    "reviewerName": "Taijul Islam",
     "reviewerEmail" : "raihan@gmail.com",
+     "reviewerImage" : "https://i.ibb.co/3M0Vy8T/user-1.jpg",
     "reviewTime": "2024-01-06T15:00:00Z",
     "reviewDescription": "Taijul Islam's dedication and expertise were crucial in making our dream of a spacious penthouse with skyline views a reality."
   },
@@ -175,24 +196,27 @@
   {
     "id": "38",
     "propertyTitle": "Sunny Seaside Bungalow",
-    "agentName": "Mahmud",
+    "reviewerName": "Mahmud",
     "reviewerEmail" : "raihan@gmail.com",
+     "reviewerImage" : "https://i.ibb.co/3M0Vy8T/user-1.jpg",
     "reviewTime": "2024-01-07T09:15:00Z",
     "reviewDescription": "Mahmud's guidance was invaluable in helping us secure our dream sunny seaside bungalow. We highly recommend his services."
   },
   {
     "id": "39",
     "propertyTitle": "Sunny Seaside Bungalow",
-    "agentName": "Raihan",
+    "reviewerName": "Raihan",
     "reviewerEmail" : "raihan@gmail.com",
+     "reviewerImage" : "https://i.ibb.co/3M0Vy8T/user-1.jpg",
     "reviewTime": "2024-01-08T11:30:00Z",
     "reviewDescription": "Raihan ensured a smooth transaction for our sunny seaside bungalow. The property exceeded our expectations."
   },
   {
     "id": "40",
     "propertyTitle": "Sunny Seaside Bungalow",
-    "agentName": "Taijul Islam",
+    "reviewerName": "Taijul Islam",
     "reviewerEmail" : "raihan@gmail.com",
+     "reviewerImage" : "https://i.ibb.co/3M0Vy8T/user-1.jpg",
     "reviewTime": "2024-01-09T14:45:00Z",
     "reviewDescription": "Taijul Islam played a key role in helping us find and secure our dream sunny seaside bungalow. His professionalism is commendable."
   }
