@@ -2,22 +2,22 @@ import { useLoaderData } from "react-router-dom";
 import "../../../Shared/ButtonHover/ButtonHover.css"
 import { useForm } from "react-hook-form";
 import useAuth from "../../../Hooks/useAuth/useAuth";
-import { useState } from "react";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../../../Hooks/useAxiosPublic/useAxiosPublic";
 
 const BroughtProperty = () => {
-    const [useOffer, setUseOffer] = useState('')
+
     const { user } = useAuth()
     const axiosPublic = useAxiosPublic()
     const properties = useLoaderData()
     const [minPrice, maxPrice] = properties.priceRange;
-    const { register, handleSubmit, formState: { errors }, reset } = useForm();
+    const { register, handleSubmit, formState: { errors }} = useForm();
     const onSubmit = async (data) => {
         console.log(data)
-        const broughtProperty = {
+        const boughtProperty = {
             propertiesId: properties._id,
             status: 'pending',
+            propertyImage: properties.propertyImage,
             propertyTitle: data.propertyTitle,
             propertyLocation: data.propertyLocation,
             agentName: data.agentName,
@@ -27,8 +27,8 @@ const BroughtProperty = () => {
             buyingDate: data.buyingDate,
             offerAmount: data.offerAmount,
         }
-        setUseOffer(data.offerAmount)
-        const offeredAmount = parseFloat(useOffer)
+        
+        const offeredAmount = parseFloat(data.offerAmount)
         console.log(offeredAmount)
         if (isNaN(offeredAmount) || offeredAmount < minPrice || offeredAmount > maxPrice) {
             Swal.fire({
@@ -39,9 +39,8 @@ const BroughtProperty = () => {
             return;
         }
         else {
-            const res = await axiosPublic.post('/propertyBrought',broughtProperty)
-            console.log(res.data)
-             
+            const res = await axiosPublic.post('/propertyBrought',boughtProperty)
+            console.log(res.data)            
                 if(res.data.insertedId || res.data.insertedId === null){
                     Swal.fire({
                         icon: 'success',

@@ -20,7 +20,7 @@ import UpdateProperTies from "../Pages/DashBoard/AgentAddProperty/UpdateProperTi
 import ManageProperties from "../Pages/DashBoard/ManageProperties/ManageProperties";
 import ManageReviews from "../Pages/DashBoard/ManageReviews/ManageReviews";
 import PropertyDetails from "../Pages/Home/PropertyDetails/PropertyDetails";
-import BroughtProperty from "../Pages/DashBoard/Wishlist/BroughtProperty";
+import OfferPropertyForm from "../Pages/DashBoard/Wishlist/OfferPropertyForm"
 
 const router = createBrowserRouter([
     {
@@ -109,7 +109,7 @@ const router = createBrowserRouter([
                 element: <WishList></WishList>
             },
             {
-                path: "prortyBought",
+                path: "propertyBought",
                 element: <PropertyBought></PropertyBought>
             },
             {
@@ -118,7 +118,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "wishlist/offerProperties/:id",
-                element: <BroughtProperty></BroughtProperty>,
+                element: <OfferPropertyForm></OfferPropertyForm>,
                 loader: ({params})=>fetch(`http://localhost:5000/wishlist/${params.id}`)
             }
         ]

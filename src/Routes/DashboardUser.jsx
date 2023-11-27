@@ -28,6 +28,7 @@ const DashboardUser = () => {
             </li>
             <li>
                 <Link
+                to="propertyBought"
                     className="flex items-center px-6 py-4 text-gray-700 dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100">
                     <span className="inline-block mr-3">
                         <FaSuperpowers></FaSuperpowers>
@@ -37,6 +38,7 @@ const DashboardUser = () => {
             </li>
             <li>
                 <Link
+                to="myReviews"
                     className="flex items-center px-6 py-4 text-gray-700 dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100">
                     <span className="inline-block mr-3">
                         <FaBook></FaBook>
