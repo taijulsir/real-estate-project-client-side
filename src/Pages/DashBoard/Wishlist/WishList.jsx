@@ -1,21 +1,66 @@
 import { useQuery } from "@tanstack/react-query";
 import useAuth from "../../../Hooks/useAuth/useAuth";
 import useAxiosPublic from "../../../Hooks/useAxiosPublic/useAxiosPublic";
-
+import { CiLocationOn } from "react-icons/ci";
+import { MdOutlineVerifiedUser } from "react-icons/md";
+import { AiOutlineDollar } from "react-icons/ai";
+import "../../../Shared/ButtonHover/ButtonHover.css"
 
 const WishList = () => {
-const {user} = useAuth()
-const axiosPublic = useAxiosPublic()
-    const {data: wishlist = [],refetch} = useQuery({
-        queryKey: ['wishlist',user?.email],
-        queryFn: async()=>{
+    const { user } = useAuth()
+    const axiosPublic = useAxiosPublic()
+    const { data: wishlist = [], refetch } = useQuery({
+        queryKey: ['wishlist', user?.email],
+        queryFn: async () => {
             const res = await axiosPublic.get(`/allWishlist/${user?.email}`)
             return res.data
         }
     })
     return (
-        <div>
-            <div>{wishlist?.length}</div>
+        <div className="px-3 lg:px-6">
+            <h3 className="text-2xl font-bold my-10">All of your Wishlist properties</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {wishlist?.map(item =>
+                    <><div key={item?.id}
+                        className="bg-white shadow-[0_2px_15px_-6px_rgba(0,0,0,0.2)] w-full py-6  rounded-lg font-[sans-serif] overflow-hidden mx-auto mt-4">
+                        <div className="flex items-center px-6">
+                            <h3 className="text-2xl text-[#333] font-semibold flex-1">{item?.propertyTitle}</h3>
+                        </div>           
+                        <img src={item?.propertyImage} className="w-full h-[338px] my-6" />
+                        <div className="mt-4 space-y-6">
+                            <div
+                                className="flex flex-wrap items-center cursor-pointer  rounded-lg w-full px-4 py-4">
+                                <img src={item.agentImage} className="w-12 h-12 rounded-full object-cover" />
+                                <div className="ml-4 flex-1">
+                                    <p className="text-sm text-black font-semibold">{item?.agentName}</p>
+                                    <p className="text-xs text-gray-400">{item?.agentEmail}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="px-6">
+                           <div className="flex justify-between ">
+                           <p className="text-sm text-gray-400 flex items-center"><CiLocationOn className="text-2xl mr-2 text-zinc-950"></CiLocationOn> {item?.propertyLocation}</p>
+                           <p className="text-sm text-gray-400 flex items-center"><AiOutlineDollar className="text-2xl mr-2 text-zinc-600"></AiOutlineDollar> {item?.priceRange}</p>
+                           <p className="text-sm text-gray-400 flex items-center"><MdOutlineVerifiedUser className="text-2xl mr-2 text-green-600"></MdOutlineVerifiedUser> {item?.verified_status}</p>
+                           
+                           </div>
+                          <div className="flex justify-between gap-5">
+                          <div className="mt-10 flex items-center flex-1">                          
+                                <button type="button"
+                                    className="btn hvr-sweep-to-top px-6 py-2 rounded w-full text-[#333] text-sm tracking-wider font-semibold border-2 border-[#333] hover:bg-gray-50 outline-none">Make an offer
+                                    </button>
+                            </div>
+                            <div className="mt-10 flex items-center flex-1">                          
+                                <button type="button"
+                                    className="btn px-6 hvr-sweep-to-top py-2 rounded w-full text-[#333] text-sm tracking-wider font-semibold border-2 border-[#333] hover:bg-gray-50 outline-none">Make an offer
+                                    </button>
+                            </div>
+                          </div>
+                        </div>                    
+                    </div>
+                    </>
+                )}
+            </div >
         </div>
     );
 };

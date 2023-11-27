@@ -12,9 +12,9 @@ const ReviewModal = ({ properties, reviews }) => {
     const axiosPublic = useAxiosPublic()
 
     const [description, setDescription] = useState(null)
-    const currentTime = new Date()
-    const isoStringtime = currentTime.toISOString()
+   
     console.log(description)
+   
     // propertyTitle
     // propertyId
     // reviewerName
@@ -24,6 +24,9 @@ const ReviewModal = ({ properties, reviews }) => {
     // reviewDescription
 
     const handleReview = async () => {
+        const currentTime = new Date()
+        const isoStringtime = currentTime.toISOString()
+        console.log(isoStringtime)
         const review = {
             propertyTitle: properties.propertyTitle,
             propertyId: properties._id,
