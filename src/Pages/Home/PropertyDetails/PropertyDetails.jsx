@@ -11,8 +11,10 @@ const PropertyDetails = () => {
     const propertyReview = useLoaderData()
     const {properties,reviews} = propertyReview;
     const { _id, propertyImage, propertyTitle, propertyLocation, priceRange, agentName, agentEmail, agentImage,verified_status } = properties;
-    const handleWishlist = async (id) => {
 
+
+    // handle wishlist
+    const handleWishlist = async (id) => {
         if(user?.email === agentEmail) {
             Swal.fire({
                 icon: 'error',
