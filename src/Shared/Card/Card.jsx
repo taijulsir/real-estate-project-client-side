@@ -33,7 +33,7 @@ const Card = ({ advertise }) => {
   return (
     <div className="px-5 lg:px-0">
       {/* image slider */}
-      <div>
+      {/* <div>
         <Swiper
           spaceBetween={30}
           pagination={{
@@ -81,7 +81,7 @@ const Card = ({ advertise }) => {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
+      </div> */}
       <div className="p-4 bg-white dark:bg-gray-700 shadow-xl">
         <div className="flex items-center gap-1 ">
           <CiLocationOn className="text-xl" />

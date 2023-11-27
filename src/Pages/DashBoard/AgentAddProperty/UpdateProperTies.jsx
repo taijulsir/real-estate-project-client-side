@@ -17,15 +17,20 @@ const UpdateProperTies = () => {
 
     const onSubmit = async (data) => {
         console.log(data)
-        const imageFile = { image: data.propertyImage[0] }
-        const res = await axiosPublic.post(image_Hosting_Api, imageFile, {
-            headers: {
-                'Content-Type': 'multipart/form-data'
-            }
-        })
-        console.log(res.data)
+        let image = properties.propertyImage;
+        if(data.propertyImage[0]){
+            const imageFile = { image: data.propertyImage[0] }
+            const res = await axiosPublic.post(image_Hosting_Api, imageFile, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+
+            })
+            image =res?.data?.data?.display_url;
+        }
+       
         const property = {
-            propertyImage: res.data.data.display_url,
+            propertyImage: image,
             propertyTitle: data.propertyTitle,
             propertyLocation: data.propertyLocation,
             priceRange: data.priceRange
@@ -33,7 +38,7 @@ const UpdateProperTies = () => {
         // eslint-disable-next-line no-unused-vars
         const updateProperties = await axiosSecure.patch(`/properties/${properties._id}`,property)
             .then(res => {
-                console.log(res)
+                console.log(res.data)
                 if (res.data.modifiedCount > 0) {
                     Swal.fire({
                         icon: 'success',
@@ -66,21 +71,21 @@ const UpdateProperTies = () => {
                     {/* property title */}
                     <div className="font-[sans-serif]  mx-auto">
                         <input
-                            {...register('propertyTitle', { required: true })}
+                            {...register('propertyTitle')}
                             type='text'
                             className="pr-4 px-5 py-2.5 text-sm text-black rounded-full bg-white border border-green-500 w-full outline-[#007bff]" defaultValue={properties?.propertyTitle} />
                     </div>
                     {/* property locatin */}
                     <div className="font-[sans-serif]  mx-auto">
                         <input
-                            {...register('propertyLocation', { required: true })}
+                            {...register('propertyLocation')}
                             type='text'
                             className="pr-4 px-5 py-2.5 text-sm text-black rounded-full bg-white border border-green-500 w-full outline-[#007bff]" defaultValue={properties?.propertyLocation} />
                     </div>
                     {/* price range */}
                     <div className="font-[sans-serif]  mx-auto">
                         <input
-                            {...register('priceRange', { required: true })}
+                            {...register('priceRange')}
                             type='text'
                             className="pr-4 px-5 py-2.5 text-sm text-black rounded-full bg-white border border-green-500 w-full outline-[#007bff]" defaultValue={properties?.priceRange} />
                     </div>
@@ -91,7 +96,7 @@ const UpdateProperTies = () => {
                             <p className="text-gray-400 font-semibold text-sm">Drag & Drop or <span className="text-[#007bff]">Choose file</span> to upload</p>
                             <p className="text-xs text-gray-400 mt-2">PNG, JPG SVG, WEBP, and GIF are Allowed.</p>
                             <input
-                                {...register('propertyImage', { required: true })}
+                                {...register('propertyImage')}
                                 type="file"
                                 className="w-1/6 text-black text-lg bg-gray-100 cursor-pointer py-1 px-2 mt-2 mx-auto hover:bg-gray-700 rounded"
                             />
