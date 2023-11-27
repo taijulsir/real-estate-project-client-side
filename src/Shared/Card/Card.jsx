@@ -1,119 +1,44 @@
 /* eslint-disable react/prop-types */
-import { useState } from 'react';
-import { CiLocationOn } from 'react-icons/ci';
-import { IoMdHeartEmpty } from 'react-icons/io';
-import { SlSizeActual } from 'react-icons/sl';
-import { IoBedOutline } from 'react-icons/io5';
-import { LiaBathSolid } from 'react-icons/lia';
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
-
 const Card = ({ advertise }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
-  const {
-    property_name,
-    description,
-    property_image,
-    location,
-    price_range,
-    verification_status,
-    bed,
-    bath,
-    size,
-    agent_img,
-    agent_name,
-    year,
-  } = advertise;
-
   return (
     <div className="px-5 lg:px-0">
-      {/* image slider */}
-      {/* <div>
-        <Swiper
-          spaceBetween={30}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Pagination]}
-          className="mySwiper"
-        >
-          {property_image.map((image, index) => (
-            <SwiperSlide key={index}>
-              <div
-                className="relative w-full h-60"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-              >
-                <img
-                  src={image.img}
-                  alt=""
-                  className="object-cover w-full h-full rounded-lg"
-                />
-                <div
-                  className={`agent-info absolute bottom-0 left-0 p-2 flex items-center text-white transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'
-                    }`}
-                >
-                  <img
-                    src={agent_img}
-                    alt={agent_name}
-                    className="w-12 h-12 object-cover rounded-full mr-2"
-                  />
-                  {agent_name}
-                </div>
-                <div
-                  className={`heart-icon absolute top-0 right-0 p-2 transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'
-                    }`}
-                >
-                  <IoMdHeartEmpty size={24} />
-                  <div className="wishlist-text absolute -top-7 right-0 bg-black text-white p-1 rounded opacity-0 transition-opacity duration-300">
-                    Add to wishlist
-                  </div>
-                </div>       
-                <span className="absolute top-0 left-0 px-2 py-1 mt-2 ml-2 text-xs text-white bg-stone-400 shadow-xl rounded-md">
-                  Luxury
-                </span>
+      <div className="w-full">
+        <div className="p-6 bg-white rounded shadow dark:bg-gray-700 group">
+          <div className="block mb-2" >
+            <div className="relative overflow-hidden">
+              <div className="mb-5 overflow-hidden">
+                <img className="object-cover w-full mx-auto transition-all rounded h-72 group-hover:scale-110"
+                  src={advertise.propertyImage} />
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div> */}
-      <div className="p-4 bg-white dark:bg-gray-700 shadow-xl">
-        <div className="flex items-center gap-1 ">
-          <CiLocationOn className="text-xl" />
-          <span className="hover:text-amber-700">{location}</span>
-        </div>
-        <div className="flex items-center justify-between mb-1">
-          <div>
-            <h2 className="text-xl lg:text-2xl font-semibold dark:text-gray-300 mt-2">
-              {property_name}
-            </h2>
-          </div>
-        </div>
-        <div>
-          <p className="mt-2 text-sm">{description}</p>
-        </div>
-        <div className="flex justify-between mt-2">
-          <div>{price_range}</div>
-          <div className="flex gap-2">
-            <span className="flex">
-              <SlSizeActual></SlSizeActual>
-              {size}
-            </span>
-            <span className="flex">
-              {' '}
-              <IoBedOutline></IoBedOutline>
-              {bed}
-            </span>
-            <span className="flex">
-              {' '}
-              <LiaBathSolid></LiaBathSolid>
-              {bath}
-            </span>
+              <div className="absolute flex flex-col top-4 right-4">
+                <a className="flex items-center">
+                  <div
+                    className="relative flex items-center justify-center p-3 mb-3 transition-all translate-x-20 bg-white rounded dark:bg-gray-700 dark:text-white group-hover:translate-x-0 wishlist hover:bg-blue-200 dark:hover:bg-blue-600 group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                      fill="currentColor" className="bi bi-heart" viewBox="0 0 16 16">
+                      <path
+                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                    </svg>
+                  </div>
+                </a>
+                <a className="flex items-center">
+                  <div
+                    className="relative flex items-center justify-center p-3 mb-3 transition-all translate-x-20 bg-white rounded dark:bg-gray-700 dark:text-white group-hover:translate-x-0 wishlist hover:bg-blue-200 dark:hover:bg-blue-600 group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                      fill="currentColor" className="bi bi-cart2" viewBox="0 0 16 16">
+                      <path
+                        d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <a >
+              <h3 className="mb-2 text-xl font-bold dark:text-white">{advertise.propertyTitle}</h3>
+            </a>
+            <p className="text-lg font-bold text-blue-500 dark:text-blue-300 ">
+              <span className="text-xs font-semibold text-gray-400  ">${advertise.priceRange}</span>
+            </p>
           </div>
         </div>
       </div>
