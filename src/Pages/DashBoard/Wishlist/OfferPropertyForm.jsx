@@ -6,28 +6,29 @@ import Swal from "sweetalert2";
 import useAxiosPublic from "../../../Hooks/useAxiosPublic/useAxiosPublic";
 
 const BroughtProperty = () => {
-
     const { user } = useAuth()
     const axiosPublic = useAxiosPublic()
     const properties = useLoaderData()
     const [minPrice, maxPrice] = properties.priceRange;
-    const { register, handleSubmit, formState: { errors }} = useForm();
+    console.log(minPrice,maxPrice)
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    
     const onSubmit = async (data) => {
         console.log(data)
         const boughtProperty = {
-            propertiesId: properties._id,
+            wishlistId: properties.wishlistId,
             status: 'pending',
             propertyImage: properties.propertyImage,
             propertyTitle: data.propertyTitle,
             propertyLocation: data.propertyLocation,
             agentName: data.agentName,
+            agentImage: properties.agentImage,
             agentEmail: data.agentEmail,
             buyerName: data.buyerName,
             buyerEmail: data.buyerEmail,
             buyingDate: data.buyingDate,
             offerAmount: data.offerAmount,
         }
-        
         const offeredAmount = parseFloat(data.offerAmount)
         console.log(offeredAmount)
         if (isNaN(offeredAmount) || offeredAmount < minPrice || offeredAmount > maxPrice) {
@@ -39,16 +40,21 @@ const BroughtProperty = () => {
             return;
         }
         else {
-            const res = await axiosPublic.post('/propertyBrought',boughtProperty)
-            console.log(res.data)            
-                if(res.data.insertedId || res.data.insertedId === null){
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Success!',
-                        text: 'Your offer is successful.',
-                    });
-                }
-            
+            const res = await axiosPublic.post('/propertyBrought', boughtProperty)
+            console.log(res.data)
+            if (res.data.insertedId) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: 'Your offer is successful.',
+                });
+            } else if (res.data.insertedId === null) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oppss..!',
+                    text: 'Item already offered you.',
+                });
+            }          
         }
     }
     return (

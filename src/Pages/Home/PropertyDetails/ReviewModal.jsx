@@ -7,26 +7,13 @@ import Swal from "sweetalert2";
 import toast, { Toaster } from "react-hot-toast";
 
 
-const ReviewModal = ({ properties, reviews }) => {
+const ReviewModal = ({ properties}) => {
     const { user } = useAuth()
     const axiosPublic = useAxiosPublic()
-
     const [description, setDescription] = useState(null)
-   
-    console.log(description)
-   
-    // propertyTitle
-    // propertyId
-    // reviewerName
-    // reviewerEmail 
-    //  reviewerImage 
-    // reviewTime
-    // reviewDescription
-
     const handleReview = async () => {
         const currentTime = new Date()
         const isoStringtime = currentTime.toISOString()
-        console.log(isoStringtime)
         const review = {
             propertyTitle: properties.propertyTitle,
             propertyId: properties._id,
@@ -45,7 +32,6 @@ const ReviewModal = ({ properties, reviews }) => {
                 }
             })
     }
-
     const handleModal = () => {
         if (user?.email === properties.agentEmail) {
             Swal.fire({

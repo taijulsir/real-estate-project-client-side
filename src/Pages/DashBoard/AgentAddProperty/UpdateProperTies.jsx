@@ -14,9 +14,7 @@ const UpdateProperTies = () => {
     const axiosPublic = useAxiosPublic()
     const navigate = useNavigate()
     const { register, handleSubmit } = useForm();
-
     const onSubmit = async (data) => {
-        console.log(data)
         let image = properties.propertyImage;
         if(data.propertyImage[0]){
             const imageFile = { image: data.propertyImage[0] }
@@ -24,11 +22,9 @@ const UpdateProperTies = () => {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
-
             })
             image =res?.data?.data?.display_url;
-        }
-       
+        }       
         const property = {
             propertyImage: image,
             propertyTitle: data.propertyTitle,

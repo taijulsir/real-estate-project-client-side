@@ -21,33 +21,30 @@ const AddProperty = () => {
                 'Content-Type': 'multipart/form-data'
             }
         });
-         const properties = {
+        const cleanPriceRange = data.priceRange.replace(/[ ,]+/g, '');
+        const properties = {
             propertyImage: res.data.data.display_url,
             propertyTitle: data.propertyTitle,
             propertyLocation: data.propertyLocation,
-            priceRange: data.priceRange,
-            agentImage: user?.photoURl,
+            priceRange: cleanPriceRange,
+            agentImage: user?.photoURL,
             agentName: data.agentName,
             agentEmail: data.agentEmail,
-            propertyDescription:data.propertyDescription,
+            propertyDescription: data.propertyDescription,
             bed: data.bed,
             bath: data.bath,
             size: data.size,
             verified_status: "pending"
-         }
-       // eslint-disable-next-line no-unused-vars
-       const propertiesRes = await axiosSecure.post('/properties',properties)
-       .then(properties=>{
-        if(properties.data.insertedId){
+        }
+        const propertiesRes = await axiosSecure.post('/properties', properties)
+        if (propertiesRes.data.insertedId) {
             Swal.fire({
                 icon: 'success',
                 title: 'Success!',
-                text: 'Sign up successful.',
+                text: 'Property added successful.',
             });
             reset()
         }
-       })
-       .catch(error=>console.log(error))
     }
 
     return (
@@ -118,7 +115,7 @@ const AddProperty = () => {
                                             className="block w-full px-4 py-3 mb-2 text-sm placeholder-gray-500 bg-white border rounded dark:text-gray-400 dark:placeholder-gray-500 dark:border-gray-800 dark:bg-gray-800"
                                             type="text" placeholder="Enter price range like $40000-$50000" />
                                     </div>
-                                    
+
                                 </div>
                                 <div className="flex justify-between">
                                     {/* bed */}
@@ -159,7 +156,7 @@ const AddProperty = () => {
                                             type="file" />
                                     </div>
                                 </div>
-                              
+
                                 {/* description */}
                                 <div className="px-4 mb-6">
                                     <label className="block mb-2 text-sm font-medium dark:text-gray-400">Description</label>

@@ -9,20 +9,18 @@ const PropertyDetails = () => {
     const { user } = useAuth()
     const axiosPublic = useAxiosPublic()
     const propertyReview = useLoaderData()
-    const {properties,reviews} = propertyReview;
-    const { _id, propertyImage, propertyTitle, propertyLocation, priceRange, agentName, agentEmail, agentImage,verified_status } = properties;
-
-
+    const { properties, reviews } = propertyReview;
+    const { _id, propertyImage, propertyTitle, propertyLocation, priceRange, agentName, agentEmail, agentImage, verified_status } = properties;
     // handle wishlist
     const handleWishlist = async (id) => {
-        if(user?.email === agentEmail) {
+        if (user?.email === agentEmail) {
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
                 text: 'Agent can`t add to wishlist!',
             })
         }
-        else{
+        else {
             const wishlist = {
                 propertyImage: propertyImage,
                 propertyTitle: propertyTitle,
@@ -37,18 +35,23 @@ const PropertyDetails = () => {
             }
             // post method
             const res = await axiosPublic.post('/wishlist', wishlist)
-                .then(res => {
-                    if (res.data.insertedId || res.data.insertedId === null) {
-                        Swal.fire({
-                            title: "Success!",
-                            text: `Succes ,Property added into wishlist`,
-                            icon: "success"
-                        });
-                    }
-                })
-                .catch(error => console.log(error))
+            console.log(res.data)        
+            if (res.data.insertedId) {
+                
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: 'Succesfully added to wishlist.',
+                });
+            } else if (res.data.insertedId === null) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oppss..!',
+                    text: 'Item already added to wishlist.',
+                });
+            }              
         }
-       
+
     }
     return (
         <div>

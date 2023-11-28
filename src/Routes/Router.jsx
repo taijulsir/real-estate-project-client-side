@@ -21,6 +21,7 @@ import ManageProperties from "../Pages/DashBoard/ManageProperties/ManageProperti
 import ManageReviews from "../Pages/DashBoard/ManageReviews/ManageReviews";
 import PropertyDetails from "../Pages/Home/PropertyDetails/PropertyDetails";
 import OfferPropertyForm from "../Pages/DashBoard/Wishlist/OfferPropertyForm"
+import RequestedProperties from "../Pages/DashBoard/RequestedProperties/RequestedProperties";
 
 const router = createBrowserRouter([
     {
@@ -99,6 +100,10 @@ const router = createBrowserRouter([
                 loader: ({ params }) => fetch(`http://localhost:5000/properties/${params.id}`)
 
             },
+            {
+                path: "requestedProperties",
+                element: <RequestedProperties></RequestedProperties>
+            },
             // normal user routes
             {
                 path: 'usersProfile',
@@ -119,7 +124,7 @@ const router = createBrowserRouter([
             {
                 path: "wishlist/offerProperties/:id",
                 element: <OfferPropertyForm></OfferPropertyForm>,
-                loader: ({params})=>fetch(`http://localhost:5000/wishlist/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/wishlist/${params.id}`)
             }
         ]
     }
