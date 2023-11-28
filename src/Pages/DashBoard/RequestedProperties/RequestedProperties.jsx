@@ -122,9 +122,7 @@ const RequestedProperties = () => {
                                     <td className="px-6 py-4">
                                         {request?.offerAmount}
                                     </td>
-                                    {/* <td className="px-6 py-4">
-                                        {request?.status}
-                                    </td> */}
+                                   
                                     <tr>
                                         {
                                             request?.status === "accepted" || request?.status === "rejected" ? (

@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 import toast, { Toaster } from "react-hot-toast";
 import "../../../Shared/ButtonHover/ButtonHover.css"
 
-const ReviewModal = ({ properties}) => {
+const ReviewModal = ({ properties }) => {
     const { user } = useAuth()
     const axiosPublic = useAxiosPublic()
     const [description, setDescription] = useState(null)
@@ -24,13 +24,10 @@ const ReviewModal = ({ properties}) => {
             reviewDescription: description
         }
         console.log(review)
-        const res = await axiosPublic.post('/reviews',review)
-            .then(res => {
-                console.log(res.data)
-                if (res.data.insertedId) {
-                    toast.success("Succefully added review")
-                }
-            })
+        const res = await axiosPublic.post('/reviews', review)
+        if (res.data.insertedId) {
+            toast.success("Succefully added review")
+        }
     }
     const handleModal = () => {
         if (user?.email === properties.agentEmail) {

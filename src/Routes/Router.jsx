@@ -23,6 +23,7 @@ import PropertyDetails from "../Pages/Home/PropertyDetails/PropertyDetails";
 import OfferPropertyForm from "../Pages/DashBoard/Wishlist/OfferPropertyForm"
 import RequestedProperties from "../Pages/DashBoard/RequestedProperties/RequestedProperties";
 import Payment from "../Pages/DashBoard/Payment/Payment";
+import ALlProperties from "../Pages/AllProperties/ALlProperties";
 
 const router = createBrowserRouter([
     {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
                     const [properties, reviews] = await Promise.all([propertiesPromise, reviewsPromise]);
                     return { properties, reviews };
                 }
+            },
+            {
+                path: "/allProperties",
+                element: <ALlProperties></ALlProperties>
             }
         ]
     },
