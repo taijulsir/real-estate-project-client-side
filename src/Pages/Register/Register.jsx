@@ -1,6 +1,7 @@
 
 import { FaUserCheck } from "react-icons/fa";
 import { IoCloudUploadOutline } from "react-icons/io5";
+import { FaRegEyeSlash } from "react-icons/fa6";
 import { MdOutlineEmail } from "react-icons/md";
 import { LuEye } from "react-icons/lu";
 import { Link, useNavigate } from "react-router-dom";
@@ -9,12 +10,14 @@ import { useForm } from "react-hook-form";
 import useAxiosPublic from "../../Hooks/useAxiosPublic/useAxiosPublic";
 import toast, { Toaster } from "react-hot-toast";
 import Swal from "sweetalert2";
+import { useState } from "react";
 
 // image hosting api
 const image_Hosting_Key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_Hosting_Api = `https://api.imgbb.com/1/upload?key=${image_Hosting_Key}`
 
 const Register = () => {
+    const [showPassword, setShowPassword] = useState(false)
     const { createUser, logout, profileUpdate } = useAuth()
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const axiosPublic = useAxiosPublic()
@@ -118,9 +121,20 @@ const Register = () => {
                                             maxLength: 20,
                                             pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&*!])[A-Za-z\d@#$%^&*!]+$/
                                         })}
-                                        name="password" type="password" required className="bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500" placeholder="Enter password" />
-                                    <LuEye className="text-2xl absolute right-3"></LuEye>
+                                        name="password"
+                                        type={showPassword ? 'text' : 'password'}
+                                        required
+                                        className="bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500"
+                                        placeholder="Enter password"
+                                    />
+                                    <button
+                                        onClick={() => setShowPassword(!showPassword)}
+                                        className="absolute right-3 top-1/2 transform -translate-y-1/2"
+                                    >
+                                        {showPassword ? <LuEye className="text-2xl" /> : <FaRegEyeSlash className="text-2xl" />}
+                                    </button>
                                 </div>
+
 
                                 {errors.password?.type === "required" && <span className="text-red-500 font-medium">This field is required</span>}
                                 {errors.password?.type === "minLength" && <span className="text-red-500 font-medium">Password Must be at least 6 character</span>}

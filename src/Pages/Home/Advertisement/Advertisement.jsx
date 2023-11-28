@@ -18,8 +18,8 @@ const Advertisement = () => {
             <h1 className=" text-2xl lg:text-4xl  font-bold text-zinc-950">Our choice of <br />
              popular real estate</h1>
             
-           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-10">
-            {advertisements?.slice(0,8).map(advertise=> <Card key={advertise._id} advertise={advertise}></Card>)}
+           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+            {advertisements?.slice(0,6).map(advertise=> <Card key={advertise._id} advertise={advertise}></Card>)}
             </div> 
             <div className="mt-10 flex items-center justify-center ">
                 <Link to="/allProperties"><button className="btn hvr-sweep-to-top border-zinc-950 ">Browse All Properties</button></Link>

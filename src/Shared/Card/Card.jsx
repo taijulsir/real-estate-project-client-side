@@ -36,7 +36,7 @@ const Card = ({ advertise }) => {
               </div>
             </div>
             <a >
-              <h3 className="mb-2 text-xl lg:text-2xl font-bold dark:text-white">{advertise.propertyTitle}</h3>
+              <h3 className="mb-2 text-xl  font-bold dark:text-white">{advertise.propertyTitle}</h3>
             </a>
             {/* agent information */}
             <div className="flex flex-wrap items-center cursor-pointer  rounded-lg w-full py-2">

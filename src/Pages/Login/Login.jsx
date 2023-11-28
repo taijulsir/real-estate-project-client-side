@@ -4,12 +4,15 @@ import { LuEye } from "react-icons/lu";
 import { FcGoogle } from "react-icons/fc";
 import { ImGithub } from "react-icons/im";
 import { BsFacebook } from "react-icons/bs";
+import { FaRegEyeSlash } from "react-icons/fa6";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import useAuth from "../../Hooks/useAuth/useAuth"
 import useAxiosPublic from "../../Hooks/useAxiosPublic/useAxiosPublic";
 import Swal from "sweetalert2";
+import { useState } from "react";
 const Login = () => {
+    const [showPassword,setShowPassWord] = useState(false)
     const {login,googleLogin,githubLogin} = useAuth()
     const axiosPublic = useAxiosPublic()
     const location = useLocation()
@@ -87,7 +90,9 @@ const Login = () => {
                         {/* password */}
                         <div className="mt-8">
                             <div className="relative flex items-center">
-                                <LuEye className="text-2xl absolute right-3 top-1/2 transform -translate-y-1/2" />
+                                <button onClick={()=>setShowPassWord(!showPassword)}>{showPassword?<LuEye className="text-2xl absolute right-3 top-1/2 transform -translate-y-1/2" /> :<FaRegEyeSlash className="text-2xl absolute right-3 top-1/2 transform -translate-y-1/2"></FaRegEyeSlash>}</button>
+                                
+                               
                                 <input
                                     {...register("password", {
                                         required: true,
@@ -95,7 +100,8 @@ const Login = () => {
                                         maxLength: 20,
                                         pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&*!])[A-Za-z\d@#$%^&*!]+$/
                                     })}
-                                    type="password"
+                                    
+                                    type={showPassword? 'text' : 'password'}
                                     className="bg-transparent w-full text-sm border-b border-[#333] px-6 py-3 outline-none placeholder:text-[#333]"
                                     placeholder="Enter password"
                                 />
