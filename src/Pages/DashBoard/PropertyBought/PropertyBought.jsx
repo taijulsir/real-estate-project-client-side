@@ -4,6 +4,8 @@ import useAxiosSecure from "../../../Hooks/useAxiosSecure/useAxiosSecure";
 import { CiLocationOn } from "react-icons/ci";
 import "../../../Shared/ButtonHover/ButtonHover.css"
 import { Link } from "react-router-dom";
+import { IoCheckmarkCircleOutline } from "react-icons/io5";
+
 const PropertyBought = () => {
     const { user } = useAuth()
     const axiosSecure = useAxiosSecure()
@@ -47,6 +49,9 @@ const PropertyBought = () => {
                         <div className="px-6">
                             {property.status === "accepted" ? <Link to={`payment/${property._id}`}><button type="button"
                                 className="px-6 btn py-2 hvr-sweep-to-top mt-5 rounded text-[#333] text-sm tracking-wider font-semibold border-2 border-[#333] hover:bg-gray-50 outline-none">Pay</button></Link> : ""}
+                        </div>
+                        <div className="px-6">
+                            {property?.status === "Bought" ? <p className="text-base text-green-600 flex items-center mt-5"><IoCheckmarkCircleOutline className="text-xl font-bold text-green-600 bg-black rounded-full mr-2"></IoCheckmarkCircleOutline> Transaction Id : {property?.transactionId}</p> : ""}
                         </div>
                     </div>)}
             </div>

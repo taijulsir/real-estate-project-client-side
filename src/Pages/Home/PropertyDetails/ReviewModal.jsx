@@ -5,7 +5,7 @@ import useAuth from "../../../Hooks/useAuth/useAuth";
 import useAxiosPublic from "../../../Hooks/useAxiosPublic/useAxiosPublic";
 import Swal from "sweetalert2";
 import toast, { Toaster } from "react-hot-toast";
-
+import "../../../Shared/ButtonHover/ButtonHover.css"
 
 const ReviewModal = ({ properties}) => {
     const { user } = useAuth()
@@ -46,9 +46,8 @@ const ReviewModal = ({ properties}) => {
     }
 
     return (
-        <div>
-
-            <button className="btn" onClick={handleModal}>Review Now</button>
+        <div className="mt-5 container mx-auto mb-5">
+            <button className="btn border border-zinc-950 hvr-sweep-to-top text-xl" onClick={handleModal}>Review Now</button>
             <dialog id="my_modal_3" className="modal">
                 <div className="modal-box">
                     <form method="dialog">

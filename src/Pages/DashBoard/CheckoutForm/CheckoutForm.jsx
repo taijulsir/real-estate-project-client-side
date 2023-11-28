@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import useAuth from "../../../Hooks/useAuth/useAuth";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure/useAxiosSecure";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { FaCheck } from "react-icons/fa";
 import { IoWarningOutline } from "react-icons/io5";
 import Swal from "sweetalert2";
@@ -17,6 +17,7 @@ const CheckoutForm = () => {
     const axiosSecure = useAxiosSecure()
     const [clientSecret, setClientSecret] = useState('')
     const [transjectionId, setTransjectionId] = useState('')
+    const navigate = useNavigate()
 
     const item = useLoaderData()
     console.log(item)
@@ -95,15 +96,15 @@ const CheckoutForm = () => {
                 console.log(payment)
                 const res = await axiosSecure.post('/payments', payment)
                 console.log(res.data)
-                if (res.data?.insertedId) {
-                    Swal.fire({
-                        position: "top-end",
+                if (res.data?.result?.insertedId) {
+                    navigate('/dashboard/propertyBought')
+                    Swal.fire({                       
                         icon: "success",
                         title: "Your work has been saved",
                         showConfirmButton: false,
                         timer: 1500
                     });
-                    // navigate('/dashboard/paymenthistory')
+                    
                 }
             }
         }
