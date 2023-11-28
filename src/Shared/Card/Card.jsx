@@ -1,5 +1,13 @@
 import { Link } from "react-router-dom";
-
+import { IoIosHeartEmpty } from "react-icons/io";
+import { BsCart2 } from "react-icons/bs";
+import { CiLocationOn } from "react-icons/ci";
+import { AiOutlineDollar } from "react-icons/ai";
+import { MdOutlineVerifiedUser } from "react-icons/md";
+import { LiaBathSolid } from "react-icons/lia";
+import { IoBedOutline } from "react-icons/io5";
+import { SlSizeActual } from "react-icons/sl";
+import "../../Shared/ButtonHover/ButtonHover.css"
 /* eslint-disable react/prop-types */
 const Card = ({ advertise }) => {
   return (
@@ -9,41 +17,51 @@ const Card = ({ advertise }) => {
           <div className="block mb-2" >
             <div className="relative overflow-hidden">
               <div className="mb-5 overflow-hidden">
-                <img className="object-cover w-full mx-auto transition-all rounded h-72 group-hover:scale-110"
+                <img className="object-cover w-full mx-auto transition-all rounded-md h-72 group-hover:scale-110"
                   src={advertise.propertyImage} />
               </div>
               <div className="absolute flex flex-col top-4 right-4">
                 <a className="flex items-center">
                   <div
                     className="relative flex items-center justify-center p-3 mb-3 transition-all translate-x-20 bg-white rounded dark:bg-gray-700 dark:text-white group-hover:translate-x-0 wishlist hover:bg-blue-200 dark:hover:bg-blue-600 group">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                      fill="currentColor" className="bi bi-heart" viewBox="0 0 16 16">
-                      <path
-                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
-                    </svg>
+                    <IoIosHeartEmpty className="text-2xl text-red-500"></IoIosHeartEmpty>
                   </div>
                 </a>
                 <a className="flex items-center">
                   <div
                     className="relative flex items-center justify-center p-3 mb-3 transition-all translate-x-20 bg-white rounded dark:bg-gray-700 dark:text-white group-hover:translate-x-0 wishlist hover:bg-blue-200 dark:hover:bg-blue-600 group">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                      fill="currentColor" className="bi bi-cart2" viewBox="0 0 16 16">
-                      <path
-                        d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
-                    </svg>
+                    <BsCart2 className="text-2xl text-green-500"></BsCart2>
                   </div>
                 </a>
               </div>
             </div>
             <a >
-              <h3 className="mb-2 text-xl font-bold dark:text-white">{advertise.propertyTitle}</h3>
+              <h3 className="mb-2 text-xl lg:text-2xl font-bold dark:text-white">{advertise.propertyTitle}</h3>
             </a>
-            <p className="text-lg font-bold text-blue-500 dark:text-blue-300 ">
-              <span className="text-xs font-semibold text-gray-400  ">${advertise.priceRange}</span>
-            </p>
-           <Link to={`/propertyDetails/${advertise._id}`}>
-           <button className="btn bg-amber-600 mt-2">Details</button>
-           </Link>
+            {/* agent information */}
+            <div className="flex flex-wrap items-center cursor-pointer  rounded-lg w-full py-2">
+              <img src={advertise.agentImage} className="w-12 h-12 rounded-full object-cover" />
+              <div className="ml-4 flex-1">
+                <p className="text-lg text-black font-semibold">{advertise.agentName}</p>
+                <p className="text-base text-gray-400">{advertise.agentEmail}</p>
+              </div>
+            </div>
+            <div className="flex justify-between my-4 ">
+              <p className="text-sm text-gray-400 flex items-center"><CiLocationOn className="text-2xl mr-2 text-zinc-950"></CiLocationOn> {advertise?.propertyLocation}</p>
+              <p className="text-sm text-gray-400 flex items-center"><AiOutlineDollar className="text-2xl mr-2 text-zinc-600"></AiOutlineDollar> {advertise?.priceRange}</p>
+              <p className="text-sm text-gray-400 flex items-center"><MdOutlineVerifiedUser className="text-2xl mr-2 text-green-600"></MdOutlineVerifiedUser> {advertise?.verified_status}</p>
+            </div>
+
+            <div className="flex gap-5">
+              <Link to={`/propertyDetails/${advertise._id}`} className="w-full">
+                <button className="btn border-zinc-950 hvr-sweep-to-top mt-2 text-lg w-full">Details</button>
+              </Link>
+              <div className="flex items-center w-full">
+                <p className="flex items-center text-xl mr-2"><LiaBathSolid className="text-2xl mr-2"></LiaBathSolid> {advertise.bath} </p>
+                <p className="flex items-center text-xl mr-2"><IoBedOutline className="text-2xl mr-2"></IoBedOutline> {advertise.bed} </p>
+                <p className="flex items-center mr-2"><SlSizeActual className="text-xl mr-2"></SlSizeActual> {advertise.size} </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -4,18 +4,7 @@ import { FaRegCommentDots } from "react-icons/fa6";
 
 
 const ReviewCards = ({ review }) => {
-    const formatLocalTime = (timeString) => {
-        try {
-            const date = new Date(timeString);
-            const options = { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
-            const formatter = new Intl.DateTimeFormat(undefined, options);
-            return formatter.format(date);
-        } catch (error) {
-            console.error('Error parsing date:', error);
-            return 'Invalid Date';
-        }
-    }
-
+   
     return (
         <div>
             <div className="container border flex flex-col w-full shadow-2xl  shadow-gray-300/50  p-6 mx-auto divide-y rounded-md">
@@ -26,7 +15,7 @@ const ReviewCards = ({ review }) => {
                         </div>
                         <div>
                             <h4 className="font-bold  text-base">{review.reviewerName}</h4>
-                            <span className="text-xs dark:text-gray-400 ">Time: {review.date ? formatLocalTime(review.reviewTime): 'N/A'}</span>
+                            <span className="text-xs dark:text-gray-400 ">{review.reviewerEmail}</span>
                         </div>
                     </div>
                     <div className="flex items-center space-x-2 ">
