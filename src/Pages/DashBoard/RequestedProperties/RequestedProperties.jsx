@@ -4,21 +4,21 @@ import useAuth from "../../../Hooks/useAuth/useAuth";
 import { FaRegCircleCheck } from "react-icons/fa6";
 import { TbForbid2 } from "react-icons/tb";
 import Swal from "sweetalert2";
-
+import "../../../Shared/ButtonHover/ButtonHover.css"
 
 
 const RequestedProperties = () => {
-   
+
     const axiosSecure = useAxiosSecure()
     const { user } = useAuth()
     const { data: requestedProperties = [], refetch } = useQuery({
         queryKey: [user?.email, 'requestedProperties'],
         queryFn: async () => {
-            const res = await axiosSecure.get(`/requestedProperties/${user?.email}`)     
+            const res = await axiosSecure.get(`/requestedProperties/${user?.email}`)
             return res.data;
         }
     })
-    const handleAccept = (requestId,status) => {
+    const handleAccept = (requestId, status) => {
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",
@@ -27,26 +27,24 @@ const RequestedProperties = () => {
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
             confirmButtonText: `Yes, accepted it!`,
-          }).then(async(result) => {
+        }).then(async (result) => {
             if (result.isConfirmed) {
 
-                const res = await axiosSecure.put(`/api/request/${requestId}`,status)
+                const res = await axiosSecure.put(`/api/request/${requestId}`, status)
                 console.log(res.data)
-                if(res.data.accptedResult.modifiedCount>0 || res.data.rejectedResult.modifiedCount>0){
+                if (res.data.accptedResult.modifiedCount > 0 || res.data.rejectedResult.modifiedCount > 0) {
                     Swal.fire({
                         title: "Updated!",
                         text: `Property has been accepted`,
                         icon: "success"
-                      });
-                      refetch()
-                }            
+                    });
+                    refetch()
+                }
             }
-          });
-       
+        });
+
     }
-
-
-    const handleReject = (requestId,status) =>{
+    const handleReject = (requestId, status) => {
         console.log(status)
         Swal.fire({
             title: "Are you sure?",
@@ -56,21 +54,21 @@ const RequestedProperties = () => {
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
             confirmButtonText: `Yes, rejected it!`,
-          }).then(async(result) => {
+        }).then(async (result) => {
             if (result.isConfirmed) {
 
-                const res = await axiosSecure.patch(`/api/reject/${requestId}`,status)
+                const res = await axiosSecure.patch(`/api/reject/${requestId}`, status)
                 console.log(res.data)
-                if(res.data.modifiedCount>0){
+                if (res.data.modifiedCount > 0) {
                     Swal.fire({
                         title: "Updated!",
                         text: `Property has been rejected`,
                         icon: "success"
-                      });
-                      refetch()
-                }            
+                    });
+                    refetch()
+                }
             }
-          });
+        });
     }
     return (
         <div className="px-3 lg:px-6 my-6">
@@ -99,13 +97,7 @@ const RequestedProperties = () => {
                                     Offer Price
                                 </th>
                                 <th className="px-6 py-3 text-left text-sm font-semibold text-white">
-                                    Status
-                                </th>
-                                <th className="px-6 py-3 text-left text-sm font-semibold text-white">
-                                    Accept
-                                </th>
-                                <th className="px-6 py-3 text-left text-sm font-semibold text-white">
-                                    Reject
+                                    Status(Accept / Reject)
                                 </th>
                             </tr>
                         </thead>
@@ -130,19 +122,30 @@ const RequestedProperties = () => {
                                     <td className="px-6 py-4">
                                         {request?.offerAmount}
                                     </td>
-                                    <td className="px-6 py-4">
+                                    {/* <td className="px-6 py-4">
                                         {request?.status}
-                                    </td>
-                                    <td className="px-6 py-4 text-sm">
-                                        <button className="mr-4 btn ">
-                                            <FaRegCircleCheck onClick={()=>handleAccept(request?._id,{status:"accepted"})} className="text-2xl text-green-600 "></FaRegCircleCheck>
-                                        </button>
-                                    </td>
-                                    <td className="px-6 py-4 text-sm">
-                                        <button onClick={()=>handleReject(request._id,{status:"rejected"})} className="mr-4 btn">
-                                            <TbForbid2 className="text-2xl text-red-600 font-bold "></TbForbid2>
-                                        </button>
-                                    </td>
+                                    </td> */}
+                                    <tr>
+                                        {
+                                            request?.status === "accepted" || request?.status === "rejected" ? (
+                                                <td className="px-6 py-4">{request?.status}</td>
+                                            ) : (
+                                                <>
+                                                    <td className="px-6 py-4 text-sm">
+                                                        <button className="mr-4 btn ">
+                                                            <FaRegCircleCheck onClick={() => handleAccept(request?._id, { status: "accepted" })} className="text-2xl text-green-600"></FaRegCircleCheck>
+                                                        </button>
+                                                    </td>
+                                                    <td className="px-6 py-4 text-sm">
+                                                        <button onClick={() => handleReject(request._id, { status: "rejected" })} className="mr-4 btn">
+                                                            <TbForbid2 className="text-2xl text-red-600 font-bold "></TbForbid2>
+                                                        </button>
+                                                    </td>
+                                                </>
+                                            )
+                                        }
+                                    </tr>
+
                                 </tr>)}
                         </tbody>
                     </table>

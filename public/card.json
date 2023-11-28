@@ -81,12 +81,13 @@
     "bed": 0,
     "bath": 1,
     "size": "1,000 sq ft",
-    "verified_status": "pending"
+    "verified_status": "pending",
+   
   },
   {
     
     "propertyImage": "https://i.ibb.co/3Rg6C90/6.webp",
-    "propertyTitle": "Spacious Penthouse, Skyline Views",
+    "propertyTitle": "Skyline Views",
     "propertyLocation": "Skyline Views",
     "priceRange": "$700,000 - $800,000",
     "agentName": "Mostofa",
@@ -95,7 +96,8 @@
     "bed": 4,
     "bath": 3,
     "size": "3,800 sq ft",
-    "verified_status": "pending"
+    "verified_status": "verified",
+    "agentImage" : "https://i.ibb.co/6RhRY7r/user2.jpg"
   },
   {
     
@@ -109,6 +111,8 @@
     "bed": 3,
     "bath": 2,
     "size": "2,300 sq ft",
-    "verified_status": "pending"
+    "verified_status": "verified",
+    "agentImage" : "https://i.ibb.co/6RhRY7r/user2.jpg"
   }
 ]
+

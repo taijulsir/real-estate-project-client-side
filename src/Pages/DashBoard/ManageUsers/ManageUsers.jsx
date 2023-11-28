@@ -3,13 +3,14 @@ import { useQuery } from "@tanstack/react-query";
 import { GrUserAdmin } from "react-icons/gr";
 import { LuUserCog } from "react-icons/lu";
 import { MdOutlineDelete } from "react-icons/md";
-import { RiUserForbidLine } from "react-icons/ri";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure/useAxiosSecure";
 import Swal from "sweetalert2";
+import { GiHandcuffed } from "react-icons/gi";
 
 
 const ManageUsers = () => {
     const axiosSecure = useAxiosSecure()
+    // fetching data by tanstaq query
     const { data: users, refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
@@ -17,8 +18,6 @@ const ManageUsers = () => {
             return res.data;
         }
     })
-
-
     // handle user delete 
     const handleDelete = (id) => {
         Swal.fire({
@@ -75,10 +74,37 @@ const ManageUsers = () => {
         });
 
     }
+    // handle fraud agent
+    const handleFraud = (id, status) => {
+        Swal.fire({
+            title: "Are you sure make fraud?",
+            text: "You won't recover it!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, make this user fraud!"
+        }).then(async (result) => {
+            if (result.isConfirmed) {
+                const res = await axiosSecure.patch(`/users/fraud/${id}`, status)
+                console.log(res.data)
+                if (res.data.statusResult.modifiedCount > 0) {
+                    refetch()
+                    Swal.fire({
+                        title: "Deleted!",
+                        text: "Your file has been deleted.",
+                        icon: "success"
+                    });
+                }
+            }
+        });
+    }
     return (
         <div>
             <div className="overflow-x-auto">
                 <table className="min-w-full bg-white font-[sans-serif]">
+
+                    {/* table heading */}
                     <thead className="bg-gray-800 whitespace-nowrap">
                         <tr>
                             <th className="px-6 py-3 text-left text-sm font-semibold text-white">
@@ -108,6 +134,7 @@ const ManageUsers = () => {
                         </tr>
                     </thead>
                     <tbody className="whitespace-nowrap">
+                        {/* dynamically mapping table data */}
                         {users?.map((user, index) =>
                             <tr key={index} className="even:bg-blue-50">
                                 <td className="px-6 py-4 text-sm ">
@@ -127,21 +154,45 @@ const ManageUsers = () => {
                                 <td className="px-6 py-4 text-lg">
                                     {user?.role}
                                 </td>
+                                {/* make admin */}
                                 <td className="px-6 py-4">
-                                    <button onClick={() => handleRole(user._id, { role: "admin" })} className="mr-4 btn bg-amber-500 ">
-                                        <GrUserAdmin className="text-2xl"></GrUserAdmin>
-                                    </button>
+                                    {
+                                        user?.status === "Fraud" ?
+                                            <td className="px-6 py-4 text-lg text-red-600">
+                                                {user?.status}
+                                            </td>
+                                            : <button onClick={() => handleRole(user._id, { role: "admin" })} className="mr-4 btn bg-amber-500 ">
+                                                <GrUserAdmin className="text-2xl"></GrUserAdmin>
+                                            </button>
+                                    }
                                 </td>
+                                {/* make agent */}
                                 <td className="px-6 py-4">
-                                    <button onClick={() => handleRole(user._id, { role: "agent" })} className="mr-4 btn bg-amber-500">
-                                        <LuUserCog className="text-2xl "></LuUserCog>
-                                    </button>
+                                    {
+                                        user?.status === "Fraud" ?
+                                            <td className="px-6 py-4 text-lg text-red-600">
+                                                {user?.status}
+                                            </td>
+                                            : <button onClick={() => handleRole(user._id, { role: "agent" })} className="mr-4 btn bg-amber-500">
+                                                <LuUserCog className="text-2xl "></LuUserCog>
+                                            </button>
+                                    }
                                 </td>
+                                {/* make fraud */}
                                 <td className="px-6 py-4">
-                                    <button className="mr-4 btn bg-amber-500">
-                                        <RiUserForbidLine className="text-2xl "></RiUserForbidLine>
-                                    </button>
+                                    {
+                                        user?.status === "Fraud" ?
+                                            <td className="px-6 py-4 text-lg text-red-600">
+                                                {user?.status}
+                                            </td>
+                                            : <button
+                                                onClick={() => handleFraud(user?._id, { status: "Fraud" })}
+                                                disabled={user?.role === "user" || user?.role === "admin"} className="mr-4 btn bg-amber-500">
+                                                <GiHandcuffed className="text-2xl text-red-700 "></GiHandcuffed>
+                                            </button>
+                                    }
                                 </td>
+                                {/* Delete user */}
                                 <td className="px-6 py-4 text-sm">
                                     <button onClick={() => handleDelete(user._id)} className="mr-4 btn bg-red-500">
                                         <MdOutlineDelete className="text-2xl "></MdOutlineDelete>

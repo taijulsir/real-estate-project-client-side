@@ -2,7 +2,8 @@ import { useQuery } from "@tanstack/react-query";
 import useAuth from "../../../Hooks/useAuth/useAuth";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure/useAxiosSecure";
 import { CiLocationOn } from "react-icons/ci";
-
+import "../../../Shared/ButtonHover/ButtonHover.css"
+import { Link } from "react-router-dom";
 const PropertyBought = () => {
     const { user } = useAuth()
     const axiosSecure = useAxiosSecure()
@@ -44,8 +45,8 @@ const PropertyBought = () => {
                             </div>
                         </div>
                         <div className="px-6">
-                            {property.status === "accepted" ? <button type="button"
-                                className="px-6 btn py-2 mt-5 rounded text-[#333] text-sm tracking-wider font-semibold border-2 border-[#333] hover:bg-gray-50 outline-none">Pay</button> : ""}
+                            {property.status === "accepted" ? <Link to={`payment/${property._id}`}><button type="button"
+                                className="px-6 btn py-2 hvr-sweep-to-top mt-5 rounded text-[#333] text-sm tracking-wider font-semibold border-2 border-[#333] hover:bg-gray-50 outline-none">Pay</button></Link> : ""}
                         </div>
                     </div>)}
             </div>

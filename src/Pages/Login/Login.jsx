@@ -35,6 +35,7 @@ const Login = () => {
     const handleSocialSignin = (popUp) => {
         popUp()       
         .then(result=>{
+            console.log(result.user)
             const authInfo = {
                 name: result.user?.displayName,
                 email: result.user?.email,
@@ -43,6 +44,7 @@ const Login = () => {
             }
             axiosPublic.post('/users',authInfo)
             .then(res=> {
+
                 if(res.data?.insertedId|| res.data?.insertedId === null){
                     navigate(location?.state ? location.state : '/')
                     Swal.fire({

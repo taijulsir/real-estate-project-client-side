@@ -81,7 +81,7 @@ const DashBoardNav = ({open,setOpen,dropdown,setDropdown}) => {
                                                         </p>
                                                     </div>
                                                     <div className="mr-2">
-                                                        <img src={user?.photoURL}
+                                                        <img referrerPolicy="no-referrer" src={user?.photoURL}
                                                             className="object-cover object-right w-10 h-10 rounded-full"
                                                             alt="person" />
                                                     </div>

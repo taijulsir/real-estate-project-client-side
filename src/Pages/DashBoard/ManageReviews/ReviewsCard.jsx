@@ -6,15 +6,7 @@ import Swal from "sweetalert2";
 
 const ReviewsCard = ({ reviews, refetch }) => {
     const axiosSecure = useAxiosSecure()
-    const { _id, propertyTitle, reviewerName, reviewerEmail, reviewerImage, reviewTime, reviewDescription } = reviews;
-    // const handleDelete = async (id) => {
-    //     const res = await axiosSecure.delete(`/reviews/${id}`)
-    //     .then(deletedData=> {
-    //         if(res.data.deletedCount>0){
-
-    //         }
-    //     })
-    // }
+    const { _id, reviewerName, reviewerEmail, reviewerImage, reviewDescription } = reviews;
 
     const handleDelete = async (id) => {
         Swal.fire({
@@ -44,6 +36,9 @@ const ReviewsCard = ({ reviews, refetch }) => {
         <div>
             <div
                 className="bg-white shadow-[0_2px_15px_-6px_rgba(0,0,0,0.2)] px-6 py-8 w-full  rounded-lg font-[sans-serif] overflow-hidden mx-auto mt-4">
+                <div>
+                    <h3 className="text-base font-semibold text-gray-500 mb-5">Property: {reviews.propertyTitle}</h3>
+                </div>
                 <div>
                     <h3 className="text-lg font-semibold flex-1">Reviewer</h3>
                 </div>
