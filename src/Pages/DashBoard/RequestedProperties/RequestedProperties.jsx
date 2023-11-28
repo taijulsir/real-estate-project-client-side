@@ -6,18 +6,19 @@ import { TbForbid2 } from "react-icons/tb";
 import Swal from "sweetalert2";
 
 
+
 const RequestedProperties = () => {
+   
     const axiosSecure = useAxiosSecure()
     const { user } = useAuth()
     const { data: requestedProperties = [], refetch } = useQuery({
         queryKey: [user?.email, 'requestedProperties'],
         queryFn: async () => {
-            const res = await axiosSecure.get(`/requestedProperties/${user?.email}`)
+            const res = await axiosSecure.get(`/requestedProperties/${user?.email}`)     
             return res.data;
         }
     })
-    const handleAction = (id,status,item) => {
-        console.log(id,status,item)
+    const handleAccept = (requestId,status) => {
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",
@@ -25,17 +26,51 @@ const RequestedProperties = () => {
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: `Yes, ${status.status} it!`,
-          }).then((result) => {
+            confirmButtonText: `Yes, accepted it!`,
+          }).then(async(result) => {
             if (result.isConfirmed) {
-              Swal.fire({
-                title: "Updated!",
-                text: `Property has been ${status.status}`,
-                icon: "success"
-              });
+
+                const res = await axiosSecure.put(`/api/request/${requestId}`,status)
+                console.log(res.data)
+                if(res.data.accptedResult.modifiedCount>0 || res.data.rejectedResult.modifiedCount>0){
+                    Swal.fire({
+                        title: "Updated!",
+                        text: `Property has been accepted`,
+                        icon: "success"
+                      });
+                      refetch()
+                }            
             }
           });
        
+    }
+
+
+    const handleReject = (requestId,status) =>{
+        console.log(status)
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: `Yes, rejected it!`,
+          }).then(async(result) => {
+            if (result.isConfirmed) {
+
+                const res = await axiosSecure.patch(`/api/reject/${requestId}`,status)
+                console.log(res.data)
+                if(res.data.modifiedCount>0){
+                    Swal.fire({
+                        title: "Updated!",
+                        text: `Property has been rejected`,
+                        icon: "success"
+                      });
+                      refetch()
+                }            
+            }
+          });
     }
     return (
         <div className="px-3 lg:px-6 my-6">
@@ -100,11 +135,11 @@ const RequestedProperties = () => {
                                     </td>
                                     <td className="px-6 py-4 text-sm">
                                         <button className="mr-4 btn ">
-                                            <FaRegCircleCheck onClick={()=>handleAction(request?._id,{status:"accepted"},request)} className="text-2xl text-green-600 "></FaRegCircleCheck>
+                                            <FaRegCircleCheck onClick={()=>handleAccept(request?._id,{status:"accepted"})} className="text-2xl text-green-600 "></FaRegCircleCheck>
                                         </button>
                                     </td>
                                     <td className="px-6 py-4 text-sm">
-                                        <button onClick={()=>handleAction(request._id,{status: "rejected"})} className="mr-4 btn">
+                                        <button onClick={()=>handleReject(request._id,{status:"rejected"})} className="mr-4 btn">
                                             <TbForbid2 className="text-2xl text-red-600 font-bold "></TbForbid2>
                                         </button>
                                     </td>
