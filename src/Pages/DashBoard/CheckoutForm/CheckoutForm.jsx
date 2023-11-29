@@ -18,17 +18,14 @@ const CheckoutForm = () => {
     const [clientSecret, setClientSecret] = useState('')
     const [transjectionId, setTransjectionId] = useState('')
     const navigate = useNavigate()
-
     const item = useLoaderData()
     console.log(item)
     const price = item.offerAmount;
     const title = item.propertyTitle
-    const agentemail = item.agentemail;
+    const agentemail = item.agentEmail;
     const location = item.propertyLocation
     const paymentId = item._id
-    console.log(price)
-
-
+ 
     useEffect(() => {
         if (price > 0) {
             axiosSecure.post('/create-payment-intent', { price })
@@ -38,8 +35,6 @@ const CheckoutForm = () => {
                 })
         }
     }, [axiosSecure, price])
-
-
 
     const handleSubmit = async (event) => {
         event.preventDefault()
@@ -85,13 +80,13 @@ const CheckoutForm = () => {
                 // Now save the payment in the database
                 const payment = {
                     paymentId,
-                    email: user.email,
-                    buyername: user.displayName,
-                    price,
-                    title,
+                    buyerEmail: user.email,
+                    buyerName: user.displayName,
+                    offerAmount:price,
+                    propertyTitle:title,
                     transjectionId: paymentIntent.id,
-                    location,
-                    agentemail
+                    propertyLocation:location,
+                    agentEmail:agentemail
                 }
                 console.log(payment)
                 const res = await axiosSecure.post('/payments', payment)
@@ -100,7 +95,7 @@ const CheckoutForm = () => {
                     navigate('/dashboard/propertyBought')
                     Swal.fire({                       
                         icon: "success",
-                        title: "Your work has been saved",
+                        title: "Your Payment is succesfull",
                         showConfirmButton: false,
                         timer: 1500
                     });

@@ -24,6 +24,7 @@ import OfferPropertyForm from "../Pages/DashBoard/Wishlist/OfferPropertyForm"
 import RequestedProperties from "../Pages/DashBoard/RequestedProperties/RequestedProperties";
 import Payment from "../Pages/DashBoard/Payment/Payment";
 import ALlProperties from "../Pages/AllProperties/ALlProperties";
+import SoldProperty from "../Pages/DashBoard/SoldProperty/SoldProperty";
 
 const router = createBrowserRouter([
     {
@@ -109,6 +110,10 @@ const router = createBrowserRouter([
             {
                 path: "requestedProperties",
                 element: <RequestedProperties></RequestedProperties>
+            },
+            {
+                path: "soldProperties",
+                element: <SoldProperty></SoldProperty>
             },
             // normal user routes
             {
