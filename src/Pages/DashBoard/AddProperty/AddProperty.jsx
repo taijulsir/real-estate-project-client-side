@@ -1,5 +1,4 @@
 import { useForm } from "react-hook-form";
-import LeftSide from "./LeftSide";
 import useAuth from "../../../Hooks/useAuth/useAuth";
 import useAxiosPublic from "../../../Hooks/useAxiosPublic/useAxiosPublic";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure/useAxiosSecure";
@@ -37,6 +36,7 @@ const AddProperty = () => {
             verified_status: "pending"
         }
         const propertiesRes = await axiosSecure.post('/properties', properties)
+        console.log(propertiesRes.data)
         if (propertiesRes.data.insertedId) {
             Swal.fire({
                 icon: 'success',
@@ -48,132 +48,85 @@ const AddProperty = () => {
     }
 
     return (
-        <div style={{ backgroundImage: 'url(https://i.ibb.co/S0PRyFS/menu-bg.png)' }}>
-            <section className="py-16 bg-gray-100 dark:bg-gray-800">
-                <div className=" px-4  ">
-                    <div className="p-8 px-4 bg-white dark:bg-gray-900">
-                        <div className="grid grid-cols-1 lg:grid-cols-[30%,1fr] gap-6">
-                            {/* left side */}
-                            <div className="">
-                                <h2 className="px-4 text-lg font-medium leading-6 text-gray-900 dark:text-gray-300">Provide Your Property Information
-                                </h2>
-                                <p className="px-4 mt-1 text-sm text-gray-600 dark:text-gray-400">
-                                    Provide Correct information
-                                </p>
-                                <div className="hidden lg:flex flex-col">
-                                    <LeftSide></LeftSide>
+        <div>
+            <div className=" px-4 lg:px-0">
+                <section className="lg:p-16 dark:bg-gray-800 dark:text-gray-50">
+                    <form onSubmit={handleSubmit(onSubmit)} className="container flex flex-col mx-auto space-y-12">
+                        <fieldset className="grid grid-cols-4 gap-6  rounded-md shadow-sm dark:bg-gray-900">
+                            {/* property photo */}
+                            <div className="space-y-2 col-span-full lg:col-span-1">
+                                <div>
+                                    <h2 className=" text-base md:text-xl font-semibold text-zinc-950 mb-2 lg:mb-4">Property Image <span className="text-red-700">*</span></h2>
+                                    <div className="flex items-center justify-center w-full">
+                                        <label className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer  dark:hover:bg-bray-800 dark:bg-gray-700  dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                                            <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                                                <svg className="w-8 h-8 mb-4 text-zinc-950" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                                                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
+                                                </svg>
+                                                <p className="mb-2 text-sm text-zinc-950"><span className="font-semibold">Click to upload</span> or drag and drop</p>
+                                                <p className="text-xs text-zinc-950">SVG, PNG, JPG or GIF </p>
+                                            </div>
+                                            <input id="dropzone-file" type="file" {...register("propertyImage1", { required: true })}  />
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
-
-                            {/* form */}
-                            <form onSubmit={handleSubmit(onSubmit)}>
-                                <div className="flex justify-between">
-                                    {/* name */}
-                                    <div className="px-4 mb-6 flex-1">
-                                        <label className="block mb-2 text-sm font-medium dark:text-gray-400"> Agent Name</label>
-                                        <input
-                                            {...register('agentName')}
-                                            className="block w-full px-4 py-3 mb-2 text-sm placeholder-gray-500 bg-white border rounded dark:text-gray-400 dark:placeholder-gray-500 dark:border-gray-800 dark:bg-gray-800"
-                                            type="text" defaultValue={user?.displayName} readOnly />
-                                    </div>
-                                    {/* email */}
-                                    <div className="px-4 mb-6 flex-1">
-                                        <label className="block mb-2 text-sm font-medium dark:text-gray-400"> Agent Email</label>
-                                        <input
-                                            {...register('agentEmail')}
-                                            className="block w-full px-4 py-3 mb-2 text-sm placeholder-gray-500 bg-white border rounded dark:text-gray-400 dark:placeholder-gray-500 dark:border-gray-800 dark:bg-gray-800"
-                                            type="text" defaultValue={user?.email} readOnly />
-                                    </div>
+                            <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
+                                {/* agent name */}
+                                <div className="col-span-full lg:col-span-3">
+                                    <h2 className=" text-base md:text-xl font-semibold text-zinc-950 mb-2 lg:mb-4">Agent Name <span className="text-red-700">*</span></h2>
+                                    <input className="pt-4 pb-4 pl-2 md:p-4 w-full bg-[#fff]   text-base font-normal text-[#1B1A1A99] rounded" type="text"  {...register('agentName')} defaultValue={user?.displayName} readOnly  />
                                 </div>
-                                <div className="flex justify-between">
-                                    {/* title */}
-                                    <div className="px-4 mb-6 flex-1">
-                                        <label className="block mb-2 text-sm font-medium dark:text-gray-400"> Property Title</label>
-                                        <input
-                                            {...register("propertyTitle", { required: true })}
-                                            className="block w-full px-4 py-3 mb-2 text-sm placeholder-gray-500 bg-white border rounded dark:text-gray-400 dark:placeholder-gray-500 dark:border-gray-800 dark:bg-gray-800"
-                                            type="text" placeholder="Enter title" />
-
-                                    </div>
-                                    {/* location */}
-                                    <div className="px-4 mb-6 flex-1">
-                                        <label className="block mb-2 text-sm font-medium dark:text-gray-400"> Property Location</label>
-                                        <input
-                                            {...register('propertyLocation', { required: true })}
-                                            className="block w-full px-4 py-3 mb-2 text-sm placeholder-gray-500 bg-white border rounded dark:text-gray-400 dark:placeholder-gray-500 dark:border-gray-800 dark:bg-gray-800"
-                                            type="text" placeholder="Enter location" />
-
-                                    </div>
+                                {/* agent email */}
+                                <div className="col-span-full lg:col-span-3">
+                                    <h2 className=" text-base md:text-xl font-semibold text-zinc-950 mb-2 lg:mb-4">Agent Email <span className="text-red-700">*</span></h2>
+                                    <input className="pt-4 pb-4 pl-2 md:p-4 w-full bg-[#fff]   text-base font-normal text-[#1B1A1A99] rounded" type='email' {...register('agentEmail')} readOnly defaultValue={user?.email} />
+                                </div>
+                                {/* property title */}
+                                <div className="col-span-full lg:col-span-3">
+                                    <h2 className=" text-base md:text-xl font-semibold text-zinc-950 mb-2 lg:mb-4">Property Title <span className="text-red-700">*</span></h2>
+                                    <input className="pt-4 pb-4 pl-2 md:p-4 w-full bg-[#fff]   text-base font-normal text-[#1B1A1A99] rounded" type="text" {...register("propertyTitle", { required: true })}  placeholder="Enter Your Property Title Here" />
                                 </div>
 
-                                <div className="flex justify-between">
-                                    {/* price */}
-                                    <div className="px-4 mb-6 flex-1">
-                                        <label className="block mb-2 text-sm font-medium dark:text-gray-400"> Price Range</label>
-                                        <input
-                                            {...register("priceRange", { required: true })}
-                                            className="block w-full px-4 py-3 mb-2 text-sm placeholder-gray-500 bg-white border rounded dark:text-gray-400 dark:placeholder-gray-500 dark:border-gray-800 dark:bg-gray-800"
-                                            type="text" placeholder="Enter price range like $40000-$50000" />
-                                    </div>
-
+                                {/* location */}
+                                <div className="col-span-full lg:col-span-3">
+                                    <h2 className=" text-base md:text-xl font-semibold text-zinc-950 mb-2 lg:mb-4">Property Location <span className="text-red-700">*</span></h2>
+                                    <input className="pt-4 pb-4 pl-2 md:p-4 w-full bg-[#fff]   text-base font-normal text-[#1B1A1A99] rounded" type="text"    {...register('propertyLocation', { required: true })} placeholder="Enter Your Property Location"  />
                                 </div>
-                                <div className="flex justify-between">
-                                    {/* bed */}
-                                    <div className="px-4 mb-6 flex-1">
-                                        <label className="block mb-2 text-sm font-medium dark:text-gray-400"> Quantity of Bed</label>
-                                        <input
-                                            {...register("bed", { required: true })}
-                                            className="block w-full px-4 py-3 mb-2 text-sm placeholder-gray-500 bg-white border rounded dark:text-gray-400 dark:placeholder-gray-500 dark:border-gray-800 dark:bg-gray-800"
-                                            type="number" placeholder="Enter quantity" />
-                                    </div>
-                                    {/* bath */}
-                                    <div className="px-4 mb-6 flex-1">
-
-                                        <label className="block mb-2 text-sm font-medium dark:text-gray-400"> Quantity of Bath</label>
-                                        <input
-                                            {...register('bath')}
-                                            className="block w-full px-4 py-3 mb-2 text-sm placeholder-gray-500 bg-white border rounded dark:text-gray-400 dark:placeholder-gray-500 dark:border-gray-800 dark:bg-gray-800"
-                                            type="number" placeholder="Enter Quantity" />
-                                    </div>
+                                {/* price */}
+                                <div className="col-span-full lg:col-span-2">
+                                    <h2 className=" text-base md:text-xl font-semibold text-zinc-950 mb-2 lg:mb-4">Price<span className="text-red-700">*</span></h2>
+                                    <input className="pt-4 pb-4 pl-2 md:p-4 w-full bg-[#fff]   text-base font-normal text-[#1B1A1A99] rounded" type="text"   {...register("priceRange", { required: true })} placeholder="Enter Price Range"  />
+                                </div>
+                                {/* bed */}
+                                <div className="col-span-full lg:col-span-2">
+                                    <h2 className=" text-base md:text-xl font-semibold text-zinc-950 mb-2 lg:mb-4">Bed <span className="text-red-700">*</span></h2>
+                                    <input className="pt-4 pb-4 pl-2 md:p-4 w-full bg-[#fff]   text-base font-normal text-[#1B1A1A99] rounded" type="number"   {...register("bed", { required: true })}placeholder="Enter Price Here"  />
+                                </div>
+                                {/* bath */}
+                                <div className="col-span-full lg:col-span-2">
+                                    <h2 className=" text-base md:text-xl font-semibold text-zinc-950 mb-2 lg:mb-4"> Bath <span className="text-red-700">*</span></h2>
+                                    <input className="pt-4 pb-4 pl-2 md:p-4 w-full bg-[#fff]   text-base font-normal text-[#1B1A1A99] rounded" type="number"   {...register('bath',{required:true})} placeholder="Enter Total Bath Here"  />
                                 </div>
                                 {/* size */}
-                                <div className="px-4 mb-6 lg:w-1/2">
-                                    <label className="block mb-2 text-sm font-medium dark:text-gray-400"> Property Size</label>
-                                    <input
-                                        {...register('size')}
-                                        className="block w-full px-4 py-3 mb-2 text-sm placeholder-gray-500 bg-white border rounded dark:text-gray-400 dark:placeholder-gray-500 dark:border-gray-800 dark:bg-gray-800"
-                                        type="text" placeholder="Enter property size" />
+                                <div className="col-span-full lg:col-span-2">
+                                    <h2 className=" text-base md:text-xl font-semibold text-zinc-950 mb-2 lg:mb-4">Size<span className="text-red-700">*</span></h2>
+                                    <input className="pt-4 pb-4 pl-2 md:p-4 w-full bg-[#fff]   text-base font-normal text-[#1B1A1A99] rounded" type="number"  {...register('size',{required:true})} placeholder="Enter Property Size"  />
                                 </div>
-
-                                {/* uploading photo */}
-                                <div>
-                                    <div className="px-4 mb-6 flex-1">
-                                        <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                                            htmlFor="file_input">Upload file</label>
-                                        <input
-                                            {...register("propertyImage1", { required: true })}
-                                            className="block w-full text-sm text-gray-600 border border-gray-200 rounded cursor-pointer file:hover:bg-gray-200 file:border-solid file:border-0 file:cursor-pointer dark:file:border-gray-700 dark:file:text-gray-300 dark:file:hover:bg-gray-500 dark:file:bg-gray-600 file:mr-5 file:px-5 file:py-3 bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:border-gray-800 dark:placeholder-gray-400 file:border-r file:border-gray-300 file:bg-gray-100 "
-                                            type="file" />
-                                    </div>
-                                </div>
-
+                                
                                 {/* description */}
-                                <div className="px-4 mb-6">
-                                    <label className="block mb-2 text-sm font-medium dark:text-gray-400">Description</label>
-                                    <textarea
-                                        {...register("propertyDescription", { required: true })}
-                                        className="block w-full px-4 py-3 mb-2 text-sm placeholder-gray-500 bg-white border rounded dark:text-gray-400 dark:placeholder-gray-500 dark:border-gray-800 dark:bg-gray-800"
-                                        rows="5" placeholder="Write description..."> </textarea>
+                                <div className="col-span-full">
+                                    <h2 className=" text-base md:text-xl font-semibold text-zinc-950 mb-2 lg:mb-4"> Description <span className="text-red-700">*</span></h2>
+                                    <input className="pt-4 pb-4 pl-2 md:p-4 w-full bg-[#fff]   text-base font-normal text-[#1B1A1A99] rounded" type="text" {...register("propertyDescription", { required: true })}placeholder="Enter Property description Here"  />
                                 </div>
-                                <div className="px-4 ">
-                                    <input type="submit" value="Submit" className="btn bg-sky-500" />
+                                <div className="col-span-full mt-5">
+                                    <input type="submit" value="Add Property" className="btn btn-block bg-[#4357AD] text-lg text-[#fff] hover:bg-[#154360] " />
                                 </div>
-                            </form>
-
-                        </div>
-                    </div>
-                </div>
-            </section>
+                            </div>
+                        </fieldset>
+                    </form>
+                </section>
+            </div>
         </div>
     );
 };

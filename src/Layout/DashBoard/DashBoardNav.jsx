@@ -25,7 +25,7 @@ const DashBoardNav = ({open,setOpen,dropdown,setDropdown}) => {
                                             onClick={() => setOpen(!open)}
                                             className={`px-2 py-3 text-blue-500 bg-blue-100 rounded ${open ? 'dark:text-gray-400 dark:bg-gray-800' : ''}`}
                                         >
-                                            <FaListUl />
+                                            <FaListUl className="text-2xl w-6" />
                                         </button>
                                     </div>
                                     <div className="justify-center hidden md:flex">

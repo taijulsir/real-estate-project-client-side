@@ -24,7 +24,7 @@ const DashBoard = () => {
 
 
     return (
-        <div>
+        <div className=" font-raleway ">
             <div className="bg-gray-100 xl:h-screen dark:bg-gray-800">
                 <div className={`body-content ${open ? 'open' : ''}`}>
 
@@ -90,7 +90,7 @@ const DashBoard = () => {
                         <div>
                             <DashBoardNav open={open} setOpen={setOpen} dropdown={dropdown} setDropdown={setDropdown}></DashBoardNav>
                         </div>
-                        <div>
+                        <div className=" font-raleway ">
                             <Outlet></Outlet>
                         </div>
                     </div>

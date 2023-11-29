@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from "../../../Hooks/useAxiosPublic/useAxiosPublic";
 import "../../../Shared/ButtonHover/ButtonHover.css"
 import { Link } from "react-router-dom";
+import Title from "../../../Shared/Title/Title";
 const Advertisement = () => {
     const axiosPublic = useAxiosPublic()
     const {data:advertisements} = useQuery({
@@ -15,9 +16,8 @@ const Advertisement = () => {
     })
     return (
         <div className="my-16  container mx-auto ">
-            <h1 className=" text-2xl lg:text-4xl  font-bold text-zinc-950">Our choice of <br />
-             popular real estate</h1>
             
+            <Title heading={"Our choice Of popular"} colorHeading={"Real estate"}></Title>
            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
             {advertisements?.map(advertise=> <Card key={advertise._id} advertise={advertise}></Card>)}
             </div> 

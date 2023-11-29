@@ -8,6 +8,7 @@ import { AiOutlineDollar } from "react-icons/ai";
 import "../../../Shared/ButtonHover/ButtonHover.css"
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
+import Title from "../../../Shared/Title/Title";
 
 const WishList = () => {
     const { user } = useAuth()
@@ -50,16 +51,16 @@ const WishList = () => {
     }
 
     return (
-        <div className="px-3 lg:px-6">
-            <h3 className="text-2xl font-bold my-10">All of your Wishlist properties</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="px-3 lg:px-6 container mx-auto mt-10">
+           <Title heading={"All Of Your"} colorHeading={"Wishlist Properties"}></Title>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
                 {wishlist?.map(item =>
                     <><div key={item?.id}
                         className="bg-white shadow-[0_2px_15px_-6px_rgba(0,0,0,0.2)] w-full py-6  rounded-lg font-[sans-serif] overflow-hidden mx-auto mt-4">
                         <div className="flex items-center px-6">
                             <h3 className="text-2xl text-[#333] font-semibold flex-1">{item?.propertyTitle}</h3>
                         </div>
-                        <img src={item?.propertyImage} className="w-full h-[338px] my-6" />
+                        <img src={item?.propertyImage} className="w-full h-[338px] rounded-lg my-4" />
                         <div className="mt-4 space-y-6">
                             <div
                                 className="flex flex-wrap items-center cursor-pointer  rounded-lg w-full px-4 py-4">
@@ -78,14 +79,14 @@ const WishList = () => {
 
                             </div>
                             <div className="flex justify-between gap-5">
-                                <div className="mt-10 flex items-center flex-1">
+                                <div className="mt-6 flex items-center flex-1">
                                     <Link className="w-full" to={`offerProperties/${item._id}`}>
                                         <button
                                             type="button"
                                             className="btn hvr-sweep-to-top px-6 py-2 rounded w-full text-[#333] text-sm tracking-wider font-semibold border-2 border-[#333] hover:bg-gray-50 outline-none">Make an offer
                                         </button></Link>
                                 </div>
-                                <div className="mt-10 flex items-center flex-1">
+                                <div className="mt-6 flex items-center flex-1">
                                     <button
                                         onClick={() => handleDelete(item._id)}
                                         type="button"

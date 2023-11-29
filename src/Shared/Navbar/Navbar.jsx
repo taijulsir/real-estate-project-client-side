@@ -17,21 +17,19 @@ const Navbar = () => {
     }
     const navlinks =
         <>
-            <li ><NavLink to="/" className={({ isActive, isPending }) =>
+            <li className="mr-4 text-lg  font-medium"><NavLink to="/" className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : ""
             }>Home</NavLink></li>
-            <li ><NavLink to="/allProperties" className={({ isActive, isPending }) =>
+            <li className="mr-4 text-lg  font-medium"><NavLink to="/allProperties" className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : ""
             }>All Properties</NavLink></li>
-            <li ><NavLink to="/dashboard" className={({ isActive, isPending }) =>
+            <li className="mr-4 text-lg  font-medium"><NavLink to="/dashboard/wishlist" className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : ""
             }>Dashboard</NavLink></li>
-            <li ><NavLink to="/aboutUs" className={({ isActive, isPending }) =>
+            <li className="mr-4 text-lg  font-medium"><NavLink to="/aboutUs" className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : ""
             }>About Us</NavLink></li>
-            <li ><NavLink to="/blogs" className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "active" : ""
-            }>Blogs</NavLink></li>
+           
         </>
     return (
         <div>

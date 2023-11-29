@@ -32,7 +32,7 @@ const DashboardProfile = ({ user,role, description }) => {
                                 {description}
                             </p>
                             {role && <a
-                                className="px-4 py-3 text-gray-50 transition-all transform bg-blue-400 rounded-[80px] hover:bg-blue-500 dark:hover:text-gray-100 dark:text-gray-100 ">
+                                className="px-4 py-3 text-zinc-950 font-bold transition-all transform bg-blue-400 rounded md hover:bg-blue-500 dark:hover:text-gray-100 dark:text-gray-100 ">
                                 Role: {role}
                             </a>}
                         </div>
