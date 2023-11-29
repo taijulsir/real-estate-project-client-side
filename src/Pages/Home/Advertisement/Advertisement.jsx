@@ -9,7 +9,7 @@ const Advertisement = () => {
     const {data:advertisements} = useQuery({
         queryKey:['properties'],
         queryFn: async()=>{
-            const res = await axiosPublic.get('/properties/verified/filtered')
+            const res = await axiosPublic.get('/advertiseProperties')
             return res.data;
         }
     })
@@ -19,7 +19,7 @@ const Advertisement = () => {
              popular real estate</h1>
             
            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
-            {advertisements?.slice(0,6).map(advertise=> <Card key={advertise._id} advertise={advertise}></Card>)}
+            {advertisements?.map(advertise=> <Card key={advertise._id} advertise={advertise}></Card>)}
             </div> 
             <div className="mt-10 flex items-center justify-center ">
                 <Link to="/allProperties"><button className="btn hvr-sweep-to-top border-zinc-950 ">Browse All Properties</button></Link>

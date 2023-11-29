@@ -17,15 +17,25 @@ const Navbar = () => {
     }
     const navlinks =
         <>
-            <li><NavLink to="/" className="text-lg font-semibold text-gray-700 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-400">Home</NavLink></li>
-            <li><NavLink to="/allProperties" className="text-lg font-semibold text-gray-700 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-400">All Properties</NavLink></li>
-            <li><NavLink to="/dashboard" className="text-lg font-semibold text-gray-700 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-400">Dashboard</NavLink></li>
-            <li><NavLink to="/aboutUs" className="text-lg font-semibold text-gray-700 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-400">About Us</NavLink></li>
-            <li><NavLink to="/blogs" className="text-lg font-semibold text-gray-700 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-400">Blogs</NavLink></li>
+            <li ><NavLink to="/" className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : ""
+            }>Home</NavLink></li>
+            <li ><NavLink to="/allProperties" className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : ""
+            }>All Properties</NavLink></li>
+            <li ><NavLink to="/dashboard" className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : ""
+            }>Dashboard</NavLink></li>
+            <li ><NavLink to="/aboutUs" className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : ""
+            }>About Us</NavLink></li>
+            <li ><NavLink to="/blogs" className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : ""
+            }>Blogs</NavLink></li>
         </>
     return (
         <div>
-            <section className="font-poppins dark:bg-gray-800 bg-blue-50">
+            <section className=" dark:bg-gray-800 bg-blue-50">
                 <div className="container px-4 mx-auto">
                     <nav className="relative flex items-center justify-between py-4 ">
                         <Link href="/" className="text-3xl font-semibold leading-none dark:text-gray-400">

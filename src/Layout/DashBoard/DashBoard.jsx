@@ -6,19 +6,23 @@ import DashboardUser from "../../Routes/DashboardUser";
 import DashboardAgent from "../../Routes/DashboardAgent";
 import DashboardAdmin from "../../Routes/DashboardAdmin";
 import useCheckRole from "../../Hooks/useCheckRole/useCheckRole";
+
+import DashboardAvailable from "../../Routes/DashboardAvailable";
+
+
 const DashBoard = () => {
     const [open, setOpen] = useState(true)
     const [dropdown, setDropdown] = useState(false)
     const { user } = useAuth()
-    const [isCheckRole,isCheckRoleLoading,refetch] = useCheckRole()
-    if(isCheckRoleLoading){
+    const [isCheckRole, isCheckRoleLoading, refetch] = useCheckRole()
+    if (isCheckRoleLoading) {
         return <span className="loading loading-spinner loading-lg"></span>
     }
-    const roleInfo = isCheckRole? isCheckRole.roleInfo : null;
+    const roleInfo = isCheckRole ? isCheckRole.roleInfo : null;
     const isAdmin = roleInfo ? roleInfo?.admin : false;
-    const isAgent = roleInfo ? roleInfo?.agent: false;
+    const isAgent = roleInfo ? roleInfo?.agent : false;
 
-    
+
     return (
         <div>
             <div className="bg-gray-100 xl:h-screen dark:bg-gray-800">
@@ -67,6 +71,14 @@ const DashBoard = () => {
                                 {/* admin */}
                                 <ul className="mb-8 text-sm">
                                     {user && isAdmin && <DashboardAdmin></DashboardAdmin>}
+                                </ul>
+                            </div>
+
+                            <div className="divider divider-warning mt-12 px-6"></div>
+                            {/* available all routes */}
+                            <div className="pb-6 mt-4 overflow-x-hidden overflow-y-auto">
+                                <ul className=" list-none">
+                                    <DashboardAvailable></DashboardAvailable>
                                 </ul>
                             </div>
                         </nav>

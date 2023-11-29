@@ -11,7 +11,7 @@ const DashboardUser = () => {
                 to="usersProfile"
                     className="flex items-center px-6 py-4 text-gray-700 dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100">
                     <span className="inline-block mr-3">
-                        <MdOutlineDashboard></MdOutlineDashboard>
+                        <MdOutlineDashboard className="text-2xl"></MdOutlineDashboard>
                     </span>
                     <span>My Profile</span>
                 </Link>
@@ -21,7 +21,7 @@ const DashboardUser = () => {
                 to="wishlist"
                     className="flex items-center px-6 py-4 text-gray-700 dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100">
                     <span className="inline-block mr-3">
-                        <FaHeart></FaHeart>
+                        <FaHeart className="text-2xl"></FaHeart>
                     </span>
                     <span>Wishlist</span>
                 </Link>
@@ -31,7 +31,7 @@ const DashboardUser = () => {
                 to="propertyBought"
                     className="flex items-center px-6 py-4 text-gray-700 dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100">
                     <span className="inline-block mr-3">
-                        <FaSuperpowers></FaSuperpowers>
+                        <FaSuperpowers className="text-2xl"></FaSuperpowers>
                     </span>
                     <span>Property Bought</span>
                 </Link>
@@ -41,7 +41,7 @@ const DashboardUser = () => {
                 to="myReviews"
                     className="flex items-center px-6 py-4 text-gray-700 dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100">
                     <span className="inline-block mr-3">
-                        <FaBook></FaBook>
+                        <FaBook className="text-2xl"></FaBook>
                     </span>
                     <span>My Reviews</span>
                 </Link>

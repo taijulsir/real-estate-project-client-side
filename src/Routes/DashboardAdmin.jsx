@@ -1,4 +1,6 @@
 import { FaBook, FaHeart, FaSuperpowers } from "react-icons/fa";
+import { LiaAdSolid } from "react-icons/lia";
+
 import { MdOutlineDashboard } from "react-icons/md";
 import { Link } from "react-router-dom";
 
@@ -11,7 +13,7 @@ const DashboardAdmin = () => {
                 to="adminProfile"
                     className="flex items-center px-6 py-4 text-gray-700 dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100">
                     <span className="inline-block mr-3">
-                        <MdOutlineDashboard></MdOutlineDashboard>
+                        <MdOutlineDashboard className="text-2xl"></MdOutlineDashboard>
                     </span>
                     <span>Admin Profile</span>
                 </Link>
@@ -21,7 +23,7 @@ const DashboardAdmin = () => {
                 to="manageUsers"
                     className="flex items-center px-6 py-4 text-gray-700 dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100">
                     <span className="inline-block mr-3">
-                        <FaHeart></FaHeart>
+                        <FaHeart className="text-2xl"></FaHeart>
                     </span>
                     <span>Manage Users</span>
                 </Link>
@@ -31,7 +33,7 @@ const DashboardAdmin = () => {
                 to="manageProperties"
                     className="flex items-center px-6 py-4 text-gray-700 dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100">
                     <span className="inline-block mr-3">
-                        <FaSuperpowers></FaSuperpowers>
+                        <FaSuperpowers className="text-2xl"></FaSuperpowers>
                     </span>
                     <span>Manage Properties</span>
                 </Link>
@@ -41,7 +43,7 @@ const DashboardAdmin = () => {
                 to="advertiseProperties"
                     className="flex items-center px-6 py-4 text-gray-700 dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100">
                     <span className="inline-block mr-3">
-                        <FaSuperpowers></FaSuperpowers>
+                        <LiaAdSolid className="text-2xl"></LiaAdSolid>
                     </span>
                     <span>Advertise Property</span>
                 </Link>
@@ -51,7 +53,7 @@ const DashboardAdmin = () => {
                 to="manageReviews"
                     className="flex items-center px-6 py-4 text-gray-700 dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100">
                     <span className="inline-block mr-3">
-                        <FaBook></FaBook>
+                        <FaBook className="text-2xl"></FaBook>
                     </span>
                     <span>Manage Reviews</span>
                 </Link>

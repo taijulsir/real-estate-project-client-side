@@ -11,7 +11,7 @@ const DashboardAgent = () => {
                 to="agentProfile"
                     className="flex items-center px-6 py-4 text-gray-700 dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100">
                     <span className="inline-block mr-3">
-                        <MdOutlineDashboard></MdOutlineDashboard>
+                        <MdOutlineDashboard className="text-2xl"></MdOutlineDashboard>
                     </span>
                     <span>Agent Profile</span>
                 </Link>
@@ -21,7 +21,7 @@ const DashboardAgent = () => {
                 to="addProperty"
                     className="flex items-center px-6 py-4 text-gray-700 dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100">
                     <span className="inline-block mr-3">
-                        <FaHeart></FaHeart>
+                        <FaHeart className="text-2xl"></FaHeart>
                     </span>
                     <span>Add Property</span>
                 </Link>
@@ -31,7 +31,7 @@ const DashboardAgent = () => {
                 to="addedProperties"
                     className="flex items-center px-6 py-4 text-gray-700 dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100">
                     <span className="inline-block mr-3">
-                        <FaSuperpowers></FaSuperpowers>
+                        <FaSuperpowers className="text-2xl"></FaSuperpowers>
                     </span>
                     <span>My Added Properties</span>
                 </Link>
@@ -41,7 +41,7 @@ const DashboardAgent = () => {
                 to="soldProperties"
                     className="flex items-center px-6 py-4 text-gray-700 dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100">
                     <span className="inline-block mr-3">
-                        <FaBook></FaBook>
+                        <FaBook className="text-2xl"></FaBook>
                     </span>
                     <span>My Sold Properties</span>
                 </Link>
@@ -51,7 +51,7 @@ const DashboardAgent = () => {
                 to="requestedProperties"
                     className="flex items-center px-6 py-4 text-gray-700 dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100">
                     <span className="inline-block mr-3">
-                        <FaList></FaList>
+                        <FaList className="text-2xl"></FaList>
                     </span>
                     <span>Requested Properties</span>
                 </Link>

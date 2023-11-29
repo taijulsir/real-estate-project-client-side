@@ -5,21 +5,28 @@ import Card from "../../Shared/Card/Card";
 import { useState } from "react";
 import "../../Shared/ButtonHover/ButtonHover.css"
 
-const filterBy = (value, range) => {
-    console.log(value)
-    const data = [];
-    const [min, max] = range.split('-')
-    value.forEach((item) => {
-        console.log(item)
-        const [itemMin, itemMax] = item.priceRange.split('-')
-        if (parseInt(itemMin) >= parseInt(min)) {
-            if (parseInt(itemMax) <= parseInt(max)) {
-                data.push(item)
-            }
-        }
-    })
-    return data;
-}
+// const filterBy = (value, range) => {
+//     console.log(value)
+//     const data = [];
+//     const [min, max] = range.split('-')
+//     value.forEach((item) => {
+//         console.log(item)
+//         const [itemMin, itemMax] = item.priceRange.split('-')
+//         if (parseInt(itemMin) >= parseInt(min)) {
+//             if (parseInt(itemMax) <= parseInt(max)) {
+//                 data.push(item)
+//             }
+//         }
+//     })
+//     return data;
+// }
+
+const filterBy = (data, searchValue) => {
+    return data.filter(item =>
+        item.propertyTitle.toLowerCase().includes(searchValue.toLowerCase())
+    );
+};
+
 
 const ALlProperties = () => {
     const [priceRange, setPriceRange] = useState('')
@@ -27,8 +34,8 @@ const ALlProperties = () => {
     const [searchValue, setSearchValue] = useState('')
     const [properties, setProperties] = useState([])
     const axiosPublic = useAxiosPublic()
-    const { data: allProperties = [], refetch, isFetching, error } = useQuery({
-        queryKey: ['allProperties', sortingOption, priceRange],
+    const { data: allProperties = [], refetch } = useQuery({
+        queryKey: ['allProperties', sortingOption, priceRange,searchValue],
         queryFn: async () => {
             const res = await axiosPublic.get('/properties/verified/filtered')
             setProperties(res.data)
@@ -36,17 +43,33 @@ const ALlProperties = () => {
         }
     })
 
-
     const sortData = (allProperties, sortingOption) => {
+        console.log(allProperties);
+        console.log(sortingOption);
         const sortedData = [...allProperties];
         if (sortingOption === 'low-to-high') {
             sortedData.sort((a, b) => parseInt(a.priceRange) - parseInt(b.priceRange));
         } else if (sortingOption === 'high-to-low') {
-            sortedData.sort((a, b) => parseInt(b.priceR) - parseInt(a.priceRange));
+            sortedData.sort((a, b) => parseInt(b.priceRange) - parseInt(a.priceRange));
         }
+        console.log(sortedData);
         return sortedData;
     };
-    const sortedData = !priceRange ? allProperties : sortData(filterBy(allProperties, priceRange), sortingOption);
+  
+    // const filteredData = searchValue ? filterBy(allProperties, priceRange) : [...allProperties];
+
+    // Filter based on searchValue
+    const filteredData = searchValue
+        ? filterBy(allProperties, searchValue)
+        : [...allProperties];
+
+    // Sort the filteredData based on sortingOption
+    const sortedData = sortData(filteredData, sortingOption);
+
+
+
+    // by this filter by price change
+    // const sortedData = !priceRange ? allProperties : sortData(filterBy(allProperties, priceRange), sortingOption);
 
     const handleSortingOptions = (value) => {
         setSortingOption(value)

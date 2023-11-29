@@ -26,6 +26,8 @@ import Payment from "../Pages/DashBoard/Payment/Payment";
 import ALlProperties from "../Pages/AllProperties/ALlProperties";
 import SoldProperty from "../Pages/DashBoard/SoldProperty/SoldProperty";
 import AdvertiseProperty from "../Pages/DashBoard/AdvertiseProperty/AdvertiseProperty";
+import Contact from "../Pages/DashBoard/Contact/Contact";
+import AboutUs from "../Pages/AboutUs/AboutUs";
 
 const router = createBrowserRouter([
     {
@@ -50,6 +52,14 @@ const router = createBrowserRouter([
             {
                 path: "/allProperties",
                 element: <PrivateRoute><ALlProperties></ALlProperties></PrivateRoute>
+            },
+            {
+                path: '/contact',
+                element: <Contact></Contact>
+            },
+            {
+                path: '/aboutUs',
+                element: <AboutUs></AboutUs>
             }
         ]
     },
