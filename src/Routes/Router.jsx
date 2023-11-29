@@ -25,6 +25,7 @@ import RequestedProperties from "../Pages/DashBoard/RequestedProperties/Requeste
 import Payment from "../Pages/DashBoard/Payment/Payment";
 import ALlProperties from "../Pages/AllProperties/ALlProperties";
 import SoldProperty from "../Pages/DashBoard/SoldProperty/SoldProperty";
+import AdvertiseProperty from "../Pages/DashBoard/AdvertiseProperty/AdvertiseProperty";
 
 const router = createBrowserRouter([
     {
@@ -38,7 +39,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/propertyDetails/:id',
-                element: <PropertyDetails></PropertyDetails>,
+                element: <PrivateRoute><PropertyDetails></PropertyDetails></PrivateRoute>,
                 loader: async ({ params }) => {
                     const propertiesPromise = fetch(`http://localhost:5000/singleProperties/${params.id}`).then(res => res.json());
                     const reviewsPromise = fetch(`http://localhost:5000/singleReviews/${params.id}`).then(res => res.json());
@@ -48,7 +49,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/allProperties",
-                element: <ALlProperties></ALlProperties>
+                element: <PrivateRoute><ALlProperties></ALlProperties></PrivateRoute>
             }
         ]
     },
@@ -83,6 +84,10 @@ const router = createBrowserRouter([
             {
                 path: 'manageProperties',
                 element: <ManageProperties></ManageProperties>
+            },
+            {
+                path: "advertiseProperties",
+                element: <AdvertiseProperty></AdvertiseProperty>
             },
             {
                 path: 'manageReviews',

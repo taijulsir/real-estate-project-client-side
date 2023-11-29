@@ -12,7 +12,7 @@ const useCheckRole = () => {
         return [undefined, false];
     }
 
-    const { data: isCheckRole, error, isPending: isCheckRoleLoading } = useQuery({
+    const { data: isCheckRole, error, isPending: isCheckRoleLoading,refetch } = useQuery({
         queryKey: [user?.email, 'isCheckRole'],
         enabled: !!user?.email && !!localStorage.getItem('access-token'),
         queryFn: async () => {
@@ -27,7 +27,7 @@ const useCheckRole = () => {
     if (error) {
         console.error("Error fetching role:", error);
     }
-    return [isCheckRole, isCheckRoleLoading];
+    return [isCheckRole, isCheckRoleLoading,refetch];
 };
 
 export default useCheckRole;

@@ -10,13 +10,15 @@ const DashBoard = () => {
     const [open, setOpen] = useState(true)
     const [dropdown, setDropdown] = useState(false)
     const { user } = useAuth()
-    const [isCheckRole,isCheckRoleLoading] = useCheckRole()
+    const [isCheckRole,isCheckRoleLoading,refetch] = useCheckRole()
     if(isCheckRoleLoading){
         return <span className="loading loading-spinner loading-lg"></span>
     }
     const roleInfo = isCheckRole? isCheckRole.roleInfo : null;
     const isAdmin = roleInfo ? roleInfo?.admin : false;
     const isAgent = roleInfo ? roleInfo?.agent: false;
+
+    
     return (
         <div>
             <div className="bg-gray-100 xl:h-screen dark:bg-gray-800">

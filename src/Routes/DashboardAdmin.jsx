@@ -38,6 +38,16 @@ const DashboardAdmin = () => {
             </li>
             <li>
                 <Link
+                to="advertiseProperties"
+                    className="flex items-center px-6 py-4 text-gray-700 dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100">
+                    <span className="inline-block mr-3">
+                        <FaSuperpowers></FaSuperpowers>
+                    </span>
+                    <span>Advertise Property</span>
+                </Link>
+            </li>
+            <li>
+                <Link
                 to="manageReviews"
                     className="flex items-center px-6 py-4 text-gray-700 dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100">
                     <span className="inline-block mr-3">
