@@ -7,6 +7,7 @@ import useAxiosSecure from "../../../Hooks/useAxiosSecure/useAxiosSecure";
 import Swal from "sweetalert2";
 import { GiHandcuffed } from "react-icons/gi";
 import HelmetTitle from "../../../Shared/HelmetTitle/HelmetTitle";
+import Title from "../../../Shared/Title/Title";
 
 
 const ManageUsers = () => {
@@ -101,8 +102,9 @@ const ManageUsers = () => {
         });
     }
     return (
-        <div>
+        <div className="mt-5">
             <HelmetTitle title={`Luxury Real State || Manage Users`}></HelmetTitle>
+            <Title heading={"Manage All"} colorHeading={"Users"}></Title>
             <div className="overflow-x-auto">
                 <table className="min-w-full bg-white font-[sans-serif]">
 

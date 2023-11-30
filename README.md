@@ -23,7 +23,7 @@
 3) Sort Functionality 🔄:
    - Empower users with dynamic sorting options based on price range.
 
-- Dashboard 📊
+# Dashboard 📊
 1) Role-Based Routes ✨:
    - Custom navigation links based on user roles (Normal user, Agent, Admin).
 2) Different Dashboards 📝:

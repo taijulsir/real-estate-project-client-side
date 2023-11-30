@@ -49,14 +49,14 @@ const AgentAddProperty = () => {
     }
 
     return (
-        <div className="px-4 mt-5">
+        <div className="px-4 mt-5 min-h-screen">
             <HelmetTitle title={"Luxury Real Estate || Agent Added Properties"}></HelmetTitle>
             <Title heading={"All Of Your"}  colorHeading={"Added Properties"}></Title>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {addedProperties?.map(properties =>
                     <div
                         key={properties._id}
-                        className=" grid sm:grid-cols-2 items-center shadow-2xl   w-full max-w-xl rounded-lg font-[sans-serif] overflow-hidden mx-auto mt-4">
+                        className=" grid sm:grid-cols-2 border items-center shadow-2xl   w-full max-w-xl rounded-lg font-[sans-serif] overflow-hidden mx-auto mt-4">
                         <img src={properties?.propertyImage} className="w-full h-full object-cover" />
                         <div className="px-4 py-6">
                              {/* agent information */}

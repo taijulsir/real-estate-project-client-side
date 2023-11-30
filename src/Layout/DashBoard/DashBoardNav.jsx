@@ -23,7 +23,7 @@ const DashBoardNav = ({open,setOpen,dropdown,setDropdown}) => {
                                     <div>
                                         <button
                                             onClick={() => setOpen(!open)}
-                                            className={`px-2 py-3 text-blue-500 bg-blue-100 rounded ${open ? 'dark:text-gray-400 dark:bg-gray-800' : ''}`}
+                                            className={`px-2 py-3 text-blue-500 bg-blue-200 rounded ${open ? 'dark:text-gray-400 dark:bg-gray-800' : ''}`}
                                         >
                                             <FaListUl className="text-2xl w-6" />
                                         </button>
@@ -32,10 +32,10 @@ const DashBoardNav = ({open,setOpen,dropdown,setDropdown}) => {
                                         <div className=" xl:w-96">
                                             <div className="relative flex flex-wrap items-center w-full ">
                                                 <input type="search"
-                                                    className="form-control bg-pink-900 relative flex-auto min-w-0 block w-72 px-3 py-1.5 text-base font-normal text-gray-700 bg-white  dark:text-gray-100 bg-clip-padding border border-solid border-gray-300 dark:border-gray-800 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white dark:bg-gray-800  focus:border-blue-600 focus:outline-none"
+                                                    className="form-control bg-pink-900 relative flex-auto min-w-0 block w-72 px-3 py-1.5 text-base font-normal text-gray-700   dark:text-gray-100 bg-clip-padding border border-solid border-gray-300 dark:border-gray-800 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white dark:bg-gray-800  focus:border-blue-600 focus:outline-none"
                                                     placeholder="Search" />
                                                 <button
-                                                    className="btn i px-6 py-2.5 bg-blue-600 dark:bg-blue-300 dark:hover:bg-blue-400  dark:text-gray-900 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out flex items-center"
+                                                    className="btn i px-6 py-2 bg-blue-600 dark:bg-blue-300 dark:hover:bg-blue-400  dark:text-gray-900 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out flex items-center"
                                                     type="button" id="button-addon2">
                                                     <IoIosSearch></IoIosSearch>
                                                 </button>
@@ -72,7 +72,7 @@ const DashBoardNav = ({open,setOpen,dropdown,setDropdown}) => {
                                                 </svg>
                                             </span>
                                         </div>
-                                        <div className={`relative text-left lg:inline-block `}>
+                                        <div className={`relative text-left lg:inline-block `} >
                                             <div className="lg:block" onClick={() => setDropdown(!dropdown)}>
                                                 <button className="flex items-center">
                                                     <div className="hidden mr-3 text-right md:block">
@@ -93,7 +93,7 @@ const DashBoardNav = ({open,setOpen,dropdown,setDropdown}) => {
                                             <div
                                                 style={{ display: dropdown ? 'block' : 'none' }}
                                                 id="dropdown_profile"
-                                                className="absolute right-0 w-48 mt-3 origin-top-right bg-white rounded shadow dark:bg-gray-800 dark:text-gray-100"
+                                                className="absolute right-0 w-48 mt-3 bg-white origin-top-right  rounded shadow dark:bg-gray-800 dark:text-gray-100"
                                             >
                                                 <div className="py-1">
                                                     <a

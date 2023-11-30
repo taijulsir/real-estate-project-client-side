@@ -19,10 +19,10 @@ const PropertyBought = () => {
         }
     })
     return (
-        <div className="px-3 lg:px-6 mt-5">
+        <div className="px-3 lg:px-6 mt-5 min-h-screen">
             <HelmetTitle title={"Luxury Real Estate ||Property Bought"}></HelmetTitle>
-           <Title heading={"My All Offered"} colorHeading={"Properties"} ></Title>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+           <Title heading={"All of My Bought"} colorHeading={"Properties"} ></Title>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6">
                 {propertyBought?.map(property =>
                     <div key={property._id}
                         className=" border border-zinc-950 text-white shadow-[0_2px_15px_-6px_rgba(0,0,0,0.2)] w-full py-6  rounded-lg font-[sans-serif] overflow-hidden mx-auto mt-4">

@@ -6,6 +6,7 @@ import { TbForbid2 } from "react-icons/tb";
 import Swal from "sweetalert2";
 import "../../../Shared/ButtonHover/ButtonHover.css"
 import HelmetTitle from "../../../Shared/HelmetTitle/HelmetTitle";
+import Title from "../../../Shared/Title/Title";
 
 
 const RequestedProperties = () => {
@@ -72,9 +73,9 @@ const RequestedProperties = () => {
         });
     }
     return (
-        <div className="px-3 lg:px-6 my-6">
+        <div className="px-3 lg:px-6 my-6 min-h-screen">
             <HelmetTitle title={"Luxury Real Estate || Requested Properties"}></HelmetTitle>
-            <h1 className="text-3xl font-bold my-6">Request Properties Information</h1>
+           <Title heading={"Propeties Requested"} colorHeading={"User Information"}></Title>
             <div>
                 <div className="overflow-x-auto">
                     <table className="min-w-full bg-white font-[sans-serif]">

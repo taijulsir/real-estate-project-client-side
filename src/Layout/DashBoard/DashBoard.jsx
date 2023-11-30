@@ -27,13 +27,13 @@ const DashBoard = () => {
     return (
         <div className=" font-raleway ">
              <HelmetTitle title={"Luxury Real State || Dashboard"}></HelmetTitle>
-            <div className="xl:h-screen dark:bg-gray-800">
+            <div className="bg-gradient-to-r from-gray-800 to-indigo-800 dark:bg-gray-800">
                 <div className={`body-content ${open ? 'open' : ''}`}>
 
                     {/* navlink  */}
                     <div className="relative lg:block navbar-menu">
                         <nav
-                            className={`fixed top-0 transition-all lg:mt-0 z-40 mt-16 left-0 dark:bg-gray-900 bottom-0 flex flex-col ${open ? 'w-[280px]' : 'w-0'
+                            className={`fixed top-0 bg-gradient-to-r from-gray-800 to-indigo-800 transition-all lg:mt-0 z-40 mt-16 left-0 dark:bg-gray-900 bottom-0 flex flex-col ${open ? 'w-[280px]' : 'w-0'
                                 } lg:border-none border-r border-gray-200 dark:border-gray-800 text-white overflow-hidden`}
                             id="sidenav"
                         >
@@ -87,7 +87,7 @@ const DashBoard = () => {
                     </div>
 
                     {/* content side */}
-                    <div className={`mx-auto transition-all content-wrapper ${!open ? 'lg:ml-0' : 'lg:ml-[280px]'}`} id="dash">
+                    <div className={`mx-auto  transition-all content-wrapper ${!open ? 'lg:ml-0' : 'lg:ml-[280px]'}`} id="dash">
                         {/* navbar */}
                         <div>
                             <DashBoardNav open={open} setOpen={setOpen} dropdown={dropdown} setDropdown={setDropdown}></DashBoardNav>
