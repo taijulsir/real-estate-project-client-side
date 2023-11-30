@@ -78,17 +78,17 @@ const Banner = () => {
 
                     {/* key features */}
                     <div className="grid grid-cols-1 lg:grid-cols-4 relative mt-0 lg:-mt-[90px] z-10 rounded">
-                        <div>
-                            <BannerFeatures bgColor="bg-red-600" icon={BsHouseDoor} heading={"Find Your Dream Home"} description={"Explore a wide range of properties and find the perfect home that suits your lifestyle."}></BannerFeatures>
+                        <div className='bg-[#114B5F]'>
+                            <BannerFeatures bgColor="" icon={BsHouseDoor} heading={"Find Your Dream Home"} description={"Explore a wide range of properties and find the perfect home that suits your lifestyle."}></BannerFeatures>
                         </div>
-                        <div>
-                            <BannerFeatures bgColor="bg-green-600" icon={HiOutlineCurrencyDollar} heading={"Competitive Pricing"} description={"Enjoy competitive pricing on a variety of real estate options, ensuring value for your investment."}></BannerFeatures>
+                        <div className='bg-[#61192C]'>
+                            <BannerFeatures bgColor="" icon={HiOutlineCurrencyDollar} heading={"Competitive Pricing"} description={"Enjoy competitive pricing on a variety of real estate options, ensuring value for your investment."}></BannerFeatures>
                         </div>
-                        <div>
-                            <BannerFeatures bgColor="bg-red-600" icon={MdOutlineMedicalServices} heading={"Property Management Services"} description={"Simplify property management with our comprehensive services and modern solutions."}></BannerFeatures>
+                        <div className='bg-[#114B5F]'>
+                            <BannerFeatures bgColor="" icon={MdOutlineMedicalServices} heading={"Property Management Services"} description={"Simplify property management with our comprehensive services and modern solutions."}></BannerFeatures>
                         </div>
-                        <div>
-                            <BannerFeatures bgColor="bg-green-600" icon={MdOutlineVerified} heading={"Verified Listings"} description={" Explore our collection of verified listings, ensuring the authenticity and quality of each property."}></BannerFeatures>
+                        <div className='bg-[#61192C]'>
+                            <BannerFeatures bgColor="" icon={MdOutlineVerified} heading={"Verified Listings"} description={" Explore our collection of verified listings, ensuring the authenticity and quality of each property."}></BannerFeatures>
                         </div>
 
                     </div>

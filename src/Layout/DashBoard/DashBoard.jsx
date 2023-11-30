@@ -25,14 +25,14 @@ const DashBoard = () => {
 
     return (
         <div className=" font-raleway ">
-            <div className="bg-gray-100 xl:h-screen dark:bg-gray-800">
+            <div className="xl:h-screen dark:bg-gray-800">
                 <div className={`body-content ${open ? 'open' : ''}`}>
 
                     {/* navlink  */}
                     <div className="relative lg:block navbar-menu">
                         <nav
                             className={`fixed top-0 transition-all lg:mt-0 z-40 mt-16 left-0 dark:bg-gray-900 bottom-0 flex flex-col ${open ? 'w-[280px]' : 'w-0'
-                                } lg:border-none border-r border-gray-200 dark:border-gray-800 bg-gray-50 overflow-hidden`}
+                                } lg:border-none border-r border-gray-200 dark:border-gray-800 text-white overflow-hidden`}
                             id="sidenav"
                         >
 
@@ -52,8 +52,8 @@ const DashBoard = () => {
                                         className="object-cover object-right w-10 h-10 rounded-full" alt="person" />
                                 </div>
                                 <div className="px-2">
-                                    <span className="text-sm text-gray-500 dark:text-gray-400 ">Welcome,</span>
-                                    <h2 className="text-lg font-medium dark:text-gray-300 ">{user?.displayName}</h2>
+                                    <span className="text-sm text-white dark:text-gray-400 ">Welcome,</span>
+                                    <h2 className="text-lg text-zinc-950 font-medium dark:text-gray-300 ">{user?.displayName}</h2>
                                 </div>
                             </div>
 

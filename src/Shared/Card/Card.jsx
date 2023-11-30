@@ -13,7 +13,7 @@ const Card = ({ advertise }) => {
   return (
     <div className="px-5 lg:px-0">
       <div className="w-full">
-        <div className="p-6 bg-white rounded shadow dark:bg-gray-700 group">
+        <div className="p-6 border rounded shadow-2xl shadow-[#462346] dark:bg-gray-700 group">
           <div className="block mb-2" >
             <div className="relative overflow-hidden">
               <div className="mb-5 overflow-hidden">
@@ -36,20 +36,20 @@ const Card = ({ advertise }) => {
               </div>
             </div>
             <a >
-              <h3 className="mb-2 text-xl  font-bold dark:text-white">{advertise.propertyTitle}</h3>
+              <h3 className="mb-2 text-xl  text-white font-bold dark:text-white">{advertise.propertyTitle}</h3>
             </a>
             {/* agent information */}
             <div className="flex flex-wrap items-center cursor-pointer  rounded-lg w-full py-2">
               <img src={advertise.agentImage} className="w-12 h-12 rounded-full object-cover" />
               <div className="ml-4 flex-1">
-                <p className="text-lg text-black font-semibold">{advertise.agentName}</p>
-                <p className="text-base text-gray-400">{advertise.agentEmail}</p>
+                <p className="text-lg text-white font-semibold">{advertise.agentName}</p>
+                <p className="text-base text-white">{advertise.agentEmail}</p>
               </div>
             </div>
             <div className="flex justify-between my-4 ">
-              <p className="text-sm text-gray-400 flex items-center"><CiLocationOn className="text-2xl mr-2 text-zinc-950"></CiLocationOn> {advertise?.propertyLocation}</p>
-              <p className="text-sm text-gray-400 flex items-center"><AiOutlineDollar className="text-2xl mr-2 text-zinc-600"></AiOutlineDollar> {advertise?.priceRange}</p>
-              <p className="text-sm text-gray-400 flex items-center"><MdOutlineVerifiedUser className="text-2xl mr-2 text-green-600"></MdOutlineVerifiedUser> {advertise?.verified_status}</p>
+              <p className="text-sm text-white flex items-center"><CiLocationOn className="text-2xl mr-2 text-white"></CiLocationOn> {advertise?.propertyLocation}</p>
+              <p className="text-sm text-white flex items-center"><AiOutlineDollar className="text-2xl mr-2 text-white"></AiOutlineDollar> {advertise?.priceRange}</p>
+              <p className="text-sm text-white flex items-center"><MdOutlineVerifiedUser className="text-2xl mr-2 text-green-600"></MdOutlineVerifiedUser> {advertise?.verified_status}</p>
             </div>
 
             <div className="flex gap-5">
@@ -57,9 +57,9 @@ const Card = ({ advertise }) => {
                 <button className="btn border-zinc-950 hvr-sweep-to-top mt-2 text-lg w-full">Details</button>
               </Link>
               <div className="flex items-center w-full">
-                <p className="flex items-center text-xl mr-2"><LiaBathSolid className="text-2xl mr-2"></LiaBathSolid> {advertise.bath} </p>
-                <p className="flex items-center text-xl mr-2"><IoBedOutline className="text-2xl mr-2"></IoBedOutline> {advertise.bed} </p>
-                <p className="flex items-center mr-2"><SlSizeActual className="text-xl mr-2"></SlSizeActual> {advertise.size} </p>
+                <p className="flex items-center text-white text-xl mr-2"><LiaBathSolid className="text-2xl  mr-2"></LiaBathSolid> {advertise.bath} </p>
+                <p className="flex items-center text-white text-xl mr-2"><IoBedOutline className="text-2xl  mr-2"></IoBedOutline> {advertise.bed} </p>
+                <p className="flex items-center text-white text-base mr-2"><SlSizeActual className="text-lg  mr-2"></SlSizeActual> {advertise.size} </p>
               </div>
             </div>
           </div>

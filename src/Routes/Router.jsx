@@ -43,8 +43,8 @@ const router = createBrowserRouter([
                 path: '/propertyDetails/:id',
                 element: <PrivateRoute><PropertyDetails></PropertyDetails></PrivateRoute>,
                 loader: async ({ params }) => {
-                    const propertiesPromise = fetch(`http://localhost:5000/singleProperties/${params.id}`).then(res => res.json());
-                    const reviewsPromise = fetch(`http://localhost:5000/singleReviews/${params.id}`).then(res => res.json());
+                    const propertiesPromise = fetch(`https://real-estate-project-server.vercel.app/singleProperties/${params.id}`).then(res => res.json());
+                    const reviewsPromise = fetch(`https://real-estate-project-server.vercel.app/singleReviews/${params.id}`).then(res => res.json());
                     const [properties, reviews] = await Promise.all([propertiesPromise, reviewsPromise]);
                     return { properties, reviews };
                 }
@@ -119,7 +119,7 @@ const router = createBrowserRouter([
             {
                 path: 'addedProperties/updateProperties/:id',
                 element: <UpdateProperTies></UpdateProperTies>,
-                loader: ({ params }) => fetch(`http://localhost:5000/properties/${params.id}`)
+                loader: ({ params }) => fetch(`https://real-estate-project-server.vercel.app/properties/${params.id}`)
 
             },
             {
@@ -150,12 +150,12 @@ const router = createBrowserRouter([
             {
                 path: "wishlist/offerProperties/:id",
                 element: <OfferPropertyForm></OfferPropertyForm>,
-                loader: ({ params }) => fetch(`http://localhost:5000/wishlist/${params.id}`)
+                loader: ({ params }) => fetch(`https://real-estate-project-server.vercel.app/wishlist/${params.id}`)
             },
             {
                 path: "propertyBought/payment/:id",
                 element: <Payment></Payment>,
-                loader: ({params}) => fetch(`http://localhost:5000/propertyBought/${params.id}`)
+                loader: ({params}) => fetch(`https://real-estate-project-server.vercel.app/propertyBought/${params.id}`)
             }
         ]
     }

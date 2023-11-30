@@ -9,7 +9,7 @@ const DashboardAvailable = () => {
             <li>
                 <Link
                     to="/"
-                    className="flex items-center text-sm px-6 py-4 text-gray-700 dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100 ">
+                    className="flex items-center text-sm px-6 py-4 text-white dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100 ">
                     <span className="inline-block mr-3">
                         <FaHome className="text-2xl"></FaHome>
                     </span>
@@ -19,7 +19,7 @@ const DashboardAvailable = () => {
             <li>
                 <Link
                     to="/addProperties"
-                    className="flex items-center text-sm px-6 py-4 text-gray-700 dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100">
+                    className="flex items-center text-sm px-6 py-4 text-white dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100">
                     <span className="inline-block mr-3">
                         <LuTableProperties className="text-2xl"></LuTableProperties>
                     </span>
@@ -29,7 +29,7 @@ const DashboardAvailable = () => {
             <li>
                 <Link
                     to="/contact"
-                    className="flex items-center text-sm px-6 py-4 text-gray-700 dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100">
+                    className="flex items-center text-sm px-6 py-4 text-white dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100">
                     <span className="inline-block mr-3">
                         <AiOutlineMail className="text-2xl"></AiOutlineMail>
                     </span>

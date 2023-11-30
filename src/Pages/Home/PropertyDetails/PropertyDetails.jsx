@@ -13,13 +13,7 @@ import { Toaster } from "react-hot-toast";
 import ReviewCards from "./ReviewCards";
 import ContactUs from "./ContactUs";
 import ReviewModal from "./ReviewModal";
-
-// <div>
-//                 <button onClick={() => handleWishlist(_id)} className="btn bg-orange-500">Add To Wishlist</button>
-//             </div>
-//             <div>
-//                 <ReviewModal properties={properties} reviews={reviews} ></ReviewModal>
-//             </div>
+import "../../../Shared/ButtonHover/ButtonHover.css"
 
 const PropertyDetails = () => {
     const { user } = useAuth()
@@ -80,8 +74,8 @@ const PropertyDetails = () => {
                                 <img src={propertyImage} alt="" className="rounded-lg shadow-lg dark:bg-gray-500 aspect-video sm:min-h-96" />
                             </div>
                         </div>
-                        <div className="flex flex-col px-6 py-8 space-y-6 rounded-sm sm:p-8 lg:p-12 lg:w-1/2 xl:w-2/5 dark:bg-violet-400 dark:text-gray-900">
-                            <h3 className="text-xl font-semibold ">Features</h3>
+                        <div className="flex flex-col px-6 py-8 text-white space-y-6 rounded-sm sm:p-8 lg:p-12 lg:w-1/2 xl:w-2/5 dark:bg-violet-400 dark:text-gray-900">
+                            <h3 className="text-xl font-semibold  ">Features</h3>
                             <hr className="mt-5" />
                             <div className="flex items-center gap-5 w-full">
                                 <div className="flex items-center space-x-2 sm:space-x-4 w-1/2">
@@ -165,7 +159,7 @@ const PropertyDetails = () => {
                             </div>
                             {/* button */}
 
-                            <button onClick={handleWishlist} className="btn btn-outline  flex items-center text-base">
+                            <button onClick={handleWishlist} className="btn  hvr-sweep-to-top text-black flex items-center text-base">
                                 <FaClover />
                                 Add To Wishlist
                             </button>
@@ -174,7 +168,7 @@ const PropertyDetails = () => {
                     </div>
                 </section>
 
-                <div className="flex flex-col lg:flex-row gap-5 container mx-auto">
+                <div className="flex flex-col lg:flex-row text-white gap-5 container mx-auto">
                     <div className="max-w-4xl flex-1 mx-2 lg:mx-0 px-8 py-4 shadow-2xl  shadow-gray-300/50 border border-white rounded-lg dark:bg-gray-800">
                         <h3 className="text-xl font-semibold ">Overview</h3>
                         <hr className="mt-5" />
@@ -228,7 +222,7 @@ const PropertyDetails = () => {
 
                     </div>
                 </div>
-                <div className="flex flex-col lg:flex-row mt-10 container mx-auto">
+                <div className="flex flex-col lg:flex-row mt-10 text-white container mx-auto">
                     <div className="max-w-4xl flex-1 mx-2 lg:mx-0 px-8 py-4 mt-5 rounded-lg border border-white shadow-2xl  shadow-gray-300/50 dark:bg-gray-800">
                         <h3 className="text-xl font-semibold ">Description</h3>
                         <hr className="mt-5" />

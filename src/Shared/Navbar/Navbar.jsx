@@ -17,34 +17,34 @@ const Navbar = () => {
     }
     const navlinks =
         <>
-            <li className="mr-4 text-lg  font-medium"><NavLink to="/" className={({ isActive, isPending }) =>
+            <li className="mr-4 text-lg text-white  font-medium"><NavLink to="/" className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : ""
             }>Home</NavLink></li>
-            <li className="mr-4 text-lg  font-medium"><NavLink to="/allProperties" className={({ isActive, isPending }) =>
+            <li className="mr-4 text-lg text-white font-medium"><NavLink to="/allProperties" className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : ""
             }>All Properties</NavLink></li>
-            <li className="mr-4 text-lg  font-medium"><NavLink to="/dashboard/wishlist" className={({ isActive, isPending }) =>
+            <li className="mr-4 text-lg text-white font-medium"><NavLink to="/dashboard" className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : ""
             }>Dashboard</NavLink></li>
-            <li className="mr-4 text-lg  font-medium"><NavLink to="/aboutUs" className={({ isActive, isPending }) =>
+            <li className="mr-4 text-lg text-white font-medium"><NavLink to="/aboutUs" className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : ""
             }>About Us</NavLink></li>
            
         </>
     return (
         <div>
-            <section className=" dark:bg-gray-800 bg-blue-50">
+            <section className=" dark:bg-gray-800 ">
                 <div className="container px-4 mx-auto">
                     <nav className="relative flex items-center justify-between py-4 ">
                         <Link href="/" className="text-3xl font-semibold leading-none dark:text-gray-400">
                             <img src="https://i.ibb.co/LQ5jG4p/logo.png" className='h-12 w-28 lg:h-16 lg:w-36' alt="" />
                         </Link>
-                        <div className="flex items-center lg:hidden ">
+                        <div className="flex items-center lg:hidden  ">
                             <a className="mr-6 dark:text-gray-400">
-                                <IoMdHeartEmpty className="text-2xl"></IoMdHeartEmpty>
+                                <IoMdHeartEmpty className="text-2xl "></IoMdHeartEmpty>
                             </a>
                             <span className="relative inline-block mr-6 dark:text-gray-400 ">
-                                <VscBell className="text-2xl"></VscBell>
+                                <VscBell className="text-2xl "></VscBell>
                                 <span
                                     className="absolute top-0 right-0 inline-flex items-center justify-center w-2 h-2 bg-red-600 rounded-full"></span>
                             </span>
