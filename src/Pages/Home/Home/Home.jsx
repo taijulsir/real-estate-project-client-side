@@ -2,9 +2,11 @@ import Advertisement from "../Advertisement/Advertisement";
 import Banner from "../Banner/Banner";
 import Gallery from "../Gallery/Gallery";
 import LatestReview from "../Latest Review/LatestReview";
+import Partners from "../Partners/Partners";
 import PropertyArea from "../PropertyArea/PropertyArea";
 import PropertyType from "../PropertyType/PropertyType";
 import Blogs from "./Blogs/Blogs";
+import Team from "./Team/Team";
 
 
 const Home = () => {
@@ -17,6 +19,8 @@ const Home = () => {
            <PropertyArea></PropertyArea>
            <Blogs></Blogs>
            <LatestReview></LatestReview>
+           <Team></Team>
+           <Partners></Partners>
         </div>
     );
 };
