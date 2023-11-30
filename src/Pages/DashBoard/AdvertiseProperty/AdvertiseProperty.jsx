@@ -5,6 +5,7 @@ import { IoMdRemoveCircleOutline } from "react-icons/io";
 
 import Swal from "sweetalert2";
 import { useEffect, useState } from "react";
+import HelmetTitle from "../../../Shared/HelmetTitle/HelmetTitle";
 
 const AdvertiseProperty = () => {
     const axiosSecure = useAxiosSecure()
@@ -66,6 +67,7 @@ const AdvertiseProperty = () => {
     }
     return (
         <div>
+            <HelmetTitle title={`Luxury Real State || Advertise Properties`}></HelmetTitle>
             <div>
                 <div className=" px-3 lg:px-6">
                     <h3 className="text-3xl text-center font-bold my-10">Your All Sold Properties</h3>

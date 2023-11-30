@@ -6,6 +6,7 @@ import { MdOutlineDelete } from "react-icons/md";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure/useAxiosSecure";
 import Swal from "sweetalert2";
 import { GiHandcuffed } from "react-icons/gi";
+import HelmetTitle from "../../../Shared/HelmetTitle/HelmetTitle";
 
 
 const ManageUsers = () => {
@@ -101,6 +102,7 @@ const ManageUsers = () => {
     }
     return (
         <div>
+            <HelmetTitle title={`Luxury Real State || Manage Users`}></HelmetTitle>
             <div className="overflow-x-auto">
                 <table className="min-w-full bg-white font-[sans-serif]">
 

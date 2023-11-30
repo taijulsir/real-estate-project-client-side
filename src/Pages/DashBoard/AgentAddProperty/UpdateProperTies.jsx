@@ -5,6 +5,7 @@ import useAxiosSecure from "../../../Hooks/useAxiosSecure/useAxiosSecure";
 import useAxiosPublic from "../../../Hooks/useAxiosPublic/useAxiosPublic";
 import Swal from "sweetalert2";
 import { useLoaderData, useNavigate } from "react-router-dom";
+import Title from "../../../Shared/Title/Title";
 
 const image_Hosting_Key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_Hosting_Api = `https://api.imgbb.com/1/upload?key=${image_Hosting_Key}`
@@ -48,7 +49,7 @@ const UpdateProperTies = () => {
     return (
         <div className="px-3 lg:px-6 my-5">
 
-            <h3 className="text-3xl font-bold text-center mb-5">Update Your Properties</h3>
+           <Title heading={"Update Your"} colorHeading={"Properties"}></Title>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className=" space-y-3">
                     {/* agent name */}

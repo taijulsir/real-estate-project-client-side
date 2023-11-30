@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import useAuth from "../../../Hooks/useAuth/useAuth";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../../../Hooks/useAxiosPublic/useAxiosPublic";
+import HelmetTitle from "../../../Shared/HelmetTitle/HelmetTitle";
 
 const BroughtProperty = () => {
     const { user } = useAuth()
@@ -59,6 +60,7 @@ const BroughtProperty = () => {
     }
     return (
         <div className="px-3 lg:px-6 my-6">
+            <HelmetTitle title={"Luxury Real Estate || Make an offer"}></HelmetTitle>
             <h2 className="text-3xl font-bold ">Make an offer to brought <span className="text-green-500">{properties.propertyTitle}.</span></h2>
 
             <div>

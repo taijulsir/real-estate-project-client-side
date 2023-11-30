@@ -1,3 +1,4 @@
+
 import Advertisement from "../Advertisement/Advertisement";
 import Banner from "../Banner/Banner";
 import Gallery from "../Gallery/Gallery";
@@ -7,11 +8,13 @@ import PropertyArea from "../PropertyArea/PropertyArea";
 import PropertyType from "../PropertyType/PropertyType";
 import Blogs from "./Blogs/Blogs";
 import Team from "./Team/Team";
+import HelmetTitle from "../../../Shared/HelmetTitle/HelmetTitle";
 
 
 const Home = () => {
     return (
         <div className="font-raleway space-y-16">
+            <HelmetTitle title={"Luxury Real Estate"}></HelmetTitle>
            <Banner></Banner> 
            <Advertisement></Advertisement>
            <Gallery></Gallery>

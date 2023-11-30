@@ -5,6 +5,7 @@ import { FaRegCircleCheck } from "react-icons/fa6";
 import { TbForbid2 } from "react-icons/tb";
 import Swal from "sweetalert2";
 import "../../../Shared/ButtonHover/ButtonHover.css"
+import HelmetTitle from "../../../Shared/HelmetTitle/HelmetTitle";
 
 
 const RequestedProperties = () => {
@@ -72,6 +73,7 @@ const RequestedProperties = () => {
     }
     return (
         <div className="px-3 lg:px-6 my-6">
+            <HelmetTitle title={"Luxury Real Estate || Requested Properties"}></HelmetTitle>
             <h1 className="text-3xl font-bold my-6">Request Properties Information</h1>
             <div>
                 <div className="overflow-x-auto">

@@ -48,7 +48,7 @@ const PropertyType = () => {
             <div className="mt-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5 container mx-auto">
             {property?.map(type =>
                 <div key={type.id} className="card ">
-                    <figure><img src={type.propertyImage} alt="Shoes" className="h-[300px] object-cover" /></figure>
+                    <figure className="relative  overflow-hidden transform transition-transform duration-500 ease-in-out animate-pulse hover:scale-110"><img src={type.propertyImage} alt="Shoes" className="h-[300px] object-cover" /></figure>
                     <div className="card-body">
                         <h2 className="card-title text-white">
                            {type.type}

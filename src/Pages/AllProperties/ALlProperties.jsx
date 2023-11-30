@@ -4,6 +4,7 @@ import useAxiosPublic from "../../Hooks/useAxiosPublic/useAxiosPublic";
 import Card from "../../Shared/Card/Card";
 import { useState } from "react";
 import "../../Shared/ButtonHover/ButtonHover.css"
+import HelmetTitle from "../../Shared/HelmetTitle/HelmetTitle";
 
 // const filterBy = (value, range) => {
 //     console.log(value)
@@ -86,6 +87,7 @@ const ALlProperties = () => {
     }
     return (
         <div>
+             <HelmetTitle title={"Luxury Real State || All Properties"}></HelmetTitle>
             <div>
                 <Banner></Banner>
             </div>

@@ -6,6 +6,7 @@ import { useLoaderData, useNavigate } from "react-router-dom";
 import { FaCheck } from "react-icons/fa";
 import { IoWarningOutline } from "react-icons/io5";
 import Swal from "sweetalert2";
+import HelmetTitle from "../../../Shared/HelmetTitle/HelmetTitle";
 
 
 
@@ -107,6 +108,7 @@ const CheckoutForm = () => {
 
     return (
         <div className="h-[700px] mt-10">
+            <HelmetTitle title={"Luxury Real Estate || Payment Form"}></HelmetTitle>
             <form className="max-w-6xl mx-auto" onSubmit={handleSubmit}>
                 <CardElement
                     options={{

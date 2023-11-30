@@ -11,6 +11,7 @@ import useAuth from "../../Hooks/useAuth/useAuth"
 import useAxiosPublic from "../../Hooks/useAxiosPublic/useAxiosPublic";
 import Swal from "sweetalert2";
 import { useState } from "react";
+import HelmetTitle from "../../Shared/HelmetTitle/HelmetTitle";
 const Login = () => {
     const [showPassword,setShowPassWord] = useState(false)
     const {login,googleLogin,githubLogin} = useAuth()
@@ -66,6 +67,7 @@ const Login = () => {
     }
     return (
         <div>
+            <HelmetTitle title={"Luxury Real Estate || Login"}></HelmetTitle>
             <div className="flex justify-center items-center font-[sans-serif] text-[#333] h-full min-h-screen p-4" style={{ backgroundImage: 'url(https://i.ibb.co/Jspy7Nq/register.png)', backgroundRepeat: "no-repeat", backgroundSize: "cover" }}>
                 <div className="max-w-md w-full mx-auto">
                     <form onSubmit={handleSubmit(onSubmit)} className="bg-opacity-70 bg-white rounded-2xl p-6 shadow-xl">

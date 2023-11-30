@@ -8,6 +8,7 @@ import DashboardAdmin from "../../Routes/DashboardAdmin";
 import useCheckRole from "../../Hooks/useCheckRole/useCheckRole";
 
 import DashboardAvailable from "../../Routes/DashboardAvailable";
+import HelmetTitle from "../../Shared/HelmetTitle/HelmetTitle";
 
 
 const DashBoard = () => {
@@ -25,6 +26,7 @@ const DashBoard = () => {
 
     return (
         <div className=" font-raleway ">
+             <HelmetTitle title={"Luxury Real State || Dashboard"}></HelmetTitle>
             <div className="xl:h-screen dark:bg-gray-800">
                 <div className={`body-content ${open ? 'open' : ''}`}>
 

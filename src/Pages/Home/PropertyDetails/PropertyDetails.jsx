@@ -14,6 +14,7 @@ import ReviewCards from "./ReviewCards";
 import ContactUs from "./ContactUs";
 import ReviewModal from "./ReviewModal";
 import "../../../Shared/ButtonHover/ButtonHover.css"
+import HelmetTitle from "../../../Shared/HelmetTitle/HelmetTitle";
 
 const PropertyDetails = () => {
     const { user } = useAuth()
@@ -65,6 +66,7 @@ const PropertyDetails = () => {
     }
     return (
         <div>
+             <HelmetTitle title={`Luxury Real State || Property ${properties._id}`}></HelmetTitle>
             <div>
                 <section className="dark:bg-gray-800 dark:text-gray-100">
                     <div className="container flex flex-col mx-auto lg:flex-row">

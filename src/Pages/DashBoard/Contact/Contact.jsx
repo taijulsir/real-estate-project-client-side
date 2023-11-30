@@ -1,9 +1,11 @@
+import HelmetTitle from "../../../Shared/HelmetTitle/HelmetTitle";
 
 
 const Contact = () => {
     return (
         <div>
-            <section className="py-16 bg-gray-100 font-poppins dark:bg-gray-900">
+            <HelmetTitle title={"Luxury Real Estate || Contact Us"}></HelmetTitle>
+            <section className="py-16  font-poppins dark:bg-gray-900">
                 <div className="justify-center flex-1 container px-4 py-4 mx-auto lg:py-10 md:px-7">
                     <div className="max-w-xl mx-auto">
                         <div className="text-center ">
@@ -23,17 +25,15 @@ const Contact = () => {
                                     </div>
                                 </div>
                             </div>
-                            <p className="mb-16 text-base text-center text-gray-500">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus magni eius eaque?
-                                Pariatur
-                                numquam, odio quod nobis ipsum ex cupiditate?
+                            <p className="mb-16 text-base text-center text-white">
+                            Feel free to reach out to us using the contact information below. Whether you have questions, feedback, or inquiries, our team is here to assist you. We value your communication and look forward to hearing from you. 
                             </p>
                         </div>
                     </div>
                     <div className="flex flex-wrap mb-8 -mx-4">
                         <div className="w-full px-4 mb-4 lg:w-1/3 lg:mb-0">
                             <div
-                                className="h-full py-12 text-center transition-all rounded-lg shadow dark:bg-gray-800 bg-gray-50 hover:shadow-lg">
+                                className="h-full py-12 text-center transition-all rounded-lg shadow dark:bg-gray-800 border  hover:shadow-lg">
                                 <div
                                     className="inline-flex items-center justify-center w-12 h-12 mb-6 text-gray-100 bg-blue-500 rounded-full dark:bg-blue-500">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -43,15 +43,15 @@ const Contact = () => {
                                         </path>
                                     </svg>
                                 </div>
-                                <h2 className="mb-4 text-xl font-bold leading-9 text-gray-700 md:text-2xl dark:text-gray-400">
+                                <h2 className="mb-4 text-xl font-bold leading-9 text-white md:text-2xl dark:text-gray-400">
                                     Email</h2>
                                 <a href="#"
-                                    className="text-base font-medium text-gray-500 md:text-lg dark:text-gray-400">ITcompany@gmail.com</a>
+                                    className="text-base font-medium text-white md:text-lg dark:text-gray-400">ITcompany@gmail.com</a>
                             </div>
                         </div>
                         <div className="w-full px-4 mb-4 lg:w-1/3 lg:mb-0">
                             <div
-                                className="h-full py-12 text-center transition-all rounded-lg shadow dark:bg-gray-800 bg-gray-50 hover:shadow-lg">
+                                className="h-full py-12 text-center transition-all rounded-lg shadow dark:bg-gray-800 border  hover:shadow-lg">
                                 <div
                                     className="inline-flex items-center justify-center w-12 h-12 mb-6 text-gray-100 bg-blue-500 rounded-full dark:bg-blue-500">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -61,15 +61,15 @@ const Contact = () => {
                                         </path>
                                     </svg>
                                 </div>
-                                <h2 className="mb-4 text-xl font-bold leading-9 text-gray-700 md:text-2xl dark:text-gray-400">
+                                <h2 className="mb-4 text-xl font-bold leading-9 text-white md:text-2xl dark:text-gray-400">
                                     Phone</h2>
                                 <a href="#"
-                                    className="text-base font-medium text-gray-500 md:text-lg dark:text-gray-400">+9876542312</a>
+                                    className="text-base font-medium text-white md:text-lg dark:text-gray-400">+9876542312</a>
                             </div>
                         </div>
                         <div className="w-full px-4 mb-4 lg:w-1/3 lg:mb-0">
                             <div
-                                className="h-full py-12 text-center transition-all rounded-lg shadow dark:bg-gray-800 bg-gray-50 hover:shadow-lg">
+                                className="h-full py-12 text-center transition-all rounded-lg shadow dark:bg-gray-800 border  hover:shadow-lg">
                                 <div
                                     className="inline-flex items-center justify-center w-12 h-12 mb-6 text-gray-100 bg-blue-500 rounded-full dark:bg-blue-500">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -79,7 +79,7 @@ const Contact = () => {
                                         </path>
                                     </svg>
                                 </div>
-                                <h2 className="mb-4 text-xl font-bold leading-9 text-gray-700 md:text-2xl dark:text-gray-400">
+                                <h2 className="mb-4 text-xl font-bold leading-9 text-white md:text-2xl dark:text-gray-400">
                                     Social</h2>
                                 <a href="#"
                                     className="inline-block mr-4 text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 hover:text-blue-700">
@@ -112,29 +112,29 @@ const Contact = () => {
                         </div>
 
                     </div>
-                    <div className="px-8 py-8 bg-white border rounded-md shadow-md dark:border-gray-800 dark:bg-gray-800">
+                    <div className="px-8 py-8  border rounded-md shadow-md dark:border-gray-800 dark:bg-gray-800">
                         <form action="">
                             <div className="mb-6">
-                                <h2 className="text-xl font-bold text-gray-00 dark:text-gray-400">
+                                <h2 className="text-xl font-bold text-white dark:text-gray-400">
                                     Please send message for futher information! </h2>
                             </div>
                             <div className="flex flex-wrap mb-4 -mx-2">
                                 <div className="w-full px-2 mb-4 lg:mb-0 lg:w-1/2">
                                     <input
-                                        className="w-full px-3 py-2 leading-loose border rounded-md bg-gray-50 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700"
+                                        className="w-full px-3 py-2 leading-loose bg-indigo-900   border rounded-md  dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700"
                                         type="text" placeholder="First Name.." required="" />
                                 </div>
                                 <div className="w-full px-2 lg:w-1/2">
                                     <input
-                                        className="w-full px-3 py-2 leading-loose border rounded-md bg-gray-50 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700"
+                                        className="w-full px-3 py-2 leading-loose bg-indigo-900  border rounded-md  dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700"
                                         type="text" placeholder="Last Name.." required="" />
                                 </div>
                             </div>
                             <input
-                                className="w-full px-3 py-2 mb-4 leading-loose border rounded-md bg-gray-50 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700"
+                                className="w-full px-3 py-2 mb-4 leading-loose bg-indigo-900  border rounded-md  dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700"
                                 type="email" placeholder="abc@gmail.com" required="" />
                             <textarea rows="4" type="message" placeholder="Write a message..." required=""
-                                className="block w-full px-4 mb-4 leading-tight text-gray-700 border rounded bg-gray-50 dark:placeholder-gray-400 py-7 dark:text-gray-400 dark:border-gray-800 dark:bg-gray-700 "></textarea>
+                                className="block w-full px-4 mb-4 leading-tight bg-indigo-900 text-white border rounded  dark:placeholder-gray-400 py-7 dark:text-gray-400 dark:border-gray-800 dark:bg-gray-700 "></textarea>
                             <button
                                 className="w-full py-4 text-sm font-bold leading-normal text-white transition-all duration-300 bg-blue-600 rounded-md dark:bg-blue-500 dark:hover:bg-blue-600 hover:bg-blue-700">
                                 Send Message

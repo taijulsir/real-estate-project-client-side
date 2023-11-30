@@ -1,6 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import useAuth from "../../../Hooks/useAuth/useAuth";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure/useAxiosSecure";
+import HelmetTitle from "../../../Shared/HelmetTitle/HelmetTitle";
+import Title from "../../../Shared/Title/Title";
 
 
 const SoldProperty = () => {
@@ -15,9 +17,10 @@ const SoldProperty = () => {
     })
     console.log(soldProperties)
     return (
-        <div>
+        <div className="mt-5">
+            <HelmetTitle title={"Luxury Real Estate || Agent Sold Property"}></HelmetTitle>
             <div className=" px-3 lg:px-6">
-                <h3 className="text-3xl text-center font-bold my-10">Your All Sold Properties</h3>
+               <Title heading={"All of your"} colorHeading={"Sold Properties"}></Title>
                
                 {/* table */}
                 <div>

@@ -3,6 +3,7 @@ import useAxiosSecure from "../../../Hooks/useAxiosSecure/useAxiosSecure";
 import { MdOutlineVerifiedUser } from "react-icons/md";
 import { TbForbid2 } from "react-icons/tb";
 import Swal from "sweetalert2";
+import HelmetTitle from "../../../Shared/HelmetTitle/HelmetTitle";
 
 
 const ManageProperties = () => {
@@ -33,6 +34,7 @@ const ManageProperties = () => {
     }
     return (
         <div className=" px-3 lg:px-6">
+                      <HelmetTitle title={`Luxury Real State || Manage Properties`}></HelmetTitle>
             <h3 className="text-3xl text-center font-bold my-5">Manage Properties</h3>
             {/* table */}
             <div>

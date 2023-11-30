@@ -69,7 +69,7 @@ const Banner = () => {
                                     </h2>
                                     <p className="mb-8 text-base leading-8 lg:w-2/3 mx-auto text-gray-400 lg:text-xl">
                                         {banner.propertyDescription} </p>
-                                    <a className="block hvr-sweep-to-top px-5 py-3 text-sm font-semibold text-center text-indigo-500 transition duration-200 bg-white border border-white rounded md:inline-block hover:bg-indigo-50 hover:border-indigo-50"
+                                    <a className="block hvr-sweep-to-top  px-5 py-3 text-xl font-semibold text-center text-indigo-500 transition duration-200 border  border-white rounded md:inline-block hover:bg-indigo-50 hover:border-indigo-50"
                                     > Explore More </a>
                                 </div>
                             </div>

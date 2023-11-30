@@ -3,6 +3,8 @@ import useAuth from "../../../Hooks/useAuth/useAuth";
 import useAxiosPublic from "../../../Hooks/useAxiosPublic/useAxiosPublic";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure/useAxiosSecure";
 import Swal from "sweetalert2";
+import HelmetTitle from "../../../Shared/HelmetTitle/HelmetTitle";
+import Title from "../../../Shared/Title/Title";
 
 const image_Hosting_Key = import.meta.env.VITE_UPLOAD_HOSTING_KEY;
 const image_Hosting_Api = `https://api.imgbb.com/1/upload?key=${image_Hosting_Key}`
@@ -48,7 +50,9 @@ const AddProperty = () => {
     }
 
     return (
-        <div>
+        <div className="mt-5">
+            <HelmetTitle title={"Luxury Real Estate || Add Property"}></HelmetTitle>
+            <Title heading={"Added Your"} colorHeading={"Properties"}></Title>
             <div className=" px-4 lg:px-0">
                 <section className="lg:p-16 dark:bg-gray-800 dark:text-gray-50">
                     <form onSubmit={handleSubmit(onSubmit)} className="container flex flex-col mx-auto space-y-12">
@@ -66,7 +70,7 @@ const AddProperty = () => {
                                                 <p className="mb-2 text-sm text-zinc-950"><span className="font-semibold">Click to upload</span> or drag and drop</p>
                                                 <p className="text-xs text-zinc-950">SVG, PNG, JPG or GIF </p>
                                             </div>
-                                            <input id="dropzone-file" type="file" {...register("propertyImage1", { required: true })}  />
+                                            <input id="dropzone-file" type="file" {...register("propertyImage1", { required: true })} />
                                         </label>
                                     </div>
                                 </div>
@@ -75,7 +79,7 @@ const AddProperty = () => {
                                 {/* agent name */}
                                 <div className="col-span-full lg:col-span-3">
                                     <h2 className=" text-base md:text-xl font-semibold text-zinc-950 mb-2 lg:mb-4">Agent Name <span className="text-red-700">*</span></h2>
-                                    <input className="pt-4 pb-4 pl-2 md:p-4 w-full bg-[#fff]   text-base font-normal text-[#1B1A1A99] rounded" type="text"  {...register('agentName')} defaultValue={user?.displayName} readOnly  />
+                                    <input className="pt-4 pb-4 pl-2 md:p-4 w-full bg-[#fff]   text-base font-normal text-[#1B1A1A99] rounded" type="text"  {...register('agentName')} defaultValue={user?.displayName} readOnly />
                                 </div>
                                 {/* agent email */}
                                 <div className="col-span-full lg:col-span-3">
@@ -85,39 +89,39 @@ const AddProperty = () => {
                                 {/* property title */}
                                 <div className="col-span-full lg:col-span-3">
                                     <h2 className=" text-base md:text-xl font-semibold text-zinc-950 mb-2 lg:mb-4">Property Title <span className="text-red-700">*</span></h2>
-                                    <input className="pt-4 pb-4 pl-2 md:p-4 w-full bg-[#fff]   text-base font-normal text-[#1B1A1A99] rounded" type="text" {...register("propertyTitle", { required: true })}  placeholder="Enter Your Property Title Here" />
+                                    <input className="pt-4 pb-4 pl-2 md:p-4 w-full bg-[#fff]   text-base font-normal text-[#1B1A1A99] rounded" type="text" {...register("propertyTitle", { required: true })} placeholder="Enter Your Property Title Here" />
                                 </div>
 
                                 {/* location */}
                                 <div className="col-span-full lg:col-span-3">
                                     <h2 className=" text-base md:text-xl font-semibold text-zinc-950 mb-2 lg:mb-4">Property Location <span className="text-red-700">*</span></h2>
-                                    <input className="pt-4 pb-4 pl-2 md:p-4 w-full bg-[#fff]   text-base font-normal text-[#1B1A1A99] rounded" type="text"    {...register('propertyLocation', { required: true })} placeholder="Enter Your Property Location"  />
+                                    <input className="pt-4 pb-4 pl-2 md:p-4 w-full bg-[#fff]   text-base font-normal text-[#1B1A1A99] rounded" type="text"    {...register('propertyLocation', { required: true })} placeholder="Enter Your Property Location" />
                                 </div>
                                 {/* price */}
                                 <div className="col-span-full lg:col-span-2">
                                     <h2 className=" text-base md:text-xl font-semibold text-zinc-950 mb-2 lg:mb-4">Price<span className="text-red-700">*</span></h2>
-                                    <input className="pt-4 pb-4 pl-2 md:p-4 w-full bg-[#fff]   text-base font-normal text-[#1B1A1A99] rounded" type="text"   {...register("priceRange", { required: true })} placeholder="Enter Price Range"  />
+                                    <input className="pt-4 pb-4 pl-2 md:p-4 w-full bg-[#fff]   text-base font-normal text-[#1B1A1A99] rounded" type="text"   {...register("priceRange", { required: true })} placeholder="Enter Price Range" />
                                 </div>
                                 {/* bed */}
                                 <div className="col-span-full lg:col-span-2">
                                     <h2 className=" text-base md:text-xl font-semibold text-zinc-950 mb-2 lg:mb-4">Bed <span className="text-red-700">*</span></h2>
-                                    <input className="pt-4 pb-4 pl-2 md:p-4 w-full bg-[#fff]   text-base font-normal text-[#1B1A1A99] rounded" type="number"   {...register("bed", { required: true })}placeholder="Enter Price Here"  />
+                                    <input className="pt-4 pb-4 pl-2 md:p-4 w-full bg-[#fff]   text-base font-normal text-[#1B1A1A99] rounded" type="number"   {...register("bed", { required: true })} placeholder="Enter Price Here" />
                                 </div>
                                 {/* bath */}
                                 <div className="col-span-full lg:col-span-2">
                                     <h2 className=" text-base md:text-xl font-semibold text-zinc-950 mb-2 lg:mb-4"> Bath <span className="text-red-700">*</span></h2>
-                                    <input className="pt-4 pb-4 pl-2 md:p-4 w-full bg-[#fff]   text-base font-normal text-[#1B1A1A99] rounded" type="number"   {...register('bath',{required:true})} placeholder="Enter Total Bath Here"  />
+                                    <input className="pt-4 pb-4 pl-2 md:p-4 w-full bg-[#fff]   text-base font-normal text-[#1B1A1A99] rounded" type="number"   {...register('bath', { required: true })} placeholder="Enter Total Bath Here" />
                                 </div>
                                 {/* size */}
                                 <div className="col-span-full lg:col-span-2">
                                     <h2 className=" text-base md:text-xl font-semibold text-zinc-950 mb-2 lg:mb-4">Size<span className="text-red-700">*</span></h2>
-                                    <input className="pt-4 pb-4 pl-2 md:p-4 w-full bg-[#fff]   text-base font-normal text-[#1B1A1A99] rounded" type="number"  {...register('size',{required:true})} placeholder="Enter Property Size"  />
+                                    <input className="pt-4 pb-4 pl-2 md:p-4 w-full bg-[#fff]   text-base font-normal text-[#1B1A1A99] rounded" type="number"  {...register('size', { required: true })} placeholder="Enter Property Size" />
                                 </div>
-                                
+
                                 {/* description */}
                                 <div className="col-span-full">
                                     <h2 className=" text-base md:text-xl font-semibold text-zinc-950 mb-2 lg:mb-4"> Description <span className="text-red-700">*</span></h2>
-                                    <input className="pt-4 pb-4 pl-2 md:p-4 w-full bg-[#fff]   text-base font-normal text-[#1B1A1A99] rounded" type="text" {...register("propertyDescription", { required: true })}placeholder="Enter Property description Here"  />
+                                    <input className="pt-4 pb-4 pl-2 md:p-4 w-full bg-[#fff]   text-base font-normal text-[#1B1A1A99] rounded" type="text" {...register("propertyDescription", { required: true })} placeholder="Enter Property description Here" />
                                 </div>
                                 <div className="col-span-full mt-5">
                                     <input type="submit" value="Add Property" className="btn btn-block bg-[#4357AD] text-lg text-[#fff] hover:bg-[#154360] " />

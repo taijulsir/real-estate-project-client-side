@@ -17,25 +17,25 @@ const Navbar = () => {
     }
     const navlinks =
         <>
-            <li className="mr-4 text-lg text-white  font-medium"><NavLink to="/" className={({ isActive, isPending }) =>
+            <li className="mr-4 text-lg lg:text-white text-zinc-950    hover:bg-gray-700 hover:px-3 hover:py-2 hover:rounded"><NavLink to="/" className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : ""
             }>Home</NavLink></li>
-            <li className="mr-4 text-lg text-white font-medium"><NavLink to="/allProperties" className={({ isActive, isPending }) =>
+            <li className="mr-4 text-lg lg:text-white text-zinc-950    hover:bg-gray-700 hover:px-3 hover:py-2 hover:rounded"><NavLink to="/allProperties" className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : ""
             }>All Properties</NavLink></li>
-            <li className="mr-4 text-lg text-white font-medium"><NavLink to="/dashboard" className={({ isActive, isPending }) =>
+            <li className="mr-4 text-lg lg:text-white text-zinc-950    hover:bg-gray-700 hover:px-3 hover:py-2 hover:rounded"><NavLink to="/dashboard" className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : ""
             }>Dashboard</NavLink></li>
-            <li className="mr-4 text-lg text-white font-medium"><NavLink to="/aboutUs" className={({ isActive, isPending }) =>
+            <li className="mr-4 text-lg lg:text-white text-zinc-950    hover:bg-gray-700 hover:px-3 hover:py-2 hover:rounded"><NavLink to="/aboutUs" className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : ""
             }>About Us</NavLink></li>
            
         </>
     return (
         <div>
-            <section className=" dark:bg-gray-800 ">
+            <section className=" dark:bg-gray-800  ">
                 <div className="container px-4 mx-auto">
-                    <nav className="relative flex items-center justify-between py-4 ">
+                    <nav className="relative flex items-center justify-between ">
                         <Link href="/" className="text-3xl font-semibold leading-none dark:text-gray-400">
                             <img src="https://i.ibb.co/LQ5jG4p/logo.png" className='h-12 w-28 lg:h-16 lg:w-36' alt="" />
                         </Link>
@@ -88,8 +88,6 @@ const Navbar = () => {
                             </NavLink>}
                         </div>
                     </nav>
-
-
                     {/* Mobile Sidebar */}
                     <div
                         className={`fixed inset-0 w-full bg-gray-800 opacity-25 dark:bg-gray-400 lg:hidden ${open ? 'translate-x-0 ease-in-opacity-100' : '-translate-x-full ease-out opacity-0'

@@ -3,6 +3,7 @@ import useAuth from "../../../Hooks/useAuth/useAuth";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure/useAxiosSecure";
 import { AiOutlineDelete } from "react-icons/ai";
 import Swal from "sweetalert2";
+import HelmetTitle from "../../../Shared/HelmetTitle/HelmetTitle";
 
 
 const MyReviews = () => {
@@ -47,7 +48,7 @@ const MyReviews = () => {
     }
     return (
         <div>
-           
+           <HelmetTitle title={"Luxury Real Estate || My Reviews"}></HelmetTitle>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {myReviews?.map(reviews =>
                     <div key={reviews._id}>

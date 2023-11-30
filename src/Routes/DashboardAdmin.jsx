@@ -11,7 +11,7 @@ const DashboardAdmin = () => {
             <li>
                 <Link
                 to="adminProfile"
-                    className="flex items-center px-6 py-4 text-white dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100">
+                    className="flex items-center px-6 py-4 text-white dark:text-gray-400 group dark:hover:bg-gray-700  hover:bg-gray-600 hover:rounded-md">
                     <span className="inline-block mr-3">
                         <MdOutlineDashboard className="text-2xl"></MdOutlineDashboard>
                     </span>
@@ -21,7 +21,7 @@ const DashboardAdmin = () => {
             <li>
                 <Link
                 to="manageUsers"
-                    className="flex items-center px-6 py-4 text-white dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100">
+                    className="flex items-center px-6 py-4 text-white dark:text-gray-400 group dark:hover:bg-gray-700  hover:bg-gray-600 hover:rounded-md">
                     <span className="inline-block mr-3">
                         <FaHeart className="text-2xl"></FaHeart>
                     </span>
@@ -31,7 +31,7 @@ const DashboardAdmin = () => {
             <li>
                 <Link
                 to="manageProperties"
-                    className="flex items-center px-6 py-4 text-white dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100">
+                    className="flex items-center px-6 py-4 text-white dark:text-gray-400 group dark:hover:bg-gray-700  hover:bg-gray-600 hover:rounded-md">
                     <span className="inline-block mr-3">
                         <FaSuperpowers className="text-2xl"></FaSuperpowers>
                     </span>
@@ -41,7 +41,7 @@ const DashboardAdmin = () => {
             <li>
                 <Link
                 to="advertiseProperties"
-                    className="flex items-center px-6 py-4 text-white dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100">
+                    className="flex items-center px-6 py-4 text-white dark:text-gray-400 group dark:hover:bg-gray-700  hover:bg-gray-600 hover:rounded-md">
                     <span className="inline-block mr-3">
                         <LiaAdSolid className="text-2xl"></LiaAdSolid>
                     </span>
@@ -51,7 +51,7 @@ const DashboardAdmin = () => {
             <li>
                 <Link
                 to="manageReviews"
-                    className="flex items-center px-6 py-4 text-white dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-100">
+                    className="flex items-center px-6 py-4 text-white dark:text-gray-400 group dark:hover:bg-gray-700  hover:bg-gray-600 hover:rounded-md">
                     <span className="inline-block mr-3">
                         <FaBook className="text-2xl"></FaBook>
                     </span>
