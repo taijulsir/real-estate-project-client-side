@@ -30,7 +30,7 @@
   - [ImgBB](https://imgbb.com/)
 
 - **Build Tools:**
-  - [Vite](https://vitejs.dev/
+  - [Vite](https://vitejs.dev/)
 
 # Explanation of all pages features.
 
