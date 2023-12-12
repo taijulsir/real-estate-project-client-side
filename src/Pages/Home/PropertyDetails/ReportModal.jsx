@@ -37,6 +37,7 @@ const ReportModal = ({properties}) => {
      const report = {
         reporterName: user?.displayName,
         reporterEmail: user?.email,
+        reporterImage: user?.photoURL,
         description: description,
         propertyTitle: properties.propertyTitle,
         agentName: properties.agentName,
