@@ -2,6 +2,36 @@
 # Website Live Link : 
 - [Live link](https://real-estate-platform-auth.web.app)
 
+## Technologies Used
+
+- **Frontend:**
+  - HTML
+  - CSS
+  - [Tailwind CSS](https://tailwindcss.com/)
+  - React
+    - [React Router DOM](https://reactrouter.com/)
+    - [React Helmet](https://github.com/nfl/react-helmet)
+  - [Tanstack Query](https://react-query.tanstack.com/)
+
+- **Backend:**
+  - MongoDB
+  - Express.js
+  - Node.js
+
+- **Authentication and Authorization:**
+  - Firebase Authentication
+  - jwt
+  
+
+- **Payment:**
+  - [Stripe](https://stripe.com/)
+
+- **Image Hosting:**
+  - [ImgBB](https://imgbb.com/)
+
+- **Build Tools:**
+  - [Vite](https://vitejs.dev/)
+
 # Explanation of all pages features.
 
 # Home 
