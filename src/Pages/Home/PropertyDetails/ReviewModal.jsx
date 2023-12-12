@@ -43,7 +43,7 @@ const ReviewModal = ({ properties }) => {
     }
 
     return (
-        <div className="mt-5 container mx-auto mb-5">
+        <div className="mt-5 mb-5" >
             <button className="btn border border-zinc-950 hvr-sweep-to-top text-xl" onClick={handleModal}>Review Now</button>
             <dialog id="my_modal_3" className="modal">
                 <div className="modal-box">

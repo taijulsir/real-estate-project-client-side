@@ -15,6 +15,7 @@ import ContactUs from "./ContactUs";
 import ReviewModal from "./ReviewModal";
 import "../../../Shared/ButtonHover/ButtonHover.css"
 import HelmetTitle from "../../../Shared/HelmetTitle/HelmetTitle";
+import ReportModal from "./ReportModal";
 
 const PropertyDetails = () => {
     const { user } = useAuth()
@@ -66,7 +67,7 @@ const PropertyDetails = () => {
     }
     return (
         <div>
-             <HelmetTitle title={`Luxury Real State || Property ${properties._id}`}></HelmetTitle>
+            <HelmetTitle title={`Luxury Real State || Property ${properties._id}`}></HelmetTitle>
             <div>
                 <section className="dark:bg-gray-800 dark:text-gray-100">
                     <div className="container flex flex-col mx-auto lg:flex-row">
@@ -246,9 +247,15 @@ const PropertyDetails = () => {
                     </div>
                 </div>
 
-                {/* modal */}
-                <div>
+
+              {/*Review and Report Section  */}
+                 <div className="container mx-auto flex gap-10">
+
+                    {/* Review modal */}
                     <ReviewModal properties={properties} reviews={reviews} ></ReviewModal>
+
+                     {/* Report Modal */}
+                     <ReportModal properties={properties}></ReportModal>
                 </div>
                 <Toaster />
             </div >

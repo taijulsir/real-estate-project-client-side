@@ -50,6 +50,16 @@ const DashboardAdmin = () => {
             </li>
             <li>
                 <Link
+                to="reportedProperties"
+                    className="flex items-center px-6 py-4 text-white dark:text-gray-400 group dark:hover:bg-gray-700  hover:bg-gray-600 hover:rounded-md">
+                    <span className="inline-block mr-3">
+                        <LiaAdSolid className="text-2xl"></LiaAdSolid>
+                    </span>
+                    <span>Reported Property</span>
+                </Link>
+            </li>
+            <li>
+                <Link
                 to="manageReviews"
                     className="flex items-center px-6 py-4 text-white dark:text-gray-400 group dark:hover:bg-gray-700  hover:bg-gray-600 hover:rounded-md">
                     <span className="inline-block mr-3">

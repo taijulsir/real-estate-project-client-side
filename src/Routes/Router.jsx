@@ -28,6 +28,7 @@ import SoldProperty from "../Pages/DashBoard/SoldProperty/SoldProperty";
 import AdvertiseProperty from "../Pages/DashBoard/AdvertiseProperty/AdvertiseProperty";
 import Contact from "../Pages/DashBoard/Contact/Contact";
 import AboutUs from "../Pages/AboutUs/AboutUs";
+import ReportedProperty from "../Pages/DashBoard/ReportedProperty/ReportedProperty";
 
 const router = createBrowserRouter([
     {
@@ -98,6 +99,10 @@ const router = createBrowserRouter([
             {
                 path: "advertiseProperties",
                 element: <AdvertiseProperty></AdvertiseProperty>
+            },
+            {
+                path: "reportedProperties",
+                element: <ReportedProperty></ReportedProperty>
             },
             {
                 path: 'manageReviews',
