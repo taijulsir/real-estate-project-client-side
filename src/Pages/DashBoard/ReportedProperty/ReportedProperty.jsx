@@ -7,7 +7,7 @@ import ReportedCards from "./ReportedCards";
 const ReportedProperty = () => {
     const axiosSecure = useAxiosSecure()
     const {data: reportedProperty = [],refetch} = useQuery({
-        queryKey: "reportedProperty",
+        queryKey: [ "reportedProperty"],
         queryFn: async() => {
             const res = await axiosSecure.get('/reportedProperties')
             return res.data;

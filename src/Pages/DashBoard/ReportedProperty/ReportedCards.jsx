@@ -10,7 +10,11 @@ const ReportedCards = ({ report, refetch }) => {
     const axiosSecure = useAxiosSecure()
     const { _id, reporterName, reporterEmail, propertyTitle, agentName, propertyImage, propertyId, reporterImage, description, status } = report;
     const handleReport = (id) => {
-        const status = "reported"
+        console.log(id)
+        const updateReport = {
+            status: "reported",
+            propertyId: propertyId,
+        }
         Swal.fire({
             title: "Are you sure make reported?",
             text: "You won't recover it!",
@@ -21,14 +25,16 @@ const ReportedCards = ({ report, refetch }) => {
             confirmButtonText: "Reported!"
         }).then(async (result) => {
             if (result.isConfirmed) {
-                const res = await axiosSecure.patch(`/reportedProperties/${id}`,{status: status})
-                if(res.data.modifiedCount > 0){
-                     Swal.fire({
+                const res = await axiosSecure.patch(`/reportedProperties/${id}`, updateReport)
+                console.log(res.data)
+                if (res.data.updateResult.modifiedCount > 0 || res.data.deleteProperty.deletedCount > 0 || res.data.deleteReview.modifiedCount > 0  ) {
+                    Swal.fire({
                         title: "Deleted!",
                         text: "Your file has been deleted.",
                         icon: "success"
                     });
-                }         
+                    refetch()
+                }
             }
         });
     }
