@@ -26,7 +26,7 @@ const DashBoard = () => {
 
     return (
         <div className=" font-raleway ">
-             <HelmetTitle title={"Luxury Real State || Dashboard"}></HelmetTitle>
+             <HelmetTitle title={"Luxury Real Estate || Dashboard"}></HelmetTitle>
             <div className="bg-gradient-to-r from-gray-800 to-indigo-800 dark:bg-gray-800">
                 <div className={`body-content ${open ? 'open' : ''}`}>
 

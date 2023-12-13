@@ -103,7 +103,7 @@ const ManageUsers = () => {
     }
     return (
         <div className="mt-5">
-            <HelmetTitle title={`Luxury Real State || Manage Users`}></HelmetTitle>
+            <HelmetTitle title={`Luxury Real Estate || Manage Users`}></HelmetTitle>
             <Title heading={"Manage All"} colorHeading={"Users"}></Title>
             <div className="overflow-x-auto">
                 <table className="min-w-full bg-white font-[sans-serif]">

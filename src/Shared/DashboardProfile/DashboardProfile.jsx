@@ -7,7 +7,7 @@ const DashboardProfile = ({ user,role, description }) => {
     return (
         
         <div>
-             <HelmetTitle title={`Luxury Real State ||  Profile`}></HelmetTitle>
+             <HelmetTitle title={`Luxury Real Estate ||  Profile`}></HelmetTitle>
             <section className="flex items-center py-10 text-white xl:h-screen font-poppins dark:bg-gray-800 ">
                 <div className="justify-center flex-1 max-w-6xl py-4 mx-auto lg:py-6 md:px-6">
                     <div className="flex flex-wrap ">

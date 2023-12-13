@@ -69,7 +69,7 @@ const Register = () => {
     }
     return (
         <div style={{ backgroundImage: 'url(https://i.ibb.co/Jspy7Nq/register.png)', backgroundRepeat: "no-repeat", backgroundSize: "cover" }}>
-            <HelmetTitle title={"Luxury Real State || Register"}></HelmetTitle>
+            <HelmetTitle title={"Luxury Real Estate || Register"}></HelmetTitle>
             <div className="font-[sans-serif] text-gray-800  max-w-4xl flex items-center mx-auto md:h-screen p-4" >
                 <div className="grid md:grid-cols-3 items-center shadow-xl rounded-xl overflow-hidden">
                     <div className="max-md:order-1 flex flex-col justify-center space-y-16 max-md:mt-16 min-h-full bg-gradient-to-r from-violet-900 to-violet-700 lg:px-8 px-4 py-4">

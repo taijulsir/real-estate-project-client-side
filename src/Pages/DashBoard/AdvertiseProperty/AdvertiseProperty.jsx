@@ -68,7 +68,7 @@ const AdvertiseProperty = () => {
     }
     return (
         <div className="mt-5">
-            <HelmetTitle title={`Luxury Real State || Advertise Properties`}></HelmetTitle>
+            <HelmetTitle title={`Luxury Real Estate || Advertise Properties`}></HelmetTitle>
             <Title heading={"Manage Advertisement"} colorHeading={"Properties"}></Title>
             <div>
                 <div className=" px-3 lg:px-6">

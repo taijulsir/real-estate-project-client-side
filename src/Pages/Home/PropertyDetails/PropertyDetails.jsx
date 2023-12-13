@@ -67,7 +67,7 @@ const PropertyDetails = () => {
     }
     return (
         <div>
-            <HelmetTitle title={`Luxury Real State || Property ${properties._id}`}></HelmetTitle>
+            <HelmetTitle title={`Luxury Real Estate || Property ${properties._id}`}></HelmetTitle>
             <div>
                 <section className="dark:bg-gray-800 dark:text-gray-100">
                     <div className="container flex flex-col mx-auto lg:flex-row">

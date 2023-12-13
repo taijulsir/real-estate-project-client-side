@@ -35,7 +35,7 @@ const ManageProperties = () => {
     }
     return (
         <div className=" px-3 lg:px-6">
-                      <HelmetTitle title={`Luxury Real State || Manage Properties`}></HelmetTitle>
+                      <HelmetTitle title={`Luxury Real Estate || Manage Properties`}></HelmetTitle>
         
             <Title heading={"Manage All"} colorHeading={"Properties"}></Title>
             {/* table */}

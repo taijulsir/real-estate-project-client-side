@@ -52,6 +52,12 @@
    - Swift property search by title for an enhanced user experience.
 3) Sort Functionality 🔄:
    - Empower users with dynamic sorting options based on price range.
+3) Property Details ✨:
+   - Every property card have details option by clicking details button user can show specific property details.
+3) Review Option 💥:
+   - In property details page User can review for any property and user  can show her own reviews.
+3) Report Option 🚫:
+   - In property details page user can review for any property and admin can show reported property.
 
 # Dashboard 📊
 1) Role-Based Routes ✨:
@@ -96,6 +102,13 @@
 4) Maximum 6 properties can be advertised 🌐6️⃣:
    - Limitation on the number of advertised properties.
 
+- Reported Property Page:
+1) Admin can view all reported properties 🚫:
+   - The properties which are reported by users admin can show all reported properties.
+2) Card with property details (property image,property title, reporter information, agent information) 📊🏡:
+   - Organized display of reported property information.
+3) Manage reported properties & can remove specific reported properties and reviews 🚀🔄:
+   - Remove reported properties and reviews for specific properties.
 
 # Agent DashBoard 👤
 
