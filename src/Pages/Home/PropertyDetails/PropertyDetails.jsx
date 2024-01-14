@@ -162,7 +162,7 @@ const PropertyDetails = () => {
                             </div>
                             {/* button */}
 
-                            <button onClick={handleWishlist} className="btn  hvr-sweep-to-top text-black flex items-center text-base">
+                            <button onClick={handleWishlist} className="btn   text-black flex items-center text-base">
                                 <FaClover />
                                 Add To Wishlist
                             </button>

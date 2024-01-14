@@ -41,10 +41,10 @@ const Navbar = () => {
                         </Link>
                         <div className="flex items-center lg:hidden  ">
                             <a className="mr-6 dark:text-gray-400">
-                                <IoMdHeartEmpty className="text-2xl "></IoMdHeartEmpty>
+                                <IoMdHeartEmpty className="text-2xl text-white "></IoMdHeartEmpty>
                             </a>
                             <span className="relative inline-block mr-6 dark:text-gray-400 ">
-                                <VscBell className="text-2xl "></VscBell>
+                                <VscBell className="text-2xl text-white "></VscBell>
                                 <span
                                     className="absolute top-0 right-0 inline-flex items-center justify-center w-2 h-2 bg-red-600 rounded-full"></span>
                             </span>
@@ -61,10 +61,10 @@ const Navbar = () => {
                         </ul>
                         <div className="items-center justify-end hidden lg:flex dark:text-gray-400">
                             <a className="mr-5">
-                                <IoMdHeartEmpty className="text-2xl"></IoMdHeartEmpty>
+                                <IoMdHeartEmpty className="text-2xl text-white"></IoMdHeartEmpty>
                             </a>
                             <span className="relative inline-block mr-5">
-                                <VscBell className="text-2xl"></VscBell>
+                                <VscBell className="text-2xl text-white"></VscBell>
                                 <span
                                     className="absolute top-0 right-0 inline-flex items-center justify-center w-2 h-2 bg-red-600 rounded-full"></span>
                             </span>
@@ -110,10 +110,10 @@ const Navbar = () => {
                                 <CiUser className="text-2xl"></CiUser>
                             </a>
                             <a className="mr-6 dark:text-gray-400">
-                                <IoMdHeartEmpty className="text-2xl"></IoMdHeartEmpty>
+                                <IoMdHeartEmpty className="text-2xl text-white"></IoMdHeartEmpty>
                             </a>
                             <span className="relative inline-block mr-6 dark:text-gray-400 ">
-                                <VscBell className="text-2xl"></VscBell>
+                                <VscBell className="text-2xl text-white"></VscBell>
                                 <span className="absolute top-0 right-0 inline-flex items-center justify-center w-2 h-2 bg-red-600 rounded-full"></span>
                             </span>
                         </div>

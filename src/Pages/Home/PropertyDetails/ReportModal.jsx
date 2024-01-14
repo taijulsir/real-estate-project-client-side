@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import useAuth from '../../../Hooks/useAuth/useAuth';
 import useAxiosPublic from '../../../Hooks/useAxiosPublic/useAxiosPublic';
-import toast from 'react-hot-toast';
 import Swal from 'sweetalert2';
 
 const ReportModal = ({properties}) => {
@@ -53,6 +52,8 @@ const ReportModal = ({properties}) => {
         });
      }
     }
+
+    
     return (
         <div className="mt-5 mb-5">
             <button className="btn border border-zinc-950 hvr-sweep-to-top text-xl" onClick={openModal}>Report Now</button>
@@ -64,9 +65,7 @@ const ReportModal = ({properties}) => {
                             <div className='flex justify-end  '>
                                 <button className="mt-4 p-2 text-3xl rounded-md" onClick={closeModal}> <IoIosCloseCircleOutline></IoIosCloseCircleOutline></button>
                             </div>
-
                             {/* report form */}
-
                             <div>
                                 <h3 className="text-2xl my-3 font-semibold"></h3>
                                 <div className="flex flex-col items-center">
@@ -80,10 +79,7 @@ const ReportModal = ({properties}) => {
                                     <textarea placeholder="Description..." className="textarea textarea-bordered textarea-lg w-full " required></textarea>
                                 </form>
                                 <button onClick={handleReport} className="btn w-full bg-amber-600 my-3">Report</button>
-
                             </div>
-
-
                         </div>
                     </div>
                 </>

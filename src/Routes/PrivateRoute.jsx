@@ -5,8 +5,8 @@ import useAuth from "../Hooks/useAuth/useAuth";
 
 const PrivateRoute = ({ children }) => {
     const { user, loading } = useAuth()
-    const location = useLocation
-        ()
+    const location = useLocation()
+       
     if (loading) {
         return <span className="loading loading-spinner loading-lg"></span>
     }
