@@ -74,7 +74,7 @@ const RequestedProperties = () => {
     }
     return (
         <div className="px-3 lg:px-6 my-6 min-h-screen">
-            <HelmetTitle title={"Luxury Real Estate || Requested Properties"}></HelmetTitle>
+            <HelmetTitle title={"MARKON REAL ESTATE || Requested Properties"}></HelmetTitle>
            <Title heading={"Propeties Requested"} colorHeading={"User Information"}></Title>
             <div>
                 <div className="overflow-x-auto">

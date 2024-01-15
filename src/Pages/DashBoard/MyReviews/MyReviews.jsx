@@ -49,7 +49,7 @@ const MyReviews = () => {
     }
     return (
         <div className="min-h-screen">
-           <HelmetTitle title={"Luxury Real Estate || My Reviews"}></HelmetTitle>
+           <HelmetTitle title={"MARKON REAL ESTATE || My Reviews"}></HelmetTitle>
            <Title heading={"All Of My"} colorHeading={"Reviews"} ></Title>
             <div className="  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6">
                 {myReviews?.map(reviews =>

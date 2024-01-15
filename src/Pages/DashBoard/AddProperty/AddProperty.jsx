@@ -51,7 +51,7 @@ const AddProperty = () => {
 
     return (
         <div className="mt-5">
-            <HelmetTitle title={"Luxury Real Estate || Add Property"}></HelmetTitle>
+            <HelmetTitle title={"MARKON REAL ESTATE || Add Property"}></HelmetTitle>
             <Title heading={"Added Your"} colorHeading={"Properties"}></Title>
             <div className=" px-4 lg:px-0">
                 <section className="lg:p-16 dark:bg-gray-800 dark:text-gray-50">

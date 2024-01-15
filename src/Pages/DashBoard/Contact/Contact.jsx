@@ -4,7 +4,7 @@ import HelmetTitle from "../../../Shared/HelmetTitle/HelmetTitle";
 const Contact = () => {
     return (
         <div>
-            <HelmetTitle title={"Luxury Real Estate || Contact Us"}></HelmetTitle>
+            <HelmetTitle title={"MARKON REAL ESTATE || Contact Us"}></HelmetTitle>
             <section className="py-16  font-poppins dark:bg-gray-900">
                 <div className="justify-center flex-1 container px-4 py-4 mx-auto lg:py-10 md:px-7">
                     <div className="max-w-xl mx-auto">

@@ -60,7 +60,7 @@ const BroughtProperty = () => {
     }
     return (
         <div className="px-3 lg:px-6 my-6">
-            <HelmetTitle title={"Luxury Real Estate || Make an offer"}></HelmetTitle>
+            <HelmetTitle title={"MARKON REAL ESTATE || Make an offer"}></HelmetTitle>
             <h2 className="text-3xl font-bold ">Make an offer to brought <span className="text-green-500">{properties.propertyTitle}.</span></h2>
 
             <div>

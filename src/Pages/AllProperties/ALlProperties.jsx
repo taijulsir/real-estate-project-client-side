@@ -87,7 +87,7 @@ const ALlProperties = () => {
     }
     return (
         <div>
-             <HelmetTitle title={"Luxury Real Estate || All Properties"}></HelmetTitle>
+             <HelmetTitle title={"MARKON REAL ESTATE || All Properties"}></HelmetTitle>
             <div>
                 <Banner></Banner>
             </div>

@@ -53,7 +53,7 @@ const WishList = () => {
 
     return (
         <div className="px-3 lg:px-6 container mx-auto mt-10">
-            <HelmetTitle title={"Luxury Real Estate || Wishlist"}></HelmetTitle>
+            <HelmetTitle title={"MARKON REAL ESTATE || Wishlist"}></HelmetTitle>
            <Title heading={"All Of Your"} colorHeading={"Wishlist Properties"}></Title>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
                 {wishlist?.map(item =>
