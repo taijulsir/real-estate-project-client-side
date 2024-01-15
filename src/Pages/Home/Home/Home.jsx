@@ -13,8 +13,8 @@ import HelmetTitle from "../../../Shared/HelmetTitle/HelmetTitle";
 
 const Home = () => {
     return (
-        <div className="font-raleway space-y-16">
-            <HelmetTitle title={"Luxury Real Estate"}></HelmetTitle>
+        <div className="font-raleway">
+            <HelmetTitle title={"Markon Real Estate"}></HelmetTitle>
            <Banner></Banner> 
            <Advertisement></Advertisement>
            <Gallery></Gallery>

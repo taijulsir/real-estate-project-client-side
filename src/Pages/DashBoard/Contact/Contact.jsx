@@ -14,7 +14,7 @@ const Contact = () => {
                                     className="absolute hidden md:block -top-14 left-0 text-[120px] text-gray-400 font-bold opacity-10">
                                     Contact
                                 </div>
-                                <h1 className="text-5xl font-bold dark:text-white"> Our <span className="text-blue-500"> Contact
+                                <h1 className="text-5xl font-bold dark:text-zinc-950"> Our <span className="text-blue-500"> Contact
                                 </span> </h1>
                                 <div className="flex w-24 mt-1 mb-10 overflow-hidden rounded">
                                     <div className="flex-1 h-2 bg-blue-200">
@@ -25,7 +25,7 @@ const Contact = () => {
                                     </div>
                                 </div>
                             </div>
-                            <p className="mb-16 text-base text-center text-white">
+                            <p className="mb-16 text-base text-center text-zinc-950">
                             Feel free to reach out to us using the contact information below. Whether you have questions, feedback, or inquiries, our team is here to assist you. We value your communication and look forward to hearing from you. 
                             </p>
                         </div>
@@ -43,10 +43,10 @@ const Contact = () => {
                                         </path>
                                     </svg>
                                 </div>
-                                <h2 className="mb-4 text-xl font-bold leading-9 text-white md:text-2xl dark:text-gray-400">
+                                <h2 className="mb-4 text-xl font-bold leading-9 text-zinc-950 md:text-2xl dark:text-gray-400">
                                     Email</h2>
                                 <a href="#"
-                                    className="text-base font-medium text-white md:text-lg dark:text-gray-400">ITcompany@gmail.com</a>
+                                    className="text-base font-medium text-zinc-950 md:text-lg dark:text-gray-400">ITcompany@gmail.com</a>
                             </div>
                         </div>
                         <div className="w-full px-4 mb-4 lg:w-1/3 lg:mb-0">
@@ -61,10 +61,10 @@ const Contact = () => {
                                         </path>
                                     </svg>
                                 </div>
-                                <h2 className="mb-4 text-xl font-bold leading-9 text-white md:text-2xl dark:text-gray-400">
+                                <h2 className="mb-4 text-xl font-bold leading-9 text-zinc-950 md:text-2xl dark:text-gray-400">
                                     Phone</h2>
                                 <a href="#"
-                                    className="text-base font-medium text-white md:text-lg dark:text-gray-400">+9876542312</a>
+                                    className="text-base font-medium text-zinc-950 md:text-lg dark:text-gray-400">+9876542312</a>
                             </div>
                         </div>
                         <div className="w-full px-4 mb-4 lg:w-1/3 lg:mb-0">
@@ -79,7 +79,7 @@ const Contact = () => {
                                         </path>
                                     </svg>
                                 </div>
-                                <h2 className="mb-4 text-xl font-bold leading-9 text-white md:text-2xl dark:text-gray-400">
+                                <h2 className="mb-4 text-xl font-bold leading-9 text-zinc-950 md:text-2xl dark:text-gray-400">
                                     Social</h2>
                                 <a href="#"
                                     className="inline-block mr-4 text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 hover:text-blue-700">
@@ -115,7 +115,7 @@ const Contact = () => {
                     <div className="px-8 py-8  border rounded-md shadow-md dark:border-gray-800 dark:bg-gray-800">
                         <form action="">
                             <div className="mb-6">
-                                <h2 className="text-xl font-bold text-white dark:text-gray-400">
+                                <h2 className="text-xl font-bold text-zinc-950 dark:text-gray-400">
                                     Please send message for futher information! </h2>
                             </div>
                             <div className="flex flex-wrap mb-4 -mx-2">
@@ -134,9 +134,9 @@ const Contact = () => {
                                 className="w-full px-3 py-2 mb-4 leading-loose bg-indigo-900  border rounded-md  dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700"
                                 type="email" placeholder="abc@gmail.com" required="" />
                             <textarea rows="4" type="message" placeholder="Write a message..." required=""
-                                className="block w-full px-4 mb-4 leading-tight bg-indigo-900 text-white border rounded  dark:placeholder-gray-400 py-7 dark:text-gray-400 dark:border-gray-800 dark:bg-gray-700 "></textarea>
+                                className="block w-full px-4 mb-4 leading-tight bg-indigo-900 text-zinc-950 border rounded  dark:placeholder-gray-400 py-7 dark:text-gray-400 dark:border-gray-800 dark:bg-gray-700 "></textarea>
                             <button
-                                className="w-full py-4 text-sm font-bold leading-normal text-white transition-all duration-300 bg-blue-600 rounded-md dark:bg-blue-500 dark:hover:bg-blue-600 hover:bg-blue-700">
+                                className="w-full py-4 text-sm font-bold leading-normal text-zinc-950 transition-all duration-300 bg-blue-600 rounded-md dark:bg-blue-500 dark:hover:bg-blue-600 hover:bg-blue-700">
                                 Send Message
                             </button>
                         </form>

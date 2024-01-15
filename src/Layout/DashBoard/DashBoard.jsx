@@ -27,14 +27,14 @@ const DashBoard = () => {
     return (
         <div className=" font-raleway ">
              <HelmetTitle title={"Luxury Real Estate || Dashboard"}></HelmetTitle>
-            <div className="bg-gradient-to-r from-gray-800 to-indigo-800 dark:bg-gray-800">
+            <div className=" dark:bg-gray-800">
                 <div className={`body-content ${open ? 'open' : ''}`}>
 
                     {/* navlink  */}
                     <div className="relative lg:block navbar-menu">
                         <nav
-                            className={`fixed top-0 bg-gradient-to-r from-gray-800 to-indigo-800 transition-all lg:mt-0 z-40 mt-16 left-0 dark:bg-gray-900 bottom-0 flex flex-col ${open ? 'w-[280px]' : 'w-0'
-                                } lg:border-none border-r border-gray-200 dark:border-gray-800 text-white overflow-hidden`}
+                            className={`fixed top-0  transition-all lg:mt-0 z-40 mt-16 left-0 dark:bg-gray-900 bottom-0 flex flex-col ${open ? 'w-[280px]' : 'w-0'
+                                } lg:border-none border-r border-gray-200 dark:border-gray-800 text-zinc-950 overflow-hidden`}
                             id="sidenav"
                         >
 
@@ -43,7 +43,7 @@ const DashBoard = () => {
                                 className="flex items-center w-full px-4 pt-4 pb-4 mb-4 border-b border-gray-200 dark:border-gray-700">
                                 <Link to='/dashboard'>
                                     <div className="flex items-center ml-2">
-                                        <img src="https://i.ibb.co/LQ5jG4p/logo.png" className='h-12 w-28 lg:h-16 lg:w-36' alt="" />
+                                        <img src="https://i.ibb.co/YZH6RwX/21eb5888117145-6050f5ffc5079-removebg-preview.png" className='h-12 w-28 lg:h-16 lg:w-56' alt="" />
                                     </div>
                                 </Link>
                             </div>
@@ -54,7 +54,7 @@ const DashBoard = () => {
                                         className="object-cover object-right w-10 h-10 rounded-full" alt="person" />
                                 </div>
                                 <div className="px-2">
-                                    <span className="text-sm text-white dark:text-gray-400 ">Welcome,</span>
+                                    <span className="text-sm text-zinc-950 dark:text-gray-400 ">Welcome,</span>
                                     <h2 className="text-lg text-zinc-950 font-medium dark:text-gray-300 ">{user?.displayName}</h2>
                                 </div>
                             </div>

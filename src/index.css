@@ -4,6 +4,7 @@
 @tailwind utilities;
 
 
-body{
-    background-image: linear-gradient(to right, #8a8b99, #281d2f);
-}
+/* body{
+    background-image: linear-gradient(to right, #688A05, #8B7A0B);
+} */
+/* linear-gradient(90deg, rgba(104,138,5,1) 35%, rgba(139,122,11,1) 76%); */

@@ -41,7 +41,7 @@ const ReportedCards = ({ report, refetch }) => {
     return (
         <div>
             <div
-                className=" text-white border shadow-[0_2px_15px_-6px_rgba(0,0,0,0.2)] px-6 py-8 w-full  rounded-lg font-[sans-serif] overflow-hidden mx-auto mt-4">
+                className=" text-zinc-950 border shadow-[0_2px_15px_-6px_rgba(0,0,0,0.2)] px-6 py-8 w-full  rounded-lg font-[sans-serif] overflow-hidden mx-auto mt-4">
                 <div>
                     <div className="flex justify-between">
                         <h3 className="text-base  mb-5">Property: {propertyTitle}</h3>
@@ -57,8 +57,8 @@ const ReportedCards = ({ report, refetch }) => {
                         className="flex flex-wrap items-center cursor-pointer shadow-[0_0px_8px_-3px_rgba(6,81,237,0.3)] rounded-lg w-full px-4 py-4">
                         <img src={reporterImage} className="w-9 h-9 rounded-full object-cover" />
                         <div className="ml-4 flex-1">
-                            <p className="text-sm text-white font-semibold">{reporterName}</p>
-                            <p className="text-xs text-white">{reporterEmail}</p>
+                            <p className="text-sm text-zinc-950 font-semibold">{reporterName}</p>
+                            <p className="text-xs text-zinc-950">{reporterEmail}</p>
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-6 fill-gray-400" viewBox="0 0 32 32">
                             <path
@@ -72,10 +72,10 @@ const ReportedCards = ({ report, refetch }) => {
                     <h3 className="text-lg font-semibold flex-1 mt-4">Report</h3>
                     <p className="text-lg "> {description}</p>
                     {status === 'reported' ? <button
-                        className="btn disabled mt-4  border border-zinc-950 bg-red-400 text-white flex items-center">Remove Proeprty<AiOutlineDelete className="text-3xl text-red-600"></AiOutlineDelete>
+                        className="btn disabled mt-4  border border-zinc-950 bg-red-400 text-zinc-950 flex items-center">Remove Proeprty<AiOutlineDelete className="text-3xl text-red-600"></AiOutlineDelete>
                     </button> : <button
                         onClick={() => handleReport(_id)}
-                        className="btn  mt-4  border border-zinc-950 bg-red-400 text-white flex items-center">Remove Proeprty<AiOutlineDelete className="text-3xl text-red-600"></AiOutlineDelete>
+                        className="btn  mt-4  border border-zinc-950 bg-red-400 text-zinc-950 flex items-center">Remove Proeprty<AiOutlineDelete className="text-3xl text-red-600"></AiOutlineDelete>
                     </button>}
                 </div>
             </div>

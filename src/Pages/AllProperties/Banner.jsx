@@ -10,11 +10,11 @@ const Banner = () => {
             <div className=" mt-10 mb-10">
                 <div className="flex items-center justify-center flex-col-reverse lg:flex-row text-center p-5">
                     <div className=" w-full lg:w-1/2">
-                        <h1 className="mb-5 text-6xl text-white  font-bold lg:ml-16">Find Your Sanctuary <br /> in Every Brick</h1>
-                        <p className="mb-5  text-white">Your Home Journey Starts Here - Explore <br /> Affordable  and Elegant Properties.We'll <br /> help you find a place  you'll love. <br />We'll help you find a place you'll love</p>
+                        <h1 className="mb-5 text-6xl text-zinc-950  font-bold lg:ml-16">Find Your Sanctuary <br /> in Every Brick</h1>
+                        <p className="mb-5  text-zinc-950">Your Home Journey Starts Here - Explore <br /> Affordable  and Elegant Properties.We'll <br /> help you find a place  you'll love. <br />We'll help you find a place you'll love</p>
                         <div className="flex items-center gap-5 justify-center">
-                            <button className="px-4 py-3 border  hvr-sweep-to-top border-zinc-950 text-white ">More Info</button>
-                            <button className="px-4 py-3 border hvr-sweep-to-top border-zinc-950 text-white">Learn More</button>
+                            <button className="px-4 py-3 border  hvr-sweep-to-top border-zinc-950 text-zinc-950 ">More Info</button>
+                            <button className="px-4 py-3 border hvr-sweep-to-top border-zinc-950 text-zinc-950">Learn More</button>
                         </div>
 
                     </div>

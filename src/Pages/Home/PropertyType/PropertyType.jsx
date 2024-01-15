@@ -44,17 +44,17 @@ const PropertyType = () => {
     return (
         <div className="mt-16">
             <Title heading={"What Kind of "} colorHeading={"Property Looking?!"}></Title>
-            <p className="text-xl text-center text-white">Our Listing Properties Type</p>
+            <p className="text-xl text-center text-zinc-950">Our Listing Properties Type</p>
             <div className="mt-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5 container mx-auto">
             {property?.map(type =>
                 <div key={type.id} className="card ">
                     <figure className="relative  overflow-hidden transform transition-transform duration-500 ease-in-out animate-pulse hover:scale-110"><img src={type.propertyImage} alt="Shoes" className="h-[300px] object-cover" /></figure>
                     <div className="card-body">
-                        <h2 className="card-title text-white">
+                        <h2 className="card-title text-zinc-950">
                            {type.type}
                             <div className="badge badge-secondary">{type.category}</div>
                         </h2>
-                       <p className="text-lg text-opacity-60 font-medium text-white">Listing: {type.listing}</p>
+                       <p className="text-lg text-opacity-60 font-medium text-zinc-950">Listing: {type.listing}</p>
                     </div>
                 </div>)}
             </div>

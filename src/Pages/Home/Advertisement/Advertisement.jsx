@@ -15,8 +15,7 @@ const Advertisement = () => {
         }
     })
     return (
-        <div className="my-16  container mx-auto ">
-            
+        <div className="mb-16  container mx-auto ">    
             <Title heading={"Our choice Of popular"} colorHeading={"Real estate"}></Title>
            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
             {advertisements?.map(advertise=> <Card key={advertise._id} advertise={advertise}></Card>)}

@@ -9,7 +9,7 @@ const DashboardUser = () => {
             <li>
                 <Link
                 to="usersProfile"
-                    className="flex items-center px-6 py-4 text-white dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-600 hover:rounded-md">
+                    className="flex items-center px-6 py-4 text-zinc-950 dark:text-gray-400 group dark:hover:bg-gray-700 hover:bg-gray-600 hover:rounded-md">
                     <span className="inline-block mr-3">
                         <MdOutlineDashboard className="text-2xl"></MdOutlineDashboard>
                     </span>
@@ -19,7 +19,7 @@ const DashboardUser = () => {
             <li>
                 <Link
                 to="wishlist"
-                    className="flex items-center px-6 py-4 text-white dark:text-gray-400 group dark:hover:bg-gray-700  hover:bg-gray-600 hover:rounded-md">
+                    className="flex items-center px-6 py-4 text-zinc-950 dark:text-gray-400 group dark:hover:bg-gray-700  hover:bg-gray-600 hover:rounded-md">
                     <span className="inline-block mr-3">
                         <FaHeart className="text-2xl"></FaHeart>
                     </span>
@@ -29,7 +29,7 @@ const DashboardUser = () => {
             <li>
                 <Link
                 to="propertyBought"
-                    className="flex items-center px-6 py-4 text-white dark:text-gray-400 group dark:hover:bg-gray-700  hover:bg-gray-600 hover:rounded-md">
+                    className="flex items-center px-6 py-4 text-zinc-950 dark:text-gray-400 group dark:hover:bg-gray-700  hover:bg-gray-600 hover:rounded-md">
                     <span className="inline-block mr-3">
                         <FaSuperpowers className="text-2xl"></FaSuperpowers>
                     </span>
@@ -39,7 +39,7 @@ const DashboardUser = () => {
             <li>
                 <Link
                 to="myReviews"
-                    className="flex items-center px-6 py-4 text-white dark:text-gray-400 group dark:hover:bg-gray-700  hover:bg-gray-600 hover:rounded-md">
+                    className="flex items-center px-6 py-4 text-zinc-950 dark:text-gray-400 group dark:hover:bg-gray-700  hover:bg-gray-600 hover:rounded-md">
                     <span className="inline-block mr-3">
                         <FaBook className="text-2xl"></FaBook>
                     </span>

@@ -35,7 +35,7 @@ const ReviewsCard = ({ reviews, refetch }) => {
     return (
         <div>
             <div
-                className=" text-white border shadow-[0_2px_15px_-6px_rgba(0,0,0,0.2)] px-6 py-8 w-full  rounded-lg font-[sans-serif] overflow-hidden mx-auto mt-4">
+                className=" text-zinc-950 border shadow-[0_2px_15px_-6px_rgba(0,0,0,0.2)] px-6 py-8 w-full  rounded-lg font-[sans-serif] overflow-hidden mx-auto mt-4">
                 <div>
                     <h3 className="text-base font-semibold  mb-5">Property: {reviews.propertyTitle}</h3>
                 </div>
@@ -47,8 +47,8 @@ const ReviewsCard = ({ reviews, refetch }) => {
                         className="flex flex-wrap items-center cursor-pointer shadow-[0_0px_8px_-3px_rgba(6,81,237,0.3)] rounded-lg w-full px-4 py-4">
                         <img src={reviewerImage} className="w-9 h-9 rounded-full object-cover" />
                         <div className="ml-4 flex-1">
-                            <p className="text-sm text-white font-semibold">{reviewerName}</p>
-                            <p className="text-xs text-white">{reviewerEmail}</p>
+                            <p className="text-sm text-zinc-950 font-semibold">{reviewerName}</p>
+                            <p className="text-xs text-zinc-950">{reviewerEmail}</p>
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-6 fill-gray-400" viewBox="0 0 32 32">
                             <path
