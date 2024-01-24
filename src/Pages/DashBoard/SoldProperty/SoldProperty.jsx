@@ -23,7 +23,7 @@ const SoldProperty = () => {
 
     return (
         <div className="mt-5 min-h-screen">
-            <HelmetTitle title={"MARKON REAL ESTATE || Agent Sold Property"}></HelmetTitle>
+            <HelmetTitle title={"Markon Estate || Agent Sold Property"}></HelmetTitle>
             <div className=" px-3 lg:px-6">
                <Title heading={"All of your"} colorHeading={"Sold Properties"}></Title>
                <h3 className="text-xl lg:text-3xl font-bold text-white mb-5">Total Sold Amount : $ {soldAmount}</h3>

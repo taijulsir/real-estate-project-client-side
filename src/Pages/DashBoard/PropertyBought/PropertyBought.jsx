@@ -20,7 +20,7 @@ const PropertyBought = () => {
     })
     return (
         <div className="px-3 lg:px-6 mt-5 min-h-screen">
-            <HelmetTitle title={"MARKON REAL ESTATE ||Property Bought"}></HelmetTitle>
+            <HelmetTitle title={"Markon Estate ||Property Bought"}></HelmetTitle>
            <Title heading={"All of My Bought"} colorHeading={"Properties"} ></Title>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6">
                 {propertyBought?.map(property =>

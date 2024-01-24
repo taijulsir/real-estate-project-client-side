@@ -8,7 +8,7 @@ const Blogs = () => {
                 <div>
                     <Title heading={"Latest news from"} colorHeading={"Real Estate"}></Title>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-                        <div className=" rounded-lg overflow-hidden hover:scale-105 transition-all duration-300">
+                        <div className=" rounded-lg overflow-hidden hover:scale-105 transition-all duration-300  border border-slate-200 shadow-md shadow-[#0a0505]">
                             <img src="https://i.ibb.co/chYptpN/sin.jpg" alt="Blog Post 1" className="w-full h-52 object-cover" />
                             <div className="p-6">
                                 <h3 className="text-xl font-bold text-zinc-950 mb-2">Navigating the Home Buying Process</h3>
@@ -16,7 +16,7 @@ const Blogs = () => {
                                 <a className="mt-4 inline-block text-black font-semibold text-sm hover:underline">Read More</a>
                             </div>
                         </div>
-                        <div className=" rounded-lg overflow-hidden hover:scale-105 transition-all duration-300">
+                        <div className=" rounded-lg overflow-hidden hover:scale-105 transition-all duration-300  border border-slate-200 shadow-md shadow-[#0a0505]">
                             <img src="https://i.ibb.co/R2cYyyK/14.webp" alt="Blog Post 2" className="w-full h-52 object-cover" />
                             <div className="p-6">
                                 <h3 className="text-xl font-bold text-zinc-950 mb-2">Trends in Modern Home Design</h3>
@@ -24,7 +24,7 @@ const Blogs = () => {
                                 <a className="mt-4 inline-block text-black font-semibold text-sm hover:underline">Read More</a>
                             </div>
                         </div>
-                        <div className=" rounded-lg overflow-hidden hover:scale-105 transition-all duration-300">
+                        <div className=" rounded-lg overflow-hidden hover:scale-105 transition-all duration-300  border border-slate-200 shadow-md shadow-[#0a0505]">
                             <img src="https://i.ibb.co/3Rg6C90/6.webp" alt="Blog Post 3" className="w-full h-52 object-cover" />
                             <div className="p-6">
                                 <h3 className="text-xl font-bold text-zinc-950 mb-2">The Impact of Location on Property Value</h3>
@@ -32,7 +32,7 @@ const Blogs = () => {
                                 <a className="mt-4 inline-block text-black font-semibold text-sm hover:underline">Read More</a>
                             </div>
                         </div>
-                        <div className=" rounded-lg overflow-hidden hover:scale-105 transition-all duration-300">
+                        <div className=" rounded-lg overflow-hidden hover:scale-105 transition-all duration-300  border border-slate-200 shadow-md shadow-[#0a0505]">
                             <img src="https://i.ibb.co/Bj9DkqV/4.jpg" alt="Blog Post 3" className="w-full h-52 object-cover" />
                             <div className="p-6">
                                 <h3 className="text-xl font-bold text-zinc-950 mb-2">Preparing Your Home for Sale</h3>
@@ -40,7 +40,7 @@ const Blogs = () => {
                                 <a className="mt-4 inline-block text-black font-semibold text-sm hover:underline">Read More</a>
                             </div>
                         </div>
-                        <div className=" rounded-lg overflow-hidden hover:scale-105 transition-all duration-300">
+                        <div className=" rounded-lg overflow-hidden hover:scale-105 transition-all duration-300  border border-slate-200 shadow-md shadow-[#0a0505]">
                             <img src="https://i.ibb.co/X2QGghk/rrrx.webp" alt="Blog Post 3" className="w-full h-52 object-cover" />
                             <div className="p-6">
                                 <h3 className="text-xl font-bold text-zinc-950 mb-2">Investing in Real Estate Business</h3>

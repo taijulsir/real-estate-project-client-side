@@ -21,7 +21,7 @@ const Footer = () => {
                     </div>
                     <div className="flex flex-wrap py-10 -mx-3">
                         <div className="w-full px-4 mb-11 md:w-1/2 lg:w-4/12 lg:mb-0">
-                            <a  className="inline-block mb-4 text-xl font-bold text-zinc-950 dark:text-gray-400"><img src="https://i.ibb.co/LQ5jG4p/logo.png" alt="" className=" h-24 w-64 object-cover" /></a>
+                            <a  className="inline-block mb-4 text-xl font-bold text-zinc-950 dark:text-gray-400"><img src="https://i.ibb.co/YZH6RwX/21eb5888117145-6050f5ffc5079-removebg-preview.png" alt="" className=" h-24 w-64 object-cover" /></a>
                             <p className="text-base font-normal leading-6 text-zinc-950 lg:w-64 dark:text-gray-400">
                             Your premier real estate partner, dedicated to crafting unforgettable living experiences.</p>
                             <div className="flex justify-start mt-4 ">

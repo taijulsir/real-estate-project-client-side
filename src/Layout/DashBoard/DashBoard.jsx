@@ -15,7 +15,7 @@ const DashBoard = () => {
     const [open, setOpen] = useState(true)
     const [dropdown, setDropdown] = useState(false)
     const { user } = useAuth()
-    const [isCheckRole, isCheckRoleLoading, refetch] = useCheckRole()
+    const [isCheckRole, isCheckRoleLoading] = useCheckRole()
     if (isCheckRoleLoading) {
         return <span className="loading loading-spinner loading-lg"></span>
     }
@@ -26,7 +26,7 @@ const DashBoard = () => {
 
     return (
         <div className=" font-raleway ">
-             <HelmetTitle title={"MARKON REAL ESTATE || Dashboard"}></HelmetTitle>
+             <HelmetTitle title={"Markon Estate || Dashboard"}></HelmetTitle>
             <div className=" dark:bg-gray-800">
                 <div className={`body-content ${open ? 'open' : ''}`}>
 
@@ -60,7 +60,7 @@ const DashBoard = () => {
                             </div>
 
                             {/* routes */}
-                            <div className="pb-6 mt-4 overflow-x-hidden overflow-y-auto">
+                            <div className="pb-4 mt-4 ">
 
                                 {/* normal user */}
                                 <ul className="mb-8 text-sm">
@@ -76,9 +76,9 @@ const DashBoard = () => {
                                 </ul>
                             </div>
 
-                            <div className="divider divider-warning mt-12 px-6"></div>
+                            <div className="divider divider-warning mt-8 px-6"></div>
                             {/* available all routes */}
-                            <div className="pb-6 mt-4 overflow-x-hidden overflow-y-auto">
+                            <div className="pb-6  ">
                                 <ul className=" list-none">
                                     <DashboardAvailable></DashboardAvailable>
                                 </ul>

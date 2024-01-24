@@ -108,7 +108,7 @@ const CheckoutForm = () => {
 
     return (
         <div className="h-[700px] mt-10">
-            <HelmetTitle title={"MARKON REAL ESTATE || Payment Form"}></HelmetTitle>
+            <HelmetTitle title={"Markon Estate || Payment Form"}></HelmetTitle>
             <form className="max-w-6xl mx-auto" onSubmit={handleSubmit}>
                 <CardElement
                     options={{

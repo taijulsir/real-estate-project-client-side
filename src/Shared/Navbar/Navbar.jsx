@@ -39,7 +39,7 @@ const Navbar = () => {
             {/* For large device */}
             <div className="hidden md:flex flex-col">
                 {/* 1st part of navbar  */}
-                <div className="w-full bg-[#306ba9]">
+                <div className="w-full bg-gradient-to-r from-sky-300 via-blue-500 to-sky-300">
                     <div className="md:max-w-6xl mx-auto flex justify-between  items-center">
                         <div>
                             <img src="https://i.ibb.co/YZH6RwX/21eb5888117145-6050f5ffc5079-removebg-preview.png" alt="" className="w-[200px] h-20" />
@@ -47,7 +47,7 @@ const Navbar = () => {
                         <div className="flex gap-6 items-center">
                             {/* Login functionality */}
                             <div>
-                                {user ? <p className="text-zinc-200">Welcome, <span className="text-green-600 font-semibold">{user?.displayName}</span></p> : <Link to="/login" className="flex items-center font-libreFranklin text-zinc-200"><CiUser className="text-xl mr-1"></CiUser> Login or Register</Link>}
+                                {user ? <p className="text-zinc-200">Welcome, <span className=" text-zinc-950 font-bold">{user?.displayName}</span></p> : <Link to="/login" className="flex items-center font-libreFranklin text-zinc-200"><CiUser className="text-xl mr-1"></CiUser> Login or Register</Link>}
                                 <p ></p>
                             </div>
                             {/* Number */}
@@ -60,20 +60,20 @@ const Navbar = () => {
                                     <option value="English" className=" text-zinc-950">
                                         English</option>
                                     <option value="" className=" text-zinc-950">
-                                       Bangla</option>
+                                        Bangla</option>
                                     <option value="" className=" text-zinc-950">
                                         Hindi</option>
                                 </select>
                             </div>
                             {/*Search bar */}
                             <div>
-                                <div className=" flex px-4 py-3  border-b border-white  focus-within:border-blue-500 overflow-hidden max-w-md mx-auto font-[sans-serif]">
+                                <div className=" flex px-4 py-3   border-b border-white  focus-within:border-blue-500 overflow-hidden max-w-md mx-auto font-[sans-serif]">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.904 192.904" width="18px" className="fill-white mr-3  ">
                                         <path
                                             d="m190.707 180.101-47.078-47.077c11.702-14.072 18.752-32.142 18.752-51.831C162.381 36.423 125.959 0 81.191 0 36.422 0 0 36.423 0 81.193c0 44.767 36.422 81.187 81.191 81.187 19.688 0 37.759-7.049 51.831-18.751l47.079 47.078a7.474 7.474 0 0 0 5.303 2.197 7.498 7.498 0 0 0 5.303-12.803zM15 81.193C15 44.694 44.693 15 81.191 15c36.497 0 66.189 29.694 66.189 66.193 0 36.496-29.692 66.187-66.189 66.187C44.693 147.38 15 117.689 15 81.193z">
                                         </path>
                                     </svg>
-                                    <input type="text" placeholder="Search Something..." className="w-full outline-none text-zinc-950  text-sm" style={{ background: 'none' }} />
+                                    <input type="text" placeholder="Search Something..." className="w-full placeholder:text-white  outline-none text-zinc-950  text-sm" style={{ background: 'none' }} />
                                 </div>
                             </div>
                         </div>
@@ -81,7 +81,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Navlink all route part */}
-                <div className="w-full bg-[#222]">
+                <div className="w-full bg-gradient-to-r from-black via-gray-800 to-black">
                     <div className="md:max-w-6xl mx-auto flex justify-between items-center py-4">
                         <div>
                             <ul className="flex items-center ml-16">
@@ -89,7 +89,7 @@ const Navbar = () => {
                             </ul>
                         </div>
                         <div className="flex items-center">
-                            <button className=" btn hvr-sweep-to-top font-semibold text-lg border-zinc-950">Virtual Tours</button>
+                            <Link to="/virtualTour"> <button className=" btn hvr-sweep-to-top font-semibold text-lg border-zinc-950">Virtual Tour</button></Link>
                             {/* user photo and name and logout button */}
                             {user ? <div className="dropdown dropdown-end z-10">
                                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
@@ -136,7 +136,7 @@ const Navbar = () => {
                 </div>
 
                 <div>
-                    <img src="https://i.ibb.co/YZH6RwX/21eb5888117145-6050f5ffc5079-removebg-preview.png" alt="" className="w-[220px] h-20 object-cover"/>
+                    <img src="https://i.ibb.co/YZH6RwX/21eb5888117145-6050f5ffc5079-removebg-preview.png" alt="" className="w-[220px] h-20 object-cover" />
                 </div>
                 {/* Website Logo */}
                 <div >

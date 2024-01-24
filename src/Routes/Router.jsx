@@ -29,6 +29,7 @@ import AdvertiseProperty from "../Pages/DashBoard/AdvertiseProperty/AdvertisePro
 import Contact from "../Pages/DashBoard/Contact/Contact";
 import AboutUs from "../Pages/AboutUs/AboutUs";
 import ReportedProperty from "../Pages/DashBoard/ReportedProperty/ReportedProperty";
+import VirtualTour from "../Pages/VirtualTour/VirtualTour";
 
 const router = createBrowserRouter([
     {
@@ -62,6 +63,10 @@ const router = createBrowserRouter([
                 path: '/aboutUs',
                 element: <AboutUs></AboutUs>
             },
+            {
+                path: "/virtualTour",
+                element: <VirtualTour></VirtualTour>
+            }
            
         ]
     },

@@ -14,16 +14,16 @@ import HomeBanner from "../HomeBanner/HomeBanner";
 const Home = () => {
     return (
         <div className="font-raleway">
-            <HelmetTitle title={"MARKON REAL ESTATE"}></HelmetTitle>
-          <HomeBanner></HomeBanner>
-           <Advertisement></Advertisement>
-           <Gallery></Gallery>
-           <PropertyType></PropertyType>
-           <PropertyArea></PropertyArea>
-           <Blogs></Blogs>
-           <LatestReview></LatestReview>
-           <Team></Team>
-           <Partners></Partners>
+            <HelmetTitle title={"Markon Estate"}></HelmetTitle>
+            <HomeBanner></HomeBanner>
+            <Advertisement></Advertisement>
+            <Gallery></Gallery>
+            <PropertyType></PropertyType>
+            <PropertyArea></PropertyArea>
+            <Blogs></Blogs>
+            <LatestReview></LatestReview>
+            <Team></Team>
+            <Partners></Partners>
         </div>
     );
 };
