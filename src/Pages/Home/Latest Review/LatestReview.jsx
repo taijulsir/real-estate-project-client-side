@@ -43,17 +43,23 @@ const LatestReview = () => {
     useEffect(() => {
         AOS.init();
     }, []);
+
+
     return (
         <div className="my-16 bg-[#F2F6F6] py-16">
             <div className=" max-w-6xl mx-auto flex justify-between items-center flex-col lg:gap-10 lg:flex-row">
                 {/* image */}
-                <div className=" flex-1">
-                    <img src="https://i.ibb.co/vJ6sHhp/property-review.png" alt="" className="lg:h-[450px] w-[450px] object-cover" />
+                <div className="flex-1">
+                    <img 
+                    data-aos="fade-up"
+                    data-aos-easing="ease-in-out"
+                    data-aos-duration="2500"
+                   
+                     src="https://i.ibb.co/vJ6sHhp/property-review.png" alt="" className="lg:h-[450px] w-[450px] object-cover animate-up-and-down overflow-hidden" />
                 </div>
                 {/* slider */}
                 <div className="lg:w-3/5 w-4/5">
                     <Swiper
-
                         modules={[Navigation, Pagination, A11y]}
                         spaceBetween={30}
                         slidesPerView="auto"
