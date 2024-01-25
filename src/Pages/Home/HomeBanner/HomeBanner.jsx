@@ -1,6 +1,6 @@
 
 import "../../../Shared/ButtonHover/ButtonHover.css"
-import houseVideo from "../../../../public/pexels-kindel-media-7578555 (720p).mp4"
+import houseVideo from "../../../assets/pexels-kindel-media-7578555 (720p).mp4"
 import { useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
