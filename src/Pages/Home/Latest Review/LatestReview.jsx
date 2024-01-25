@@ -55,7 +55,7 @@ const LatestReview = () => {
                     data-aos-easing="ease-in-out"
                     data-aos-duration="2500"
                    
-                     src="https://i.ibb.co/vJ6sHhp/property-review.png" alt="" className="lg:h-[450px] w-[450px] object-cover animate-up-and-down overflow-hidden" />
+                     src="https://i.ibb.co/pb73p1z/property-review.png" alt="" className="lg:h-[450px] w-[450px] object-cover animate-up-and-down overflow-hidden" />
                 </div>
                 {/* slider */}
                 <div className="lg:w-3/5 w-4/5">
