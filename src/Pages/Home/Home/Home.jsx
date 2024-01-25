@@ -9,6 +9,7 @@ import Blogs from "./Blogs/Blogs";
 import Team from "./Team/Team";
 import HelmetTitle from "../../../Shared/HelmetTitle/HelmetTitle";
 import HomeBanner from "../HomeBanner/HomeBanner";
+import DownloadApp from "../DownloadApp/DownloadApp";
 
 
 const Home = () => {
@@ -23,6 +24,7 @@ const Home = () => {
             <Blogs></Blogs>
             <LatestReview></LatestReview>
             <Team></Team>
+            <DownloadApp></DownloadApp>
             <Partners></Partners>
         </div>
     );

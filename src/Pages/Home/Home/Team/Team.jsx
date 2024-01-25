@@ -22,9 +22,7 @@ const Team = () => {
                         delay: 2500,
                         disableOnInteraction: false,
                     }}
-                    pagination={{
-                        clickable: true,
-                    }}
+                   
                     modules={[Pagination, Autoplay]}
                     className="mySwiper"
                     breakpoints={{

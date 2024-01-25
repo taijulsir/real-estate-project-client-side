@@ -10,7 +10,8 @@ const HomeBanner = () => {
         AOS.init();
     }, []);
     return (
-        <div className="w-full h-[700px] flex  bg-center object-cover bg-no-repeat font-raleway" style={{ backgroundImage: 'url(https://fokkner.qodeinteractive.com/wp-content/uploads/2021/05/h1-img-5.jpg) ' }}  >
+        <div className="w-full relative h-[700px] flex  bg-center object-cover bg-no-repeat font-raleway" style={{ backgroundImage: 'url(https://fokkner.qodeinteractive.com/wp-content/uploads/2021/05/h1-img-5.jpg) ' }}  >
+            <div className=" absolute inset-0 bg-[#151515] opacity-30"></div>
             <div>
                 {/* Title and button */}
                 <div className="container mx-auto mt-40 "
@@ -41,8 +42,6 @@ const HomeBanner = () => {
                     </video>
                 </div>
             </div>
-
-
         </div>
     );
 };
