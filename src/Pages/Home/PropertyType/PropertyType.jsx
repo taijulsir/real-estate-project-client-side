@@ -47,14 +47,14 @@ const PropertyType = () => {
             <p className="text-xl text-center text-zinc-950">Our Listing Properties Type</p>
             <div className="mt-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5 container mx-auto">
             {property?.map(type =>
-                <div key={type.id} className="card  shadow shadow-[#958c8c] overflow-hidden">
-                    <figure className="relative  overflow-hidden transform transition-transform duration-500 ease-in-out animate-pulse hover:scale-110"><img src={type.propertyImage} alt="Shoes" className="h-[300px] object-cover" /></figure>
-                    <div className="card-body">
-                        <h2 className="card-title text-zinc-950">
+                <div key={type.id} className="shadow shadow-[#958c8c] overflow-hidden  mx-5 rounded-md">
+                    <figure className="relative  overflow-hidden transform transition-transform duration-500 ease-in-out animate-pulse hover:scale-110"><img src={type.propertyImage} alt="Shoes" className="h-[220px] lg:h-[200px] w-full object-cover" /></figure>
+                    <div className=" px-5 mt-10">
+                        <h2 className=" font-bold   text-zinc-950 flex gap-2">
                            {type.type}
-                            <div className="badge badge-secondary">{type.category}</div>
+                            <div className="badge badge-secondary lg:hidden xl:flex">{type.category}</div>
                         </h2>
-                       <p className="text-lg text-opacity-60 font-medium text-zinc-950">Listing: {type.listing}</p>
+                       <p className="text-lg text-opacity-60 font-medium text-zinc-950 mb-10">Listing: {type.listing}</p>
                     </div>
                 </div>)}
             </div>

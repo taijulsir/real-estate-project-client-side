@@ -5,7 +5,7 @@ const PropertyArea = () => {
     return (
         <div className="container mx-auto ">
             <Title heading={"Choose Your Area For"} colorHeading={"Best Deals"} ></Title>
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-7 lg:grid-flow-col  gap-6 mt-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-7 lg:grid-flow-col mx-5 gap-6 mt-10">
                 <div className=" relative col-span-2 row-span-2 overflow-hidden transition-transform transform hover:scale-105">
                     <img
                         src="https://i.ibb.co/RQLb7Ty/top-class-villas-near-whitefield.jpg"

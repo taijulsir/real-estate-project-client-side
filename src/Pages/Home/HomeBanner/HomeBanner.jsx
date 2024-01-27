@@ -11,7 +11,7 @@ const HomeBanner = () => {
     }, []);
     return (
         <div className="w-full relative h-[700px] flex  bg-center object-cover bg-no-repeat font-raleway" style={{ backgroundImage: 'url(https://fokkner.qodeinteractive.com/wp-content/uploads/2021/05/h1-img-5.jpg) ' }}  >
-            <div className=" absolute inset-0 bg-[#151515] opacity-30"></div>
+            <div className=" absolute inset-0 bg-black opacity-30"></div>
             <div>
                 {/* Title and button */}
                 <div className="container mx-auto mt-40 "
@@ -19,11 +19,11 @@ const HomeBanner = () => {
                     data-aos-easing="linear"
                     data-aos-duration="3500"
                 >
-                    <h1 className="text-[90px] font-bold text-slate-200 mb-8 ml-16">Modern Home</h1>
+                    <h1 className="text-[40px] md:text-[90px] font-bold text-slate-200 mb-8 ml-16" style={{whiteSpace: "nowrap"}}>Modern Home</h1>
                     <Link to="/allProperties"><button className="btn hvr-sweep-to-top border border-zinc-950 ml-16">Explore Now</button></Link>
                 </div>
                 <div className="mt-[116px] hidden  lg:flex" >
-                    <div className="ml-[290px] w-[950px] h-52 bg-zinc-900 border boreder-white shadow-md"
+                    <div className="mx-5 xl:ml-[290px] w-[950px] h-52 bg-zinc-900 border boreder-white shadow-md"
                         >
                         <div className="flex items-center justify-between p-20 text-white" data-aos="fade-right"
                         data-aos-easing="linear"
