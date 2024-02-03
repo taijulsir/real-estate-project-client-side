@@ -33,7 +33,7 @@ const UpdateProperTies = () => {
             priceRange: data.priceRange
         }
         // eslint-disable-next-line no-unused-vars
-        const updateProperties = await axiosSecure.patch(`/properties/${properties._id}`,property)
+        const updateProperties = await axiosSecure.patch(`/api/v1/properties/${properties._id}`,property)
             .then(res => {
                 console.log(res.data)
                 if (res.data.modifiedCount > 0) {

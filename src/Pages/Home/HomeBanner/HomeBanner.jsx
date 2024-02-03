@@ -23,7 +23,7 @@ const HomeBanner = () => {
                     <Link to="/allProperties"><button className="btn hvr-sweep-to-top border border-zinc-950 ml-16">Explore Now</button></Link>
                 </div>
                 <div className="mt-[116px] hidden  lg:flex" >
-                    <div className="mx-5 xl:ml-[290px] w-[950px] h-52 bg-zinc-900 border boreder-white shadow-md"
+                    <div className="mx-5 xl:mx-0 xl:ml-[290px] w-[950px] h-52 bg-zinc-900 border boreder-white shadow-md"
                         >
                         <div className="flex items-center justify-between p-20 text-white" data-aos="fade-right"
                         data-aos-easing="linear"

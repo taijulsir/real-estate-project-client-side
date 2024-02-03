@@ -13,7 +13,7 @@ const AdvertiseProperty = () => {
     const { data: advertiseProperty = [], refetch } = useQuery({
         queryKey: ['advertiseProperty'],
         queryFn: async () => {
-            const res = await axiosSecure.get('/properties/verified/filtered')
+            const res = await axiosSecure.get('/api/v1/properties/verified/filtered')
             return res.data;
         }
     })
@@ -53,7 +53,7 @@ const AdvertiseProperty = () => {
             confirmButtonText: `Yes, ${advertise.advertise} it!`
         }).then(async (result) => {
             if (result.isConfirmed) {
-                const res = await axiosSecure.patch(`/advertiseProperties/${id}`, advertise)
+                const res = await axiosSecure.patch(`/api/v1/advertiseProperties/${id}`, advertise)
                 console.log(res.data)
                 if (res?.data.modifiedCount > 0) {
                     refetch()

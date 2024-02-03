@@ -37,7 +37,7 @@ const AddProperty = () => {
             size: data.size,
             verified_status: "pending"
         }
-        const propertiesRes = await axiosSecure.post('/properties', properties)
+        const propertiesRes = await axiosSecure.post('/api/v1/properties', properties)
         console.log(propertiesRes.data)
         if (propertiesRes.data.insertedId) {
             Swal.fire({

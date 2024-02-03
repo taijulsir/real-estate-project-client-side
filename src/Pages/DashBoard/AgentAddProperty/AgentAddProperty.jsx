@@ -15,7 +15,7 @@ const AgentAddProperty = () => {
     const { data: addedProperties = [], refetch } = useQuery({
         queryKey: [user?.email, 'addedProperties'],
         queryFn: async () => {
-            const res = await axiosSecure.get(`/agentProperties/${user?.email}`)
+            const res = await axiosSecure.get(`/api/v1/agentProperties/${user?.email}`)
             return res.data;
         }
     })
@@ -33,7 +33,7 @@ const AgentAddProperty = () => {
             confirmButtonText: "Yes, delete it!"
         }).then(async (result) => {
             if (result.isConfirmed) {
-                const res = await axiosSecure.delete(`/properties/${id}`)
+                const res = await axiosSecure.delete(`/api/v1/properties/${id}`)
                     .then(propertiesres => {
                         if (propertiesres.data.deletedCount > 0) {
                             refetch()

@@ -25,7 +25,7 @@ const ReportedCards = ({ report, refetch }) => {
             confirmButtonText: "Reported!"
         }).then(async (result) => {
             if (result.isConfirmed) {
-                const res = await axiosSecure.patch(`/reportedProperties/${id}`, updateReport)
+                const res = await axiosSecure.patch(`/api/v1/reportedProperties/${id}`, updateReport)
                 console.log(res.data)
                 if (res.data.updateResult.modifiedCount > 0 || res.data.deleteProperty.deletedCount > 0 || res.data.deleteReview.modifiedCount > 0  ) {
                     Swal.fire({

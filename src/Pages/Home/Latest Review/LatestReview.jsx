@@ -22,7 +22,7 @@ const LatestReview = () => {
         queryKey: ['customerReveiew'],
         queryFn: async () => {
             try {
-                const res = await axiosPublic.get('/allReviews');
+                const res = await axiosPublic.get('/api/v1/allReviews');
                 return res.data;
             } catch (error) {
                 console.error('Error fetching reviews:', error.message);

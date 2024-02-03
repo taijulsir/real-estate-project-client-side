@@ -44,7 +44,7 @@ const Register = () => {
                     photoURL: res.data.data.display_url,
                     role: 'user'
                 }
-                axiosPublic.post('/users', authInfo)
+                axiosPublic.post('/api/v1/users', authInfo)
                     .then(res => {
                         if (res.data.insertedId || res.data.insertedId === null) {
                             Swal.fire({

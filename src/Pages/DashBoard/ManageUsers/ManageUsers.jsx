@@ -16,7 +16,7 @@ const ManageUsers = () => {
     const { data: users, refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await axiosSecure.get('/users')
+            const res = await axiosSecure.get('/api/v1/users')
             return res.data;
         }
     })
@@ -32,7 +32,7 @@ const ManageUsers = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                axiosSecure.delete(`/users/${id}`)
+                axiosSecure.delete(`/api/v1/users/${id}`)
                     .then(res => {
                         if (res.data.deletedCount > 0) {
                             refetch()
@@ -61,7 +61,7 @@ const ManageUsers = () => {
             const updateRole = role
             console.log(updateRole)
             if (result.isConfirmed) {
-                axiosSecure.patch(`/users/admin/${id}`, updateRole)
+                axiosSecure.patch(`/api/v1/users/admin/${id}`, updateRole)
                     .then(res => {
                         if (res.data.modifiedCount > 0) {
                             refetch()
@@ -88,7 +88,7 @@ const ManageUsers = () => {
             confirmButtonText: "Yes, make this user fraud!"
         }).then(async (result) => {
             if (result.isConfirmed) {
-                const res = await axiosSecure.patch(`/users/fraud/${id}`, status)
+                const res = await axiosSecure.patch(`/api/v1/users/fraud/${id}`, status)
                 console.log(res.data)
                 if (res.data.statusResult.modifiedCount > 0) {
                     refetch()
@@ -162,9 +162,9 @@ const ManageUsers = () => {
                                 <td className="px-6 py-4">
                                     {
                                         user?.status === "Fraud" ?
-                                            <td className="px-6 py-4 text-lg text-red-600">
+                                            <span className="px-6 py-4 text-lg text-red-600">
                                                 {user?.status}
-                                            </td>
+                                            </span>
                                             : <button onClick={() => handleRole(user._id, { role: "admin" })} className="mr-4 btn bg-amber-500 ">
                                                 <GrUserAdmin className="text-2xl"></GrUserAdmin>
                                             </button>
@@ -174,9 +174,9 @@ const ManageUsers = () => {
                                 <td className="px-6 py-4">
                                     {
                                         user?.status === "Fraud" ?
-                                            <td className="px-6 py-4 text-lg text-red-600">
+                                            <span className="px-6 py-4 text-lg text-red-600">
                                                 {user?.status}
-                                            </td>
+                                            </span>
                                             : <button onClick={() => handleRole(user._id, { role: "agent" })} className="mr-4 btn bg-amber-500">
                                                 <LuUserCog className="text-2xl "></LuUserCog>
                                             </button>
@@ -186,9 +186,9 @@ const ManageUsers = () => {
                                 <td className="px-6 py-4">
                                     {
                                         user?.status === "Fraud" ?
-                                            <td className="px-6 py-4 text-lg text-red-600">
+                                            <span className="px-6 py-4 text-lg text-red-600">
                                                 {user?.status}
-                                            </td>
+                                            </span>
                                             : <button
                                                 onClick={() => handleFraud(user?._id, { status: "Fraud" })}
                                                 disabled={user?.role === "user" || user?.role === "admin"} className="mr-4 btn bg-amber-500">

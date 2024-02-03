@@ -41,7 +41,7 @@ const BroughtProperty = () => {
             return;
         }
         else {
-            const res = await axiosPublic.post('/propertyBrought', boughtProperty)
+            const res = await axiosPublic.post('/api/v1/propertyBrought', boughtProperty)
             console.log(res.data)
             if (res.data.insertedId) {
                 Swal.fire({

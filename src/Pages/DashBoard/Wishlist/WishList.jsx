@@ -17,7 +17,7 @@ const WishList = () => {
     const { data: wishlist = [], refetch } = useQuery({
         queryKey: ['wishlist', user?.email],
         queryFn: async () => {
-            const res = await axiosPublic.get(`/allWishlist/${user?.email}`)
+            const res = await axiosPublic.get(`/api/v1/allWishlist/${user?.email}`)
             return res.data
         }
     })
@@ -35,7 +35,7 @@ const WishList = () => {
             confirmButtonText: "Yes, delete it!"
         }).then(async (result) => {
             if (result.isConfirmed) {
-                const res = await axiosPublic.delete(`/wishlist/${id}`)
+                const res = await axiosPublic.delete(`/api/v1/wishlist/${id}`)
                     .then(res => {
                         if (res.data.deletedCount > 0) {
                             Swal.fire({

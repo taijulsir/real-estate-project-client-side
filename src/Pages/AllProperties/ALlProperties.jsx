@@ -38,11 +38,13 @@ const ALlProperties = () => {
     const { data: allProperties = [], refetch } = useQuery({
         queryKey: ['allProperties', sortingOption, priceRange,searchValue],
         queryFn: async () => {
-            const res = await axiosPublic.get('/properties/verified/filtered')
+            const res = await axiosPublic.get('/api/v1/properties/verified/filtered')
             setProperties(res.data)
             return res.data;
         }
     })
+
+
 
     const sortData = (allProperties, sortingOption) => {
         console.log(allProperties);

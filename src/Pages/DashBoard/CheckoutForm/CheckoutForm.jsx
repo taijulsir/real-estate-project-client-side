@@ -29,7 +29,7 @@ const CheckoutForm = () => {
  
     useEffect(() => {
         if (price > 0) {
-            axiosSecure.post('/create-payment-intent', { price })
+            axiosSecure.post('/api/v1/create-payment-intent', { price })
                 .then(res => {
                     // console.log(res.data.clientSecret)
                     setClientSecret(res.data.clientSecret)
@@ -90,7 +90,7 @@ const CheckoutForm = () => {
                     agentEmail:agentemail
                 }
                 console.log(payment)
-                const res = await axiosSecure.post('/payments', payment)
+                const res = await axiosSecure.post('/api/v1/payments', payment)
                 console.log(res.data)
                 if (res.data?.result?.insertedId) {
                     navigate('/dashboard/propertyBought')

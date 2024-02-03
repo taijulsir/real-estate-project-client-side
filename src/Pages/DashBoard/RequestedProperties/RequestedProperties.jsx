@@ -16,7 +16,7 @@ const RequestedProperties = () => {
     const { data: requestedProperties = [], refetch } = useQuery({
         queryKey: [user?.email, 'requestedProperties'],
         queryFn: async () => {
-            const res = await axiosSecure.get(`/requestedProperties/${user?.email}`)
+            const res = await axiosSecure.get(`/api/v1/requestedProperties/${user?.email}`)
             return res.data;
         }
     })
@@ -32,7 +32,7 @@ const RequestedProperties = () => {
         }).then(async (result) => {
             if (result.isConfirmed) {
 
-                const res = await axiosSecure.put(`/api/request/${requestId}`, status)
+                const res = await axiosSecure.put(`/api/v1/api/request/${requestId}`, status)
                 console.log(res.data)
                 if (res.data.accptedResult.modifiedCount > 0 || res.data.rejectedResult.modifiedCount > 0) {
                     Swal.fire({
@@ -59,7 +59,7 @@ const RequestedProperties = () => {
         }).then(async (result) => {
             if (result.isConfirmed) {
 
-                const res = await axiosSecure.patch(`/api/reject/${requestId}`, status)
+                const res = await axiosSecure.patch(`/api/v1/api/reject/${requestId}`, status)
                 console.log(res.data)
                 if (res.data.modifiedCount > 0) {
                     Swal.fire({

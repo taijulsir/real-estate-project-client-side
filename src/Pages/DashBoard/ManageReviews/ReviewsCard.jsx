@@ -19,7 +19,7 @@ const ReviewsCard = ({ reviews, refetch }) => {
             confirmButtonText: "Yes, delete it!"
         }).then(async (result) => {
             if (result.isConfirmed) {
-                const res = await axiosSecure.delete(`/reviews/${id}`)
+                const res = await axiosSecure.delete(`/api/v1/reviews/${id}`)
                 console.log(res.data)
                 if (res.data.deletedCount > 0) {
                     refetch()

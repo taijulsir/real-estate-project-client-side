@@ -9,7 +9,7 @@ const ReportedProperty = () => {
     const {data: reportedProperty = [],refetch} = useQuery({
         queryKey: [ "reportedProperty"],
         queryFn: async() => {
-            const res = await axiosSecure.get('/reportedProperties')
+            const res = await axiosSecure.get('/api/v1/reportedProperties')
             return res.data;
         }
     })

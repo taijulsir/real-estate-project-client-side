@@ -1,5 +1,7 @@
 import Title from "../../../Shared/Title/Title";
 
+
+
 // type data
 const property =[
     {

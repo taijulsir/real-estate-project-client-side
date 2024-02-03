@@ -46,7 +46,7 @@ const Login = () => {
                 photoURL: result.user?.photoURL,
                 role: 'user'
             }
-            axiosPublic.post('/users',authInfo)
+            axiosPublic.post('/api/v1/users',authInfo)
             .then(res=> {
 
                 if(res.data?.insertedId|| res.data?.insertedId === null){

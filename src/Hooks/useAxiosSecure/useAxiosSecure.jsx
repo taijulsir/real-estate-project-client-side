@@ -4,7 +4,7 @@ import useAuth from "../useAuth/useAuth";
 import Swal from "sweetalert2";
 
 const axiosSecure = axios.create({
-    baseURL: "https://real-estate-project-server.vercel.app"
+    baseURL: "http://localhost:3000"
 })
 const useAxiosSecure = () => {
     const navigate = useNavigate()

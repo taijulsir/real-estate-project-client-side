@@ -10,7 +10,7 @@ const ManageReviews = () => {
     const { data: manageReviews = [], refetch } = useQuery({
         queryKey: ['manageReviews'],
         queryFn: async () => {
-            const res = await axiosSecure.get('/manageReviews')
+            const res = await axiosSecure.get('/api/v1/manageReviews')
             return res.data;
         }
     })

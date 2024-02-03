@@ -12,7 +12,7 @@ const ManageProperties = () => {
     const { data: manageProperties = [], refetch } = useQuery({
         queryKey: ['manageProperties'],
         queryFn: async () => {
-            const res = await axiosSecure.get('/manageProperties')
+            const res = await axiosSecure.get('/api/v1/manageProperties')
             return res.data;
         }
     })
@@ -20,7 +20,7 @@ const ManageProperties = () => {
     const handleVerify = async (id, status) => {
         const updateStatus = status;
         // eslint-disable-next-line no-unused-vars
-        const res = await axiosSecure.patch(`/properties/verifiedStatus/${id}`, updateStatus)
+        const res = await axiosSecure.patch(`/api/v1/properties/verifiedStatus/${id}`, updateStatus)
             .then(updateRes => {
                 console.log(updateRes.data)
                 if (updateRes.data.modifiedCount > 0) {

@@ -13,7 +13,7 @@ const Advertisement = () => {
     const {data:advertisements} = useQuery({
         queryKey:['properties'],
         queryFn: async()=>{
-            const res = await axiosPublic.get('/advertiseProperties')
+            const res = await axiosPublic.get('/api/v1/advertiseProperties')
             return res.data; 
         }
     })

@@ -13,7 +13,7 @@ const MyReviews = () => {
     const { data: myReviews = [], refetch } = useQuery({
         queryKey: [user?.email, 'myReviews'],
         queryFn: async () => {
-            const res = await axiosSecure.get(`/userMyReviews/${user?.email}`)
+            const res = await axiosSecure.get(`/api/v1/userMyReviews/${user?.email}`)
             return res.data;
         }
     })
@@ -29,7 +29,7 @@ const MyReviews = () => {
             confirmButtonText: "Yes, delete it!"
         }).then(async (result) => {
             if (result.isConfirmed) {
-                const res = await axiosSecure.delete(`/reviews/${id}`)
+                const res = await axiosSecure.delete(`/api/v1/reviews/${id}`)
                 if (res.data.deletedCount > 0) {
                     refetch()
                     Swal.fire({
